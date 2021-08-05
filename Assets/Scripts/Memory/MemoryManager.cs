@@ -4,39 +4,48 @@ using System.Collections.Generic;
 using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.UI;
-using Image = UnityEngine.UIElements.Image;
+using Image = UnityEngine.UI.Image;
 
 public class MemoryManager : MonoBehaviour
 {
     public Sprite[] testSprites;
 
-    public GameObject cardToInstantiate;
-
-    private List<GameObject> cardsInstantiated;
+    public Dictionary<int, MemoryCard> cardsButtonsDictionary;
+    public List<MemoryCard> cards;
 
     public int flipped = 0;
 
-    private Vector3[] cardsPositions =
-    {
-        new Vector3(-6.44f, 3.25f, 0f), new Vector3(-3.32f, 3.25f, 0f), new Vector3(-0.36f, 3.25f, 0f), new Vector3(2.76f, 3.25f, 0f),
-        new Vector3(-6.44f, 0.14f, 0f), new Vector3(-3.32f, 0.14f, 0f), new Vector3(-0.36f, 0.14f, 0f), new Vector3(2.76f, 0.14f, 0f),
-        new Vector3(-6.44f, -3.11f, 0f), new Vector3(-3.32f, -3.11f, 0f), new Vector3(-0.36f, -3.11f, 0f), new Vector3(2.76f, -3.11f, 0f),
-    };
+    private int first_card_index;
+    private int second_card_index;
 
+    private Sprite currentFlippedSprite;
 
-
-
+    
     // Start is called before the first frame update
     void Start()
     {
-        cardsInstantiated = new List<GameObject>();
+        InstantiateCards();
         SetupGame();
+        CoverAllBacks();
     }
 
     // Update is called once per frame
     void Update()
     {
- 
+
+    }
+
+    void InstantiateCards()
+    {
+        cards = new List<MemoryCard>();
+        cardsButtonsDictionary = new Dictionary<int, MemoryCard>();
+        var fowt = GameObject.FindGameObjectsWithTag("card");
+        for(int i =0; i < fowt.Length; i++)
+        {
+            var mc = fowt[i].GetComponent<MemoryCard>();
+            cards.Add(mc);
+            cardsButtonsDictionary.Add(i,mc);
+        }
     }
 
     void ShuffleList<T>(List<T> l)
@@ -57,13 +66,9 @@ public class MemoryManager : MonoBehaviour
 
     void SetupGame()
     {
-        List<int> indexes = new List<int>();
-        for (int j = 0; j < cardsPositions.Length; j++)
-        {
-            indexes.Add(j);
-        }
+        flipped = 0;
 
-        ShuffleList(indexes);
+        ShuffleList(cards);
         
         int keyOfIndexes = 0;
 
@@ -71,11 +76,77 @@ public class MemoryManager : MonoBehaviour
         {
             for (int j=0; j< 2; j++)
             {
-                GameObject newObj = Instantiate(cardToInstantiate, cardsPositions[indexes[keyOfIndexes]], Quaternion.identity);
-                newObj.GetComponent<Image>();
-                cardsInstantiated.Add(newObj);
-                keyOfIndexes++;
+                if (keyOfIndexes < cards.Count)
+                {
+                    cards[keyOfIndexes].animalFront.GetComponent<Image>().sprite = sprite;
+                    keyOfIndexes++;
+                }
             }
         }
+    }
+
+    void CoverAllBacks()
+    {
+        foreach (var card in cards)
+        {
+            card.backCard.SetActive(true);
+            card.won = false;
+        }
+    }
+
+    void CoverLoseBacks()
+    {
+        foreach (var mc in cardsButtonsDictionary.Values)
+        {
+            if (!mc.won)
+            {
+                mc.backCard.SetActive(true);
+            }
+        }
+    }
+
+
+    public void FlipCard(int index)
+    {
+        Sprite s = cardsButtonsDictionary[index].animalFront.GetComponent<Image>().sprite;
+        switch (flipped)
+        {
+            case 0:
+                currentFlippedSprite = s;
+                first_card_index = index;
+                cardsButtonsDictionary[index].backCard.SetActive(false);
+                flipped++;
+                break;
+            case 1:
+                cardsButtonsDictionary[index].backCard.SetActive(false);
+                second_card_index = index;
+                StartCoroutine(CheckWin(currentFlippedSprite.Equals(s)));
+                flipped++;
+                break;
+            default:
+                break;
+
+        }
+    }
+
+    IEnumerator CheckWin(bool win)
+    {
+        yield return new WaitForSeconds(0f);
+        //TODO positive feedback
+        if (win)
+        {
+            Debug.Log("hai vinto");
+            cardsButtonsDictionary[first_card_index].won = true;
+            cardsButtonsDictionary[second_card_index].won = true;
+        }
+        else
+        {
+            Debug.Log("hai perso");
+            yield return new WaitForSeconds(2f);
+            CoverLoseBacks();
+        }
+
+        flipped = 0;
+
     }
 }
