@@ -2,21 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MemoryDeck : MonoBehaviour
+public class MemoryDeck
 {
 
-    public Sprite[] cards_images;
+    public Sprite[] animals_images;
+    public Sprite[] emoji_images;
 
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
