@@ -9,6 +9,10 @@ using Image = UnityEngine.UI.Image;
 public class MemoryManager : MonoBehaviour
 {
     public Sprite[] testSprites;
+    
+    public Sprite[] animalSprites;
+    public Sprite[] emojiSprites;
+    public Sprite[] chibiSprites;
 
     public Dictionary<int, MemoryCard> cardsButtonsDictionary;
     public List<MemoryCard> cards;
@@ -72,7 +76,7 @@ public class MemoryManager : MonoBehaviour
         
         int keyOfIndexes = 0;
 
-        foreach (var sprite in testSprites)
+        foreach (var sprite in emojiSprites)
         {
             for (int j=0; j< 2; j++)
             {
