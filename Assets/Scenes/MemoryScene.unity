@@ -227,14 +227,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce75c46610cc24692886fbf79221cbf5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  testSprites:
+  use_chibi: 0
+  use_emoji: 0
+  animalSprites:
   - {fileID: 21300000, guid: ad21b29ecdd2240239492d1524dcfba4, type: 3}
   - {fileID: 21300000, guid: 0feab5a918a18499dbaa2e71adce8fe6, type: 3}
   - {fileID: 21300000, guid: ab8d7d99efda94266b34110d42ed3cb6, type: 3}
   - {fileID: 21300000, guid: 34c94e2793a0a47daa3d31747e05477b, type: 3}
   - {fileID: 21300000, guid: 0d3de92b170df4481a28dae0ebaaa137, type: 3}
   - {fileID: 21300000, guid: d784eac706867468faaa61743cfb08b3, type: 3}
-  animalSprites: []
   emojiSprites:
   - {fileID: 8220708520127592286, guid: 5bdc2b2a7bccd47cc879f89a31906f42, type: 3}
   - {fileID: 21300000, guid: e52cfdc6462b248978c31473263b64d8, type: 3}
@@ -242,7 +243,13 @@ MonoBehaviour:
   - {fileID: -8583150262326572680, guid: 8a2e6c1ee6e7942de8c99ede4357da3c, type: 3}
   - {fileID: 4815476061570213978, guid: 77ca4117238524d21b091cbac1bcff74, type: 3}
   - {fileID: -7268858456151150532, guid: 8a2e6c1ee6e7942de8c99ede4357da3c, type: 3}
-  chibiSprites: []
+  chibiSprites:
+  - {fileID: 21300000, guid: 5e103d0db70200d48ae4a7c4449e0d51, type: 3}
+  - {fileID: 21300000, guid: 1f0452ea2f2637a44902634aeca67993, type: 3}
+  - {fileID: 21300000, guid: e4d1eac17c35dbe4daf0fc13992e5bc3, type: 3}
+  - {fileID: 21300000, guid: 524712abb894db54cad4e257bff90eba, type: 3}
+  - {fileID: 21300000, guid: 69791a9266803c746a1e3fde8bbd0b05, type: 3}
+  - {fileID: 21300000, guid: eaa41b6eb1d10604e9755ca0bf5ec8a5, type: 3}
   cards:
   - {fileID: 0}
   - {fileID: 0}

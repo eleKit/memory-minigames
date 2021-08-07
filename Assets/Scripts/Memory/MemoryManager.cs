@@ -8,7 +8,8 @@ using Image = UnityEngine.UI.Image;
 
 public class MemoryManager : MonoBehaviour
 {
-    public Sprite[] testSprites;
+    public bool use_chibi;
+    public bool use_emoji;
     
     public Sprite[] animalSprites;
     public Sprite[] emojiSprites;
@@ -29,7 +30,18 @@ public class MemoryManager : MonoBehaviour
     void Start()
     {
         InstantiateCards();
-        SetupGame();
+        if (use_chibi)
+        {
+            SetupGame(chibiSprites);
+        } else if (use_emoji)
+        {
+            SetupGame(emojiSprites);
+        }
+        else
+        {
+            SetupGame(animalSprites);
+        }
+
         CoverAllBacks();
     }
 
@@ -68,7 +80,7 @@ public class MemoryManager : MonoBehaviour
 
     }
 
-    void SetupGame()
+    void SetupGame(Sprite[] sprites)
     {
         flipped = 0;
 
@@ -76,7 +88,7 @@ public class MemoryManager : MonoBehaviour
         
         int keyOfIndexes = 0;
 
-        foreach (var sprite in emojiSprites)
+        foreach (var sprite in sprites)
         {
             for (int j=0; j< 2; j++)
             {
