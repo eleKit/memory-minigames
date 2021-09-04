@@ -15,7 +15,7 @@ public class BoxGameManager : MonoBehaviour
 
    private List<GameObject> elements_to_instantiate;
 
-   private Transform current_element_transform;
+   public Transform current_element_transform { get; private set; }
 
    private int index = 0;
    
@@ -51,6 +51,8 @@ public class BoxGameManager : MonoBehaviour
    {
       current_element_transform = t;
    }
+   
+   
 
 
    public void InstantiateNext()
