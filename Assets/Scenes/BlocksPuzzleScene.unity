@@ -123,11 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!4 &91574910 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7450451634133684767, guid: 139c6cb765f58470694dbadeac5961ae, type: 3}
-  m_PrefabInstance: {fileID: 7450451634082087009}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &119474883
 GameObject:
   m_ObjectHideFlags: 0
@@ -513,11 +508,11 @@ MonoBehaviour:
       - m_Target: {fileID: 2052316363}
         m_TargetAssemblyTypeName: BoxGameManager, Assembly-CSharp
         m_MethodName: SetPositionOfCurrentElement
-        m_Mode: 4
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 2
           m_FloatArgument: 6.955274
           m_StringArgument: 
           m_BoolArgument: 0
@@ -884,7 +879,7 @@ MonoBehaviour:
       - m_Target: {fileID: 2052316363}
         m_TargetAssemblyTypeName: BoxGameManager, Assembly-CSharp
         m_MethodName: SetPositionOfCurrentElement
-        m_Mode: 4
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -1485,11 +1480,11 @@ MonoBehaviour:
       - m_Target: {fileID: 2052316363}
         m_TargetAssemblyTypeName: BoxGameManager, Assembly-CSharp
         m_MethodName: SetPositionOfCurrentElement
-        m_Mode: 4
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 2.62
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1900,42 +1895,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: BoxGameManager
       objectReference: {fileID: 0}
-    - target: {fileID: 7034426819478562144, guid: 7cf70850489d74439ae23a5eaa732ee2, type: 3}
-      propertyPath: m_TagString
-      value: boxManager
-      objectReference: {fileID: 0}
-    - target: {fileID: 7034426819478562145, guid: 7cf70850489d74439ae23a5eaa732ee2, type: 3}
-      propertyPath: current_element
-      value: 
-      objectReference: {fileID: 91574910}
-    - target: {fileID: 7034426819478562145, guid: 7cf70850489d74439ae23a5eaa732ee2, type: 3}
-      propertyPath: colour_title_elements.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 7034426819478562145, guid: 7cf70850489d74439ae23a5eaa732ee2, type: 3}
-      propertyPath: colour_level_elements.Array.data[0]
-      value: 
-      objectReference: {fileID: 7450451634133684765, guid: 139c6cb765f58470694dbadeac5961ae, type: 3}
-    - target: {fileID: 7034426819478562145, guid: 7cf70850489d74439ae23a5eaa732ee2, type: 3}
-      propertyPath: colour_level_elements.Array.data[1]
-      value: 
-      objectReference: {fileID: 7589692757726959923, guid: e2a63a766fb9c45908d0b5e8c3f31641, type: 3}
-    - target: {fileID: 7034426819478562145, guid: 7cf70850489d74439ae23a5eaa732ee2, type: 3}
-      propertyPath: colour_level_elements.Array.data[2]
-      value: 
-      objectReference: {fileID: 5666253046292969942, guid: 7dad27fef6cfe4f3e8922a204b30028e, type: 3}
-    - target: {fileID: 7034426819478562145, guid: 7cf70850489d74439ae23a5eaa732ee2, type: 3}
-      propertyPath: colour_title_elements.Array.data[0]
-      value: 
-      objectReference: {fileID: 7539556933077349085, guid: 703d4df98b9e44fab8f86f77e41d866d, type: 3}
-    - target: {fileID: 7034426819478562145, guid: 7cf70850489d74439ae23a5eaa732ee2, type: 3}
-      propertyPath: colour_title_elements.Array.data[1]
-      value: 
-      objectReference: {fileID: 8421690035287973333, guid: 4e3182c7991924f6d896ad20fce6b22f, type: 3}
-    - target: {fileID: 7034426819478562145, guid: 7cf70850489d74439ae23a5eaa732ee2, type: 3}
-      propertyPath: colour_title_elements.Array.data[2]
-      value: 
-      objectReference: {fileID: 9099081649614069433, guid: 4e649289137d041dca5127f055610819, type: 3}
     - target: {fileID: 7034426819478562150, guid: 7cf70850489d74439ae23a5eaa732ee2, type: 3}
       propertyPath: m_RootOrder
       value: 8

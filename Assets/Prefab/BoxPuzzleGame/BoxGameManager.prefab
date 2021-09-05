@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7034426819478562145}
   m_Layer: 0
   m_Name: BoxGameManager
-  m_TagString: Untagged
+  m_TagString: boxManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -43,13 +43,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bd4b5da4feeb4310950d3b14c433a36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  colour_title_elements:
+  - {fileID: 7539556933077349085, guid: 703d4df98b9e44fab8f86f77e41d866d, type: 3}
+  - {fileID: 8421690035287973333, guid: 4e3182c7991924f6d896ad20fce6b22f, type: 3}
+  - {fileID: 9099081649614069433, guid: 4e649289137d041dca5127f055610819, type: 3}
   colour_level_elements:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 7450451634133684765, guid: 139c6cb765f58470694dbadeac5961ae, type: 3}
+  - {fileID: 7589692757726959923, guid: e2a63a766fb9c45908d0b5e8c3f31641, type: 3}
+  - {fileID: 5666253046292969942, guid: 7dad27fef6cfe4f3e8922a204b30028e, type: 3}
   y_positions:
   - 1.5
   - -0.3
   - -2
+  x_positions:
+  - -2.70876
+  - 2.62
+  - 6.955274
   x_default_position: -7.09
-  current_element: {fileID: 0}
