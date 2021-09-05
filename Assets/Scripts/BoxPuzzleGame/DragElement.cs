@@ -8,6 +8,8 @@ using UnityEngine;
 public class DragElement : MonoBehaviour
 {
     private BoxGameManager box_game_manager;
+    public int x_grid_index_current;
+    public int y_grid_index_current;
 
     private void Start()
     {
