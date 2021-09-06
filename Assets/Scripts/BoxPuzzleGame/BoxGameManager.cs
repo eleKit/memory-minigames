@@ -28,8 +28,6 @@ public class BoxGameManager : MonoBehaviour
 
    private int index = 0;
 
-   private bool reset_performed = false;
-
 
    private void Start()
    {
@@ -57,10 +55,8 @@ public class BoxGameManager : MonoBehaviour
       
       index = 0;
 
-      GameObject go = Instantiate(colour_level_elements[index], new Vector3(x_default_position, 0f, 0f),
-         Quaternion.identity);
-      current_element_drag_script = go.GetComponent<DragElement>();
-      current_element_transform = go.transform;   }
+      IntantiateBox();   
+   }
 
    private void Update()
    {
@@ -68,19 +64,10 @@ public class BoxGameManager : MonoBehaviour
    }
 
 
-   /*
-    public void SetPositionOfCurrentElement(float x_coord)
-   {
-      if (index < y_positions.Length)
-      {
-         current_element_transform.position = new Vector3(x_coord, y_positions[index], 0f);
-      }
-   }
-   */
    
    public void SetPositionOfCurrentElement(int x_index)
    {
-      reset_performed = false;
+      ResetIndexes(current_element_drag_script.x_grid_index_current, current_element_drag_script.y_grid_index_current);
       bool done = false;
       for (int y_index = 0; y_index < Grid_Dimension; y_index++)
       {
@@ -102,13 +89,21 @@ public class BoxGameManager : MonoBehaviour
    {
       current_element_transform = t;
       current_element_drag_script = t.gameObject.GetComponent<DragElement>();
-      ResetIndexes(current_element_drag_script.x_grid_index_current, current_element_drag_script.y_grid_index_current);
-      reset_performed = true;
+      Debug.Log(current_element_drag_script.x_grid_index_current + " , " + current_element_drag_script.y_grid_index_current);
    }
 
    private void ResetIndexes(int x_index, int y_index)
    {
-      xy[x_index, y_index] = false;
+      if(!(x_index == -1 && y_index == -1))
+         xy[x_index, y_index] = false;
+   }
+
+   private void IntantiateBox()
+   {
+      GameObject go = Instantiate(colour_level_elements[index], new Vector3(x_default_position, 0f, 0f),
+         Quaternion.identity);
+      current_element_drag_script = go.GetComponent<DragElement>();
+      current_element_transform = go.transform;     
    }
    
    
@@ -116,20 +111,12 @@ public class BoxGameManager : MonoBehaviour
 
    public void InstantiateNext()
    {
-      if (reset_performed)
-      {
-         SetPositionOfCurrentElement(current_element_drag_script.x_grid_index_current);
-      }
       index++;
       if (index >= y_positions.Length)
       {
          index = 0;
       }
-
-      GameObject go = Instantiate(colour_level_elements[index], new Vector3(x_default_position, 0f, 0f),
-         Quaternion.identity);
-      current_element_drag_script = go.GetComponent<DragElement>();
-      current_element_transform = go.transform;
+      IntantiateBox();
    }
    
    
