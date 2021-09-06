@@ -24,6 +24,7 @@ public class BoxGameManager : MonoBehaviour
    private bool[,] xy = new bool[Grid_Dimension,Grid_Dimension];
 
    public float x_default_position;
+   public float y_default_position;
 
    public Transform current_element_transform { get; private set; }
    private DragElement current_element_drag_script;
@@ -110,21 +111,17 @@ public class BoxGameManager : MonoBehaviour
       if (t.position.x < line_vert_1_x_position)
       {
          ResetIndexes(current_element_drag_script.x_grid_index_current, current_element_drag_script.y_grid_index_current);
-         t.position = new Vector3(x_default_position, 2f, 0f);
-         Debug.Log("0 cond");
+         //t.position = new Vector3(x_default_position, t.position.y, 0f);
 
       } else if (t.position.x > line_vert_1_x_position && t.position.x < line_vert_2_x_position)
       {
          SetPositionOfCurrentElement(0);
-         Debug.Log("1 cond");
       } else if (t.position.x > line_vert_2_x_position && t.position.x < line_vert_3_x_position)
       {
          SetPositionOfCurrentElement(1);
-         Debug.Log("2 cond");
       } else if (t.position.x > line_vert_3_x_position)
       {
          SetPositionOfCurrentElement(2);
-         Debug.Log("3 cond");
       }
 
 
@@ -167,7 +164,7 @@ public class BoxGameManager : MonoBehaviour
    /// </summary>
    private void IntantiateBox()
    {
-      GameObject go = Instantiate(colour_level_elements[indexes_sequence_of_elements_to_instantiate[index]], new Vector3(x_default_position, 0f, 0f),
+      GameObject go = Instantiate(colour_level_elements[indexes_sequence_of_elements_to_instantiate[index]], new Vector3(x_default_position, y_default_position, 0f),
          Quaternion.identity);
       current_element_drag_script = go.GetComponent<DragElement>();
       current_element_transform = go.transform;     
