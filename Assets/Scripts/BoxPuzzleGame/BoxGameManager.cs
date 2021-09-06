@@ -8,6 +8,7 @@ public class BoxGameManager : MonoBehaviour
 {
    private const int Grid_Dimension = 3;
    public GameObject[] colour_title_elements;
+   public float y_title_position;
    
    public GameObject[] colour_level_elements;
 
@@ -55,9 +56,9 @@ public class BoxGameManager : MonoBehaviour
       }
       
       //instantiate the boxes symbols in the top area cof each column
-      foreach (var e in colour_title_elements)
+      for (int i = 0; i<colour_title_elements.Length; i++)
       {
-         Instantiate(e, e.transform.position, Quaternion.identity);
+         Instantiate(colour_title_elements[i], new Vector3(x_positions[i], y_title_position, 0f), Quaternion.identity);
       }
       
       // setup the index of the indexes_sequence_of_elements_to_instantiate at 0
