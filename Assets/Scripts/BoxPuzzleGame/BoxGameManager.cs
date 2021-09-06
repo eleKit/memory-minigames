@@ -7,13 +7,17 @@ using Random = System.Random;
 public class BoxGameManager : MonoBehaviour
 {
    private const int Grid_Dimension = 3;
-   public GameObject[] colour_title_elements;
-   public float y_title_position;
+   /*public GameObject[] colour_title_elements;
+   
    
    public GameObject[] colour_level_elements;
-
+*/
    private List<int> indexes_sequence_of_elements_to_instantiate;
 
+
+   public LevelSelector level_selector;
+
+   public float y_title_position;
    public float[] y_positions;
    
    public float[] x_positions;
@@ -35,13 +39,14 @@ public class BoxGameManager : MonoBehaviour
 
    private void Start()
    {
+      level_selector.GenerateLevel(0);
       //setup the list with sequence of boxes in order, it is repeated 3 times since the play columns are 3
       indexes_sequence_of_elements_to_instantiate = new List<int>();
-      for (int i = 0; i < colour_level_elements.Length; i++)
+      for  (int i = 0; i <level_selector.current_level_elements.Length; i++)
       {
          indexes_sequence_of_elements_to_instantiate.Add(i);  
          indexes_sequence_of_elements_to_instantiate.Add(i);  
-         indexes_sequence_of_elements_to_instantiate.Add(i);  
+         indexes_sequence_of_elements_to_instantiate.Add(i);
       }
       
       //randomize the elements in the list
@@ -56,9 +61,9 @@ public class BoxGameManager : MonoBehaviour
       }
       
       //instantiate the boxes symbols in the top area cof each column
-      for (int i = 0; i<colour_title_elements.Length; i++)
+      for (int i = 0; i<level_selector.current_level_elements.Length; i++)
       {
-         Instantiate(colour_title_elements[i], new Vector3(x_positions[i], y_title_position, 0f), Quaternion.identity);
+         Instantiate(level_selector.GetCurrentLevelElement(i).title_element, new Vector3(x_positions[i], y_title_position, 0f), Quaternion.identity);
       }
       
       // setup the index of the indexes_sequence_of_elements_to_instantiate at 0
@@ -165,7 +170,7 @@ public class BoxGameManager : MonoBehaviour
    /// </summary>
    private void IntantiateBox()
    {
-      GameObject go = Instantiate(colour_level_elements[indexes_sequence_of_elements_to_instantiate[index]], new Vector3(x_default_position, y_default_position, 0f),
+      GameObject go = Instantiate(level_selector.GetCurrentLevelElement(indexes_sequence_of_elements_to_instantiate[index]).interacting_element, new Vector3(x_default_position, y_default_position, 0f),
          Quaternion.identity);
       current_element_drag_script = go.GetComponent<DragElement>();
       current_element_transform = go.transform;     
