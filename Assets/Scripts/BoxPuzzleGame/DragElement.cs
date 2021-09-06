@@ -25,6 +25,12 @@ public class DragElement : MonoBehaviour
             
     }
 
+    IEnumerator OnMouseUp()
+    {
+        yield return new WaitForSeconds(0.2f);
+        box_game_manager.SetPositionBasedOnVector3(this.GetComponent<Transform>());
+    }
+
     private void OnMouseDown()
     {
         Transform me = this.GetComponent<Transform>();
