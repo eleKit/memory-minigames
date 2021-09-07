@@ -15,6 +15,21 @@ public class BoxesStandardLevels
         public int key;
         public int[] elements_indexes;
     }
+  
+    public List<OrderedDictionary> levelA = new List<OrderedDictionary>()
+    {
+        new OrderedDictionary() {key = 0, elements_indexes = new[] {0, 1, 2}},
+    };
+    
+    public List<OrderedDictionary> levelB = new List<OrderedDictionary>()
+    {
+        new OrderedDictionary() {key = 1, elements_indexes = new[] {0, 2, 4}},
+    };
+    
+    public List<OrderedDictionary> levelC = new List<OrderedDictionary>()
+    {
+        new OrderedDictionary() {key = 3, elements_indexes = new[] {0, 3, 4}},
+    };
     
     public List<OrderedDictionary> level2 = new List<OrderedDictionary>()
     {

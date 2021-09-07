@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Random = System.Random;
+using Rnd = UnityEngine.Random;
 
 public class BoxGameManager : MonoBehaviour
 {
@@ -34,16 +35,46 @@ public class BoxGameManager : MonoBehaviour
    public Transform current_element_transform { get; private set; }
    private DragElement current_element_drag_script;
 
+   public GameObject hand_mouse;
+
    private int index = 0;
 
-   public int level = 0;
+   [Header("game canvas")]
+   public GameObject game_canvas;
+   [Header("win canvas")]
+   public GameObject win_element;
+   [Header("levels canvas")]
+   public GameObject level_canvas;
 
 
    private void Start()
    {
-      level_selector.GenerateStaticLevel(level);
-      //setup the list with sequence of boxes in order, it is repeated 3 times since the play columns are 3
       indexes_sequence_of_elements_to_instantiate = new List<int>();
+      game_canvas.SetActive(false);
+      level_canvas.SetActive(true);
+      hand_mouse.SetActive(false);
+   }
+
+   public void GenerateLevel(int level)
+   {
+      level_selector.GenerateStaticLevel(level);
+      SetupLevel();
+   }
+   
+   public void GenerateRandomLevel()
+   {
+      int random = Rnd.Range(0, 5);
+      level_selector.GenerateRandomSingleLevel(random);
+      SetupLevel();
+   }
+
+   private void SetupLevel()
+   {
+      game_canvas.SetActive(true);
+      level_canvas.SetActive(false);
+      hand_mouse.SetActive(true);
+      //setup the list with sequence of boxes in order, it is repeated 3 times since the play columns are 3
+      indexes_sequence_of_elements_to_instantiate.Clear();
       for  (int i = 0; i <level_selector.current_level_elements.Count; i++)
       {
          indexes_sequence_of_elements_to_instantiate.Add(i);  
@@ -54,7 +85,6 @@ public class BoxGameManager : MonoBehaviour
       //randomize the elements in the list
       RandomizeIndexesSequence();
       
-      Debug.Log(level_selector.current_level_elements.Count);
       //instantiate the boxes symbols in the top area cof each column
       for (int i = 0; i<level_selector.current_level_elements.Count; i++)
       {

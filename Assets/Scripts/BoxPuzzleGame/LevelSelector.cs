@@ -45,6 +45,15 @@ public class LevelSelector : MonoBehaviour
    public void GenerateStaticLevel(int level)
    {
       switch (level){
+         case -3:
+            GenerateStandardLevelArray(standard_levels.levelA);
+            break;
+         case -2:
+            GenerateStandardLevelArray(standard_levels.levelB);
+            break;
+         case -1:
+            GenerateStandardLevelArray(standard_levels.levelC);
+            break;
          case 0:
             GenerateStandardLevelArray(standard_levels.level0);
             break;
@@ -75,6 +84,7 @@ public class LevelSelector : MonoBehaviour
          case 9:
             GenerateStandardLevelArray(standard_levels.level9);
             break;
+         
       }
       
    }
