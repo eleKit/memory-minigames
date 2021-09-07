@@ -39,10 +39,10 @@ public class BoxGameManager : MonoBehaviour
 
    private void Start()
    {
-      level_selector.GenerateLevel(0);
+      level_selector.GenerateStaticLevel(0);
       //setup the list with sequence of boxes in order, it is repeated 3 times since the play columns are 3
       indexes_sequence_of_elements_to_instantiate = new List<int>();
-      for  (int i = 0; i <level_selector.current_level_elements.Length; i++)
+      for  (int i = 0; i <level_selector.current_level_elements.Count; i++)
       {
          indexes_sequence_of_elements_to_instantiate.Add(i);  
          indexes_sequence_of_elements_to_instantiate.Add(i);  
@@ -50,18 +50,11 @@ public class BoxGameManager : MonoBehaviour
       }
       
       //randomize the elements in the list
-      Random rng = new Random(); 
-      int n = indexes_sequence_of_elements_to_instantiate.Count;  
-      while (n > 1) {  
-         n--;  
-         int k = rng.Next(n + 1);  
-         int value = indexes_sequence_of_elements_to_instantiate[k];  
-         indexes_sequence_of_elements_to_instantiate[k] = indexes_sequence_of_elements_to_instantiate[n];  
-         indexes_sequence_of_elements_to_instantiate[n] = value;  
-      }
+      RandomizeIndexesSequence();
       
+      Debug.Log(level_selector.current_level_elements.Count);
       //instantiate the boxes symbols in the top area cof each column
-      for (int i = 0; i<level_selector.current_level_elements.Length; i++)
+      for (int i = 0; i<level_selector.current_level_elements.Count; i++)
       {
          Instantiate(level_selector.GetCurrentLevelElement(i).title_element, new Vector3(x_positions[i], y_title_position, 0f), Quaternion.identity);
       }
@@ -71,6 +64,19 @@ public class BoxGameManager : MonoBehaviour
 
       // instantiate the first interactable box
       IntantiateBox();   
+   }
+
+   private void RandomizeIndexesSequence()
+   {
+      Random rng = new Random(); 
+      int n = indexes_sequence_of_elements_to_instantiate.Count;  
+      while (n > 1) {  
+         n--;  
+         int k = rng.Next(n + 1);  
+         int value = indexes_sequence_of_elements_to_instantiate[k];  
+         indexes_sequence_of_elements_to_instantiate[k] = indexes_sequence_of_elements_to_instantiate[n];  
+         indexes_sequence_of_elements_to_instantiate[n] = value;  
+      }
    }
 
    private void Update()

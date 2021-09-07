@@ -51,14 +51,14 @@ MonoBehaviour:
   - {fileID: 7589692757726959923, guid: e2a63a766fb9c45908d0b5e8c3f31641, type: 3}
   - {fileID: 7450451634133684765, guid: 139c6cb765f58470694dbadeac5961ae, type: 3}
   - {fileID: 5666253046292969942, guid: 7dad27fef6cfe4f3e8922a204b30028e, type: 3}
-  sqares_title_array:
+  squares_title_array:
   - {fileID: 9180550459569686404, guid: c7e6ac366d3cd45b3842463803da883b, type: 3}
   - {fileID: 3916438285161274262, guid: 6d64cb2525ea24641b1c3948d1b1c0e6, type: 3}
   - {fileID: 4335769887027346118, guid: e3117bcd79cba4e2e89733cf890bf4e7, type: 3}
   - {fileID: 577170384594635587, guid: 5a7b83c1eb27649e1bc21cad8e4f5c5b, type: 3}
   - {fileID: 3111288944636643917, guid: 8aa272a9e6adc4c1c84226cf99a4aace, type: 3}
   - {fileID: 3222987277151805552, guid: 7bf3f400e2a7a4c38aeb61a1871bb1c0, type: 3}
-  sqares_array:
+  squares_array:
   - {fileID: 4095598937142014878, guid: 08abc7e85d5244dcebcbd20de50a65d4, type: 3}
   - {fileID: 7273038550273580363, guid: a0c5fd6ad925a4b23afbf077dd1117af, type: 3}
   - {fileID: 2383891673278085335, guid: 906ff9257297f4fbdb401eceb27ce4d9, type: 3}
