@@ -2072,6 +2072,10 @@ PrefabInstance:
       value: BoxGameManager
       objectReference: {fileID: 0}
     - target: {fileID: 7034426819478562145, guid: 7cf70850489d74439ae23a5eaa732ee2, type: 3}
+      propertyPath: level
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7034426819478562145, guid: 7cf70850489d74439ae23a5eaa732ee2, type: 3}
       propertyPath: level_selector
       value: 
       objectReference: {fileID: 187646247}

@@ -36,10 +36,12 @@ public class BoxGameManager : MonoBehaviour
 
    private int index = 0;
 
+   public int level = 0;
+
 
    private void Start()
    {
-      level_selector.GenerateStaticLevel(0);
+      level_selector.GenerateStaticLevel(level);
       //setup the list with sequence of boxes in order, it is repeated 3 times since the play columns are 3
       indexes_sequence_of_elements_to_instantiate = new List<int>();
       for  (int i = 0; i <level_selector.current_level_elements.Count; i++)

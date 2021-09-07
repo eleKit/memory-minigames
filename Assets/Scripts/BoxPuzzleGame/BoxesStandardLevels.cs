@@ -16,22 +16,66 @@ public class BoxesStandardLevels
         public int[] elements_indexes;
     }
     
-    public List<OrderedDictionary> level0 = new List<OrderedDictionary>()
+    public List<OrderedDictionary> level2 = new List<OrderedDictionary>()
     {
-        new OrderedDictionary() {key = 0, elements_indexes = new[] {0}},
-        new OrderedDictionary() {key = 1, elements_indexes = new[] {1}},
-        new OrderedDictionary() {key = 0, elements_indexes = new[] {2}},
+        new OrderedDictionary() {key = 1, elements_indexes = new[] {0}},
+        new OrderedDictionary() {key = 0, elements_indexes = new[] {2, 0}},
     };
 
-    public List<int[]> level1;
-    public List<int[]> level2;
-    public List<int[]> level3;
-    public List<int[]> level4;
-    public List<int[]> level5;
-    public List<int[]> level6;
-    public List<int[]> level7;
-    public List<int[]> level8;
-    public List<int[]> level9;
+    public List<OrderedDictionary> level9 = new List<OrderedDictionary>()
+    {
+        new OrderedDictionary() {key = 0, elements_indexes = new[] {1}},
+        new OrderedDictionary() {key = 1, elements_indexes = new[] {2}},
+        new OrderedDictionary() {key = 3, elements_indexes = new[] {3}},
+    };
+    public List<OrderedDictionary> level3 = new List<OrderedDictionary>()
+    {
+        new OrderedDictionary() {key = 0, elements_indexes = new[] {0}},
+        new OrderedDictionary() {key = 2, elements_indexes = new[] {3}},
+        new OrderedDictionary() {key = 3, elements_indexes = new[] {4}},
+    };
+    public List<OrderedDictionary> level0 = new List<OrderedDictionary>()
+    {
+        new OrderedDictionary() {key = 1, elements_indexes = new[] {3}},
+        new OrderedDictionary() {key = 3, elements_indexes = new[] {1}},
+        new OrderedDictionary() {key = 1, elements_indexes = new[] {5}},
+    };
+    public List<OrderedDictionary> level4 = new List<OrderedDictionary>()
+    {
+        new OrderedDictionary() {key = 4, elements_indexes = new[] {3}},
+        new OrderedDictionary() {key = 0, elements_indexes = new[] {1}},
+        new OrderedDictionary() {key = 4, elements_indexes = new[] {5}},
+    };
+    public List<OrderedDictionary> level5 = new List<OrderedDictionary>()
+    {
+        new OrderedDictionary() {key = 0, elements_indexes = new[] {0}},
+        new OrderedDictionary() {key = 4, elements_indexes = new[] {1}},
+        new OrderedDictionary() {key = 0, elements_indexes = new[] {2}},
+    };
+    public List<OrderedDictionary> level6 = new List<OrderedDictionary>()
+    {
+        new OrderedDictionary() {key = 1, elements_indexes = new[] {5}},
+        new OrderedDictionary() {key = 4, elements_indexes = new[] {6}},
+        new OrderedDictionary() {key = 1, elements_indexes = new[] {2}},
+    };
+    public List<OrderedDictionary> level7 = new List<OrderedDictionary>()
+    {
+        new OrderedDictionary() {key = 1, elements_indexes = new[] {5}},
+        new OrderedDictionary() {key = 2, elements_indexes = new[] {1}},
+        new OrderedDictionary() {key = 3, elements_indexes = new[] {3}},
+    };
+    public List<OrderedDictionary> level1 = new List<OrderedDictionary>()
+    {
+        new OrderedDictionary() {key = 2, elements_indexes = new[] {1}},
+        new OrderedDictionary() {key = 3, elements_indexes = new[] {4}},
+        new OrderedDictionary() {key = 3, elements_indexes = new[] {1}}
+    };
+    public List<OrderedDictionary> level8 = new List<OrderedDictionary>()
+    {
+        new OrderedDictionary() {key = 4, elements_indexes = new[] {4}},
+        new OrderedDictionary() {key = 1, elements_indexes = new[] {1}},
+        new OrderedDictionary() {key = 4, elements_indexes = new[] {0}},
+    };
 
     public Dictionary<int, TitleAndInteractableArrays > go_dictionary = new Dictionary<int, TitleAndInteractableArrays>();
 

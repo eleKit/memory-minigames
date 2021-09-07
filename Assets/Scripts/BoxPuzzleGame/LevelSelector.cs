@@ -49,16 +49,31 @@ public class LevelSelector : MonoBehaviour
             GenerateStandardLevelArray(standard_levels.level0);
             break;
          case 1:
-            RandomSingleLevelArray(squares_title_array, squares_array);
+            GenerateStandardLevelArray(standard_levels.level1);
             break;
          case 2:
-            RandomSingleLevelArray(heart_title_array, heart_array);
+            GenerateStandardLevelArray(standard_levels.level2);
             break;
          case 3:
-            RandomSingleLevelArray(stars_title_array, stars_array);
+            GenerateStandardLevelArray(standard_levels.level3);
             break;
          case 4:
-            RandomSingleLevelArray(others_title_array, others_array);
+            GenerateStandardLevelArray(standard_levels.level4);
+            break;
+         case 5:
+            GenerateStandardLevelArray(standard_levels.level5);
+            break;
+         case 6:
+            GenerateStandardLevelArray(standard_levels.level6);
+            break;
+         case 7:
+            GenerateStandardLevelArray(standard_levels.level7);
+            break;
+         case 8:
+            GenerateStandardLevelArray(standard_levels.level8);
+            break;
+         case 9:
+            GenerateStandardLevelArray(standard_levels.level9);
             break;
       }
       
