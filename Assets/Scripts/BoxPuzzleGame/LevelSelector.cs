@@ -32,6 +32,16 @@ public class LevelSelector : MonoBehaviour
       public GameObject interacting_element;
 
    }
+
+   public void SetupLevelGenerator()
+   {
+      current_level_elements = new List<LevelElements>();
+      standard_levels.AddToDictionary(0, balls_title_array, balls_array);
+      standard_levels.AddToDictionary(1, squares_title_array, squares_array);
+      standard_levels.AddToDictionary(2, heart_title_array, heart_array);
+      standard_levels.AddToDictionary(3, stars_title_array, stars_array);
+      standard_levels.AddToDictionary(4, others_title_array, others_array);
+   }
    
    
    public LevelElements GetCurrentLevelElement(int index)
@@ -91,12 +101,7 @@ public class LevelSelector : MonoBehaviour
 
    private void GenerateStandardLevelArray(List<BoxesStandardLevels.OrderedDictionary> level_dictionary)
    {
-      current_level_elements = new List<LevelElements>();
-      standard_levels.AddToDictionary(0, balls_title_array, balls_array);
-      standard_levels.AddToDictionary(1, squares_title_array, squares_array);
-      standard_levels.AddToDictionary(2, heart_title_array, heart_array);
-      standard_levels.AddToDictionary(3, stars_title_array, stars_array);
-      standard_levels.AddToDictionary(4, others_title_array, others_array);
+      current_level_elements.Clear();
       foreach (var v in level_dictionary)
       {
          foreach (var index in v.elements_indexes)
@@ -139,7 +144,7 @@ public class LevelSelector : MonoBehaviour
    private void RandomSingleLevelArray(GameObject[] go_title_array, GameObject[] go_array)
    {
       var indexes_of_elements = ExtractLevelIndexes(go_array);
-      current_level_elements = new List<LevelElements>();
+      current_level_elements.Clear();
       for (int i=0; i< indexes_of_elements.Length; i++)
       {
          current_level_elements.Add(new LevelElements

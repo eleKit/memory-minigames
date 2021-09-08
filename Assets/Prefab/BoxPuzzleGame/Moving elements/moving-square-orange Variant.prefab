@@ -69,7 +69,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7898982722240288658, guid: 0f9e21da810994046a96f04bece09918, type: 3}
       propertyPath: m_Name
-      value: moving-square-pink Variant
+      value: moving-square-orange Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 7898982722240288658, guid: 0f9e21da810994046a96f04bece09918, type: 3}
+      propertyPath: m_TagString
+      value: box
       objectReference: {fileID: 0}
     - target: {fileID: 7898982722240288659, guid: 0f9e21da810994046a96f04bece09918, type: 3}
       propertyPath: m_Sprite

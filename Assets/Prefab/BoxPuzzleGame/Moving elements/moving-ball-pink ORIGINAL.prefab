@@ -13,8 +13,8 @@ GameObject:
   - component: {fileID: 7450451634133684961}
   - component: {fileID: 7450451634133684766}
   m_Layer: 0
-  m_Name: moving-ball-pink
-  m_TagString: Untagged
+  m_Name: moving-ball-pink ORIGINAL
+  m_TagString: box
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

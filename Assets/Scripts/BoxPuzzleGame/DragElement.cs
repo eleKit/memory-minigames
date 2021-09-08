@@ -25,9 +25,9 @@ public class DragElement : MonoBehaviour
             
     }
 
-    IEnumerator OnMouseUp()
+    private void OnMouseUp()
     {
-        yield return new WaitForSeconds(0.2f);
+        //yield return new WaitForSeconds(0.2f);
         box_game_manager.SetPositionBasedOnVector3(this.GetComponent<Transform>());
     }
 

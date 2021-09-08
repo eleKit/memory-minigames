@@ -25,7 +25,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: c81541554bd616a42913b2eb6c429fcd, type: 3}
     - target: {fileID: 8865976106288406145, guid: 357679007e0d64b2888bc5764408a129, type: 3}
       propertyPath: m_Name
-      value: moving-square-yellow
+      value: moving-square-yellow Variant
       objectReference: {fileID: 0}
     - target: {fileID: 8865976106288406147, guid: 357679007e0d64b2888bc5764408a129, type: 3}
       propertyPath: m_RootOrder

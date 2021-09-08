@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7694453460966478016, guid: b34a608c091544eb0906f489c8a4d126, type: 3}
       propertyPath: m_Name
-      value: moving-square-blue
+      value: moving-square-blue Variant
       objectReference: {fileID: 0}
     - target: {fileID: 7694453460966478017, guid: b34a608c091544eb0906f489c8a4d126, type: 3}
       propertyPath: m_Sprite
