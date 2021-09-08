@@ -28,11 +28,15 @@ public class BoxGameManager : MonoBehaviour
    public float line_vert_3_x_position;
 
    private bool[,] xy = new bool[Grid_Dimension,Grid_Dimension];
+   private Sprite[,] xy_sprites = new Sprite[Grid_Dimension,Grid_Dimension];
+
+   private Sprite[] title_sprites = new Sprite[Grid_Dimension];
 
    public float x_default_position;
    public float y_default_position;
 
    public Transform current_element_transform { get; private set; }
+   private SpriteRenderer current_element_sprite_renderer;
    private DragElement current_element_drag_script;
 
    public GameObject hand_mouse;
@@ -89,6 +93,7 @@ public class BoxGameManager : MonoBehaviour
       for (int i = 0; i<level_selector.current_level_elements.Count; i++)
       {
          Instantiate(level_selector.GetCurrentLevelElement(i).title_element, new Vector3(x_positions[i], y_title_position, 0f), Quaternion.identity);
+         title_sprites[i] = level_selector.GetCurrentLevelElement(i).title_element.GetComponent<SpriteRenderer>().sprite;
       }
       
       // setup the index of the indexes_sequence_of_elements_to_instantiate at 0
@@ -132,6 +137,7 @@ public class BoxGameManager : MonoBehaviour
          if (!xy[x_index, y_index])
          {
             xy[x_index, y_index] = true;
+            xy_sprites[x_index, y_index] = current_element_sprite_renderer.sprite;
             current_element_transform.position = new Vector3(x_positions[x_index], y_positions[y_index], 0f);
             current_element_drag_script.x_grid_index_current = x_index;
             current_element_drag_script.y_grid_index_current = y_index;
@@ -140,7 +146,7 @@ public class BoxGameManager : MonoBehaviour
          }
       }
       if(!done)
-         Debug.LogError("the column x_index is full");
+         Debug.Log("the column x_index is full");
    }
 
    #endregion
@@ -184,7 +190,8 @@ public class BoxGameManager : MonoBehaviour
    {
       current_element_transform = t;
       current_element_drag_script = t.gameObject.GetComponent<DragElement>();
-      Debug.Log(current_element_drag_script.x_grid_index_current + " , " + current_element_drag_script.y_grid_index_current);
+      current_element_sprite_renderer = t.gameObject.GetComponent<SpriteRenderer>();
+
    }
 
    /// <summary>
@@ -211,7 +218,8 @@ public class BoxGameManager : MonoBehaviour
       GameObject go = Instantiate(level_selector.GetCurrentLevelElement(indexes_sequence_of_elements_to_instantiate[index]).interacting_element, new Vector3(x_default_position, y_default_position, 0f),
          Quaternion.identity);
       current_element_drag_script = go.GetComponent<DragElement>();
-      current_element_transform = go.transform;     
+      current_element_transform = go.transform;
+      current_element_sprite_renderer = go.GetComponent<SpriteRenderer>();
    }
    
 
@@ -228,6 +236,28 @@ public class BoxGameManager : MonoBehaviour
       }
    }
    
-#endregion
+   #endregion
+
+   #region Win
+
+   public void CheckWin()
+   {
+      bool win = true;
+      for (int i=0; i< Grid_Dimension; i++)
+      {
+         for (int j = 0; j < Grid_Dimension; j++)
+         {
+            if(!title_sprites[i].Equals(xy_sprites[i,j]))
+            {
+               win = false;
+               break;
+            }
+         }
+      }
+      
+      Debug.LogError("win value " + win);
+   }
+
+   #endregion
    
 }
