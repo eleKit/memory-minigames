@@ -329,6 +329,7 @@ public class BoxGameManager : MonoBehaviour
 
    public void ReloadLevel()
    {
+      win_element.SetActive(false);
       GameObject[] interactable_boxes = GameObject.FindGameObjectsWithTag("box");
       foreach (var go in interactable_boxes)
       {

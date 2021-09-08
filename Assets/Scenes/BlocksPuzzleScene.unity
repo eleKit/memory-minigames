@@ -4268,7 +4268,7 @@ RectTransform:
   m_Children:
   - {fileID: 1822100518}
   m_Father: {fileID: 1468990576}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4318,7 +4318,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1011070477}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2052316363}
+        m_TargetAssemblyTypeName: BoxGameManager, Assembly-CSharp
+        m_MethodName: LoadLevelSelection
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1011070477
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6023,7 +6035,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1468990576
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6039,6 +6051,7 @@ RectTransform:
   - {fileID: 882269748}
   - {fileID: 1362772621}
   - {fileID: 1660455962}
+  - {fileID: 1898288634}
   - {fileID: 1011070475}
   - {fileID: 1804741913}
   m_Father: {fileID: 987135434}
@@ -6630,7 +6643,6 @@ RectTransform:
   - {fileID: 67400778}
   - {fileID: 1869690907}
   - {fileID: 1888667205}
-  - {fileID: 1898288634}
   m_Father: {fileID: 1468990576}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7179,7 +7191,7 @@ RectTransform:
   m_Children:
   - {fileID: 1620971329}
   m_Father: {fileID: 1468990576}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -7607,12 +7619,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 195432522}
-  m_Father: {fileID: 1660455962}
-  m_RootOrder: 6
+  m_Father: {fileID: 1468990576}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -45.9}
+  m_AnchoredPosition: {x: -57.860016, y: -45.9}
   m_SizeDelta: {x: 43.377, y: 43.377}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1898288635
@@ -7658,7 +7670,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1898288636}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2052316363}
+        m_TargetAssemblyTypeName: BoxGameManager, Assembly-CSharp
+        m_MethodName: ReloadLevel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1898288636
 MonoBehaviour:
   m_ObjectHideFlags: 0
