@@ -1,52 +1,40 @@
 fileFormatVersion: 2
-guid: 4540a1075fb1c4c5dae3e9cef00cab6b
+guid: 463a2fe25a9c44a23a61b7ade82e9743
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6402913732307580831
-    second: roundOutline_0
+      213: 453032197585797336
+    second: children_0
   - first:
-      213: 5430075476035430636
-    second: roundOutline_1
+      213: 2238790517440466685
+    second: children_1
   - first:
-      213: 3270516232164042540
-    second: roundOutline_2
+      213: -4498931963112675932
+    second: children_2
   - first:
-      213: -2690250160641004115
-    second: roundOutline_3
+      213: 4081669366561030255
+    second: children_3
   - first:
-      213: 2934094239953688523
-    second: roundOutline_4
+      213: 7026010542338477985
+    second: children_4
   - first:
-      213: 2723152514446691021
-    second: roundOutline_5
+      213: -2749634554799181128
+    second: children_5
   - first:
-      213: -5273099851208817322
-    second: roundOutline_6
+      213: 5242687964195982850
+    second: children_6
   - first:
-      213: -3221433100122933228
-    second: roundOutline_7
+      213: -3483317794042619126
+    second: children_7
   - first:
-      213: 5294491708510294622
-    second: roundOutline_8
+      213: -171966258824876347
+    second: children_8
   - first:
-      213: 8651417341848323028
-    second: roundOutline_9
+      213: -6218159384409270773
+    second: children_9
   - first:
-      213: -1208925506302681584
-    second: roundOutline_10
-  - first:
-      213: 3645467095470804732
-    second: roundOutline_11
-  - first:
-      213: 8363901985081109058
-    second: roundOutline_12
-  - first:
-      213: 4400985073645807119
-    second: roundOutline_13
-  - first:
-      213: 1178744785370112925
-    second: roundOutline_14
+      213: 3861984599260370303
+    second: children_10
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -172,316 +160,232 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: roundOutline_0
+      name: children_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 748
-        width: 282
-        height: 172
+        x: 39
+        y: 322
+        width: 50
+        height: 126
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 168065272e74427a0800000000000000
-      internalID: -6402913732307580831
+      spriteID: 8d08ae8226e794600800000000000000
+      internalID: 453032197585797336
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: roundOutline_1
+      name: children_1
       rect:
         serializedVersion: 2
-        x: 276
-        y: 778
-        width: 186
-        height: 142
+        x: 172
+        y: 322
+        width: 64
+        height: 126
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ce8e6ac20e08b5b40800000000000000
-      internalID: 5430075476035430636
+      spriteID: dfe4d8e2d18c11f10800000000000000
+      internalID: 2238790517440466685
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: roundOutline_2
+      name: children_2
       rect:
         serializedVersion: 2
-        x: 354
-        y: 624
-        width: 148
-        height: 156
+        x: 343
+        y: 329
+        width: 122
+        height: 108
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c27694a6f25336d20800000000000000
-      internalID: 3270516232164042540
+      spriteID: 4a5a40647359091c0800000000000000
+      internalID: -4498931963112675932
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: roundOutline_3
+      name: children_3
       rect:
         serializedVersion: 2
-        x: 192
-        y: 578
-        width: 160
-        height: 175
+        x: 532
+        y: 329
+        width: 104
+        height: 108
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dad2e028bbf4aaad0800000000000000
-      internalID: -2690250160641004115
+      spriteID: f60c67cc9a005a830800000000000000
+      internalID: 4081669366561030255
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: roundOutline_4
+      name: children_4
       rect:
         serializedVersion: 2
-        x: 495
-        y: 754
-        width: 153
-        height: 166
+        x: 364
+        y: 316
+        width: 80
+        height: 10
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bc795fd6a2ff7b820800000000000000
-      internalID: 2934094239953688523
+      spriteID: 1af0c34ec57618160800000000000000
+      internalID: 7026010542338477985
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: roundOutline_5
+      name: children_5
       rect:
         serializedVersion: 2
-        x: 646
-        y: 762
-        width: 139
-        height: 158
+        x: 543
+        y: 316
+        width: 82
+        height: 10
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dca8ec4b8c49ac520800000000000000
-      internalID: 2723152514446691021
+      spriteID: 8b23e0bc0f557d9d0800000000000000
+      internalID: -2749634554799181128
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: roundOutline_6
+      name: children_6
       rect:
         serializedVersion: 2
-        x: 776
-        y: 625
-        width: 140
-        height: 150
+        x: 20
+        y: 164
+        width: 88
+        height: 122
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 65588879f9f22d6b0800000000000000
-      internalID: -5273099851208817322
+      spriteID: 20e0e1e2de4c1c840800000000000000
+      internalID: 5242687964195982850
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: roundOutline_7
+      name: children_7
       rect:
         serializedVersion: 2
-        x: 643
-        y: 456
-        width: 136
-        height: 164
+        x: 155
+        y: 164
+        width: 98
+        height: 122
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 418bc7fc9ab2b43d0800000000000000
-      internalID: -3221433100122933228
+      spriteID: a0bda46fbe4c8afc0800000000000000
+      internalID: -3483317794042619126
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: roundOutline_8
+      name: children_8
       rect:
         serializedVersion: 2
-        x: 780
-        y: 480
-        width: 134
-        height: 145
+        x: 375
+        y: 174
+        width: 98
+        height: 102
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e52d1005820d97940800000000000000
-      internalID: 5294491708510294622
+      spriteID: 5cee365499d0d9df0800000000000000
+      internalID: -171966258824876347
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: roundOutline_9
+      name: children_9
       rect:
         serializedVersion: 2
-        x: 0
-        y: 248
-        width: 190
-        height: 164
+        x: 51
+        y: 2
+        width: 50
+        height: 126
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4d306883c32001870800000000000000
-      internalID: 8651417341848323028
+      spriteID: b06168f2cf8a4b9a0800000000000000
+      internalID: -6218159384409270773
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: roundOutline_10
+      name: children_10
       rect:
         serializedVersion: 2
-        x: 0
-        y: 111
-        width: 183
-        height: 138
+        x: 172
+        y: 2
+        width: 64
+        height: 126
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 01e5bec38a8093fe0800000000000000
-      internalID: -1208925506302681584
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: roundOutline_11
-      rect:
-        serializedVersion: 2
-        x: 509
-        y: 271
-        width: 136
-        height: 184
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cfe89e1420d479230800000000000000
-      internalID: 3645467095470804732
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: roundOutline_12
-      rect:
-        serializedVersion: 2
-        x: 774
-        y: 167
-        width: 138
-        height: 157
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 24aa1f4aa8c821470800000000000000
-      internalID: 8363901985081109058
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: roundOutline_13
-      rect:
-        serializedVersion: 2
-        x: 361
-        y: 145
-        width: 153
-        height: 164
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f0664786b90731d30800000000000000
-      internalID: 4400985073645807119
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: roundOutline_14
-      rect:
-        serializedVersion: 2
-        x: 353
-        y: 292
-        width: 152
-        height: 152
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d9364d4132ebb5010800000000000000
-      internalID: 1178744785370112925
+      spriteID: f7591f60886889530800000000000000
+      internalID: 3861984599260370303
       vertices: []
       indices: 
       edges: []

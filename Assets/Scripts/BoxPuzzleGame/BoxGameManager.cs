@@ -132,8 +132,7 @@ public class BoxGameManager : MonoBehaviour
    /// <param name="x_index">index of the button pressed</param>
    public void SetPositionOfCurrentElement(int x_index)
    {
-      ResetIndexes(current_element_drag_script.x_grid_index_current, current_element_drag_script.y_grid_index_current);
-      bool done = false;
+      bool instantiate = ResetIndexes(current_element_drag_script.x_grid_index_current, current_element_drag_script.y_grid_index_current);
       for (int y_index = 0; y_index < Grid_Dimension; y_index++)
       {
          if (!xy[x_index, y_index])
@@ -143,13 +142,14 @@ public class BoxGameManager : MonoBehaviour
             current_element_transform.position = new Vector3(x_positions[x_index], y_positions[y_index], 0f);
             current_element_drag_script.x_grid_index_current = x_index;
             current_element_drag_script.y_grid_index_current = y_index;
-            done = true;
             break;
          }
       }
 
-      if (!done)
-         Debug.Log("the column x_index is full");
+      if (instantiate)
+      {
+         InstantiateNext();
+      }
    }
 
    #endregion
@@ -166,6 +166,7 @@ public class BoxGameManager : MonoBehaviour
          ResetIndexes(current_element_drag_script.x_grid_index_current,
             current_element_drag_script.y_grid_index_current);
          //t.position = new Vector3(x_default_position, t.position.y, 0f);
+         //TODO instantiate next here?
 
       }
       else if (t.position.x > line_vert_1_x_position && t.position.x < line_vert_2_x_position)
@@ -206,10 +207,16 @@ public class BoxGameManager : MonoBehaviour
    /// </summary>
    /// <param name="x_index"></param>
    /// <param name="y_index"></param>
-   private void ResetIndexes(int x_index, int y_index)
+   private bool ResetIndexes(int x_index, int y_index)
    {
       if (!(x_index == -1 && y_index == -1))
          xy[x_index, y_index] = false;
+      else
+      {
+         return true;
+      }
+
+      return false;
    }
 
    #endregion
@@ -273,7 +280,7 @@ public class BoxGameManager : MonoBehaviour
          }
       }
 
-      yield return new WaitForSeconds(0.2f);
+      yield return new WaitForSeconds(1f);
       if (win)
       {
          LoadWinUI();
