@@ -134,10 +134,10 @@ public class MemoryManager : MonoBehaviour
                 flipped++;
                 break;
             case 1:
-                cardsButtonsDictionary[index].backCard.SetActive(false);
                 second_card_index = index;
-                StartCoroutine(CheckWin(currentFlippedSprite.Equals(s)));
                 flipped++;
+                cardsButtonsDictionary[index].backCard.SetActive(false);
+                StartCoroutine(CheckWin(currentFlippedSprite.Equals(s)));
                 break;
             default:
                 break;
