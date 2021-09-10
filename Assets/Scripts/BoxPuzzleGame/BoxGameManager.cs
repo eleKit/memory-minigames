@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using Random = System.Random;
 using Rnd = UnityEngine.Random;
 
@@ -133,11 +134,13 @@ public class BoxGameManager : MonoBehaviour
    public void SetPositionOfCurrentElement(int x_index)
    {
       bool instantiate = ResetIndexes(current_element_drag_script.x_grid_index_current, current_element_drag_script.y_grid_index_current);
+      bool done = false;
       for (int y_index = 0; y_index < Grid_Dimension; y_index++)
       {
          if (!xy[x_index, y_index])
          {
             xy[x_index, y_index] = true;
+            done = true;
             xy_sprites[x_index, y_index] = current_element_sprite_renderer.sprite;
             current_element_transform.position = new Vector3(x_positions[x_index], y_positions[y_index], 0f);
             current_element_drag_script.x_grid_index_current = x_index;
@@ -146,7 +149,7 @@ public class BoxGameManager : MonoBehaviour
          }
       }
 
-      if (instantiate)
+      if (instantiate && done)
       {
          InstantiateNext();
       }
@@ -165,19 +168,21 @@ public class BoxGameManager : MonoBehaviour
       {
          ResetIndexes(current_element_drag_script.x_grid_index_current,
             current_element_drag_script.y_grid_index_current);
+         current_element_drag_script.x_grid_index_current = -1;
+         current_element_drag_script.y_grid_index_current = -1;
          //t.position = new Vector3(x_default_position, t.position.y, 0f);
          //TODO instantiate next here?
 
       }
-      else if (t.position.x > line_vert_1_x_position && t.position.x < line_vert_2_x_position)
+      else if (t.position.x >= line_vert_1_x_position && t.position.x < line_vert_2_x_position)
       {
          SetPositionOfCurrentElement(0);
       }
-      else if (t.position.x > line_vert_2_x_position && t.position.x < line_vert_3_x_position)
+      else if (t.position.x >= line_vert_2_x_position && t.position.x < line_vert_3_x_position)
       {
          SetPositionOfCurrentElement(1);
       }
-      else if (t.position.x > line_vert_3_x_position)
+      else if (t.position.x >= line_vert_3_x_position)
       {
          SetPositionOfCurrentElement(2);
       }
@@ -210,7 +215,9 @@ public class BoxGameManager : MonoBehaviour
    private bool ResetIndexes(int x_index, int y_index)
    {
       if (!(x_index == -1 && y_index == -1))
+      {
          xy[x_index, y_index] = false;
+      }
       else
       {
          return true;
@@ -353,5 +360,10 @@ public class BoxGameManager : MonoBehaviour
    }
 
    #endregion
+
+   public void LoadHomeMenu()
+   {
+      SceneManager.LoadSceneAsync("HomeScene");
+   }
    
 }
