@@ -168,8 +168,8 @@ public class BoxGameManager : MonoBehaviour
       {
          ResetIndexes(current_element_drag_script.x_grid_index_current,
             current_element_drag_script.y_grid_index_current);
-         current_element_drag_script.x_grid_index_current = -1;
-         current_element_drag_script.y_grid_index_current = -1;
+         current_element_drag_script.x_grid_index_current = -2;
+         current_element_drag_script.y_grid_index_current = -2;
          //t.position = new Vector3(x_default_position, t.position.y, 0f);
          //TODO instantiate next here?
 
@@ -214,16 +214,19 @@ public class BoxGameManager : MonoBehaviour
    /// <param name="y_index"></param>
    private bool ResetIndexes(int x_index, int y_index)
    {
-      if (!(x_index == -1 && y_index == -1))
+      if (x_index == -2 && y_index == -2)
+      {
+         return false;
+         
+      } else if (!(x_index == -1 && y_index == -1))
       {
          xy[x_index, y_index] = false;
+         return false;
       }
       else
       {
          return true;
       }
-
-      return false;
    }
 
    #endregion
