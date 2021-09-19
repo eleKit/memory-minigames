@@ -132,7 +132,12 @@ public class BoxGameManager : MonoBehaviour
    /// This function is called by arrow buttons to locate a box
    /// </summary>
    /// <param name="x_index">index of the button pressed</param>
-   public bool SetPositionOfCurrentElement(int x_index)
+   public void SetPositionOfCurrentElement(int x_index)
+   {
+      SetPositionPrivateFunction(x_index);
+   }
+
+   private bool SetPositionPrivateFunction(int x_index)
    {
       bool instantiate = ResetIndexes(current_element_drag_script.x_grid_index_current, current_element_drag_script.y_grid_index_current);
       bool done = false;
@@ -179,7 +184,7 @@ public class BoxGameManager : MonoBehaviour
       }
       else if (t.position.x >= line_vert_1_x_position && t.position.x < line_vert_2_x_position)
       {
-         if (!SetPositionOfCurrentElement(0))
+         if (!SetPositionPrivateFunction(0))
          {
             ResetALL();
             t.position = new Vector3(x_default_position, Rnd.Range(-0.8f, 2.6f), 0f);
@@ -187,7 +192,7 @@ public class BoxGameManager : MonoBehaviour
       }
       else if (t.position.x >= line_vert_2_x_position && t.position.x < line_vert_3_x_position)
       {
-         if (!SetPositionOfCurrentElement(1))
+         if (!SetPositionPrivateFunction(1))
          {
             ResetALL();
             t.position = new Vector3(x_default_position, Rnd.Range(-0.8f, 2.6f), 0f);
@@ -195,7 +200,7 @@ public class BoxGameManager : MonoBehaviour
       }
       else if (t.position.x >= line_vert_3_x_position)
       {
-         if (!SetPositionOfCurrentElement(2))
+         if (!SetPositionPrivateFunction(2))
          {
             ResetALL();
             t.position = new Vector3(x_default_position, Rnd.Range(-0.8f, 2.6f), 0f);
