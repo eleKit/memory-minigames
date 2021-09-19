@@ -34,13 +34,13 @@ public class BoxGameManager : MonoBehaviour
    private bool[,] xy = new bool[Grid_Dimension, Grid_Dimension];
    private Sprite[,] xy_sprites = new Sprite[Grid_Dimension, Grid_Dimension];
 
-   private Sprite[] title_sprites = new Sprite[Grid_Dimension];
+   public Sprite[] title_sprites {get; private set;}
 
    public float x_default_position;
    public float y_default_position;
 
-   public Transform current_element_transform { get; private set; }
-   private SpriteRenderer current_element_sprite_renderer;
+   public Transform current_element_transform { get; private set; } //value used by hand mouse indicator
+   public SpriteRenderer current_element_sprite_renderer { get; private set; }
    private DragElement current_element_drag_script;
 
    public GameObject hand_mouse;
@@ -54,6 +54,7 @@ public class BoxGameManager : MonoBehaviour
 
    private void Start()
    {
+      title_sprites = new Sprite[Grid_Dimension];
       indexes_sequence_of_elements_to_instantiate = new List<int>();
       level_selector.SetupLevelGenerator();
       LoadLevelSelection();
