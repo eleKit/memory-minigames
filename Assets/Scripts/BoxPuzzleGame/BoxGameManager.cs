@@ -132,7 +132,7 @@ public class BoxGameManager : MonoBehaviour
    /// This function is called by arrow buttons to locate a box
    /// </summary>
    /// <param name="x_index">index of the button pressed</param>
-   public void SetPositionOfCurrentElement(int x_index)
+   public bool SetPositionOfCurrentElement(int x_index)
    {
       bool instantiate = ResetIndexes(current_element_drag_script.x_grid_index_current, current_element_drag_script.y_grid_index_current);
       bool done = false;
@@ -153,7 +153,12 @@ public class BoxGameManager : MonoBehaviour
       if (instantiate && done)
       {
          InstantiateNext();
+      } else if (done)
+      {
+         CheckWinAndNotInstantiate();
       }
+
+      return done;
    }
 
    #endregion
@@ -167,28 +172,45 @@ public class BoxGameManager : MonoBehaviour
 
       if (t.position.x < line_vert_1_x_position)
       {
-         ResetIndexes(current_element_drag_script.x_grid_index_current,
-            current_element_drag_script.y_grid_index_current);
-         current_element_drag_script.x_grid_index_current = -2;
-         current_element_drag_script.y_grid_index_current = -2;
+         ResetALL();
          //t.position = new Vector3(x_default_position, t.position.y, 0f);
          //TODO instantiate next here?
 
       }
       else if (t.position.x >= line_vert_1_x_position && t.position.x < line_vert_2_x_position)
       {
-         SetPositionOfCurrentElement(0);
+         if (!SetPositionOfCurrentElement(0))
+         {
+            ResetALL();
+            t.position = new Vector3(x_default_position, Rnd.Range(-0.8f, 2.6f), 0f);
+         }
       }
       else if (t.position.x >= line_vert_2_x_position && t.position.x < line_vert_3_x_position)
       {
-         SetPositionOfCurrentElement(1);
+         if (!SetPositionOfCurrentElement(1))
+         {
+            ResetALL();
+            t.position = new Vector3(x_default_position, Rnd.Range(-0.8f, 2.6f), 0f);
+         }
       }
       else if (t.position.x >= line_vert_3_x_position)
       {
-         SetPositionOfCurrentElement(2);
+         if (!SetPositionOfCurrentElement(2))
+         {
+            ResetALL();
+            t.position = new Vector3(x_default_position, Rnd.Range(-0.8f, 2.6f), 0f);
+         }
       }
 
 
+   }
+
+   private void ResetALL()
+   {
+      ResetIndexes(current_element_drag_script.x_grid_index_current,
+         current_element_drag_script.y_grid_index_current);
+      current_element_drag_script.x_grid_index_current = -2;
+      current_element_drag_script.y_grid_index_current = -2;
    }
 
    #endregion
@@ -263,20 +285,24 @@ public class BoxGameManager : MonoBehaviour
       }
       else
       {
-         StartCoroutine(CheckWin());
+         CheckWinAndStartCoroutine();
       }
+   }
+
+   private void CheckWinAndNotInstantiate()
+   {
+      if (index >= indexes_sequence_of_elements_to_instantiate.Count)
+      {
+         CheckWinAndStartCoroutine();
+      }
+
    }
 
    #endregion
 
    #region Win
 
-   public void StartWinCheckCoroutine()
-   {
-      StartCoroutine(CheckWin());
-   }
-
-   IEnumerator CheckWin()
+   private void CheckWinAndStartCoroutine()
    {
       bool win = true;
       for (int i = 0; i < Grid_Dimension; i++)
@@ -291,11 +317,17 @@ public class BoxGameManager : MonoBehaviour
          }
       }
 
-      yield return new WaitForSeconds(1f);
       if (win)
       {
-         LoadWinUI();
+         StartCoroutine(CheckWin());
       }
+   }
+
+   IEnumerator CheckWin()
+   {
+      yield return new WaitForSeconds(1f);
+      LoadWinUI();
+      
    }
 
    #endregion
