@@ -25,11 +25,14 @@ public class BoxGameManager : MonoBehaviour
    public float y_title_position;
    public float[] y_positions;
 
+   [Header("coordinates of sections to locate the box")]
    public float[] x_positions;
 
+   [Header("conditions used to select the section to locate the box ")]
    public float line_vert_1_x_position;
    public float line_vert_2_x_position;
    public float line_vert_3_x_position;
+   public float line_vert_overflow_x_position;
 
    private bool[,] xy = new bool[Grid_Dimension, Grid_Dimension];
    private Sprite[,] xy_sprites = new Sprite[Grid_Dimension, Grid_Dimension];
@@ -198,13 +201,18 @@ public class BoxGameManager : MonoBehaviour
             t.position = new Vector3(x_default_position, Rnd.Range(-0.8f, 2.6f), 0f);
          }
       }
-      else if (t.position.x >= line_vert_3_x_position)
+      else if (t.position.x >= line_vert_3_x_position && t.position.x < line_vert_overflow_x_position)
       {
          if (!SetPositionPrivateFunction(2))
          {
             ResetALL();
             t.position = new Vector3(x_default_position, Rnd.Range(-0.8f, 2.6f), 0f);
          }
+      } else if (t.position.x >= line_vert_overflow_x_position)
+      {
+         ResetALL();
+         //TODO avoid to reach this area
+         t.position = new Vector3(x_default_position, t.position.y, 0f);
       }
 
 
@@ -214,8 +222,12 @@ public class BoxGameManager : MonoBehaviour
    {
       ResetIndexes(current_element_drag_script.x_grid_index_current,
          current_element_drag_script.y_grid_index_current);
-      current_element_drag_script.x_grid_index_current = -2;
-      current_element_drag_script.y_grid_index_current = -2;
+      if (!(current_element_drag_script.x_grid_index_current == -1 &&
+          current_element_drag_script.y_grid_index_current == -1))
+      {
+         current_element_drag_script.x_grid_index_current = -2;
+         current_element_drag_script.y_grid_index_current = -2;
+      }
    }
 
    #endregion
