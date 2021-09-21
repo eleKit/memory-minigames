@@ -13,6 +13,8 @@ public class SaveNumPlayers : Singleton<SaveNumPlayers>
     }
 
     private PlayOptions play_option;
+
+    private HomeMenuManager.GameTypes game_type;
     void Awake()
     {
 
@@ -30,6 +32,7 @@ public class SaveNumPlayers : Singleton<SaveNumPlayers>
     void Start()
     {
         play_option = PlayOptions.none;
+        game_type = HomeMenuManager.GameTypes.none;
     }
 
     public void SetPlayOption(PlayOptions option)
@@ -60,6 +63,16 @@ public class SaveNumPlayers : Singleton<SaveNumPlayers>
     public void Set2Players()
     {
         play_option = PlayOptions.couple;
+    }
+
+    public void SetGameType(HomeMenuManager.GameTypes type)
+    {
+        game_type = type;
+    }
+
+    public HomeMenuManager.GameTypes GetGameType()
+    {
+        return game_type;
     }
     
 

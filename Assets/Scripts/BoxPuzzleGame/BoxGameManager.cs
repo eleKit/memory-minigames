@@ -50,6 +50,8 @@ public class BoxGameManager : MonoBehaviour
 
    private int index = 0;
 
+   public bool current_turn_is_player;
+
    [Header("game canvas")] public GameObject game_canvas;
    [Header("win canvas")] public GameObject win_element;
    [Header("levels canvas")] public GameObject level_canvas;
@@ -111,6 +113,7 @@ public class BoxGameManager : MonoBehaviour
 
       // instantiate the first interactable box
       IntantiateBox();
+      current_turn_is_player = true;
    }
    
 
@@ -137,7 +140,24 @@ public class BoxGameManager : MonoBehaviour
    /// <param name="x_index">index of the button pressed</param>
    public void SetPositionOfCurrentElement(int x_index)
    {
-      SetPositionPrivateFunction(x_index);
+      if (current_turn_is_player)
+      {
+         SetPositionPrivateFunction(x_index);
+      }
+   }
+   
+   public void SetPositionOfAgentElement(int x_index)
+   {
+      if (!current_turn_is_player)
+      {
+         SetPositionPrivateFunction(x_index);
+         
+      }
+   }
+
+   public void ChangeTurn()
+   {
+      current_turn_is_player = !current_turn_is_player;
    }
 
    private bool SetPositionPrivateFunction(int x_index)

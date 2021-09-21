@@ -70,6 +70,7 @@ public class HomeMenuManager : MonoBehaviour
     {
         if (!save_number_players.GetPlayOption().Equals(SaveNumPlayers.PlayOptions.none))
         {
+            save_number_players.SetGameType(current_game_type);
             switch (current_game_type)
             {
                 case GameTypes.memory:

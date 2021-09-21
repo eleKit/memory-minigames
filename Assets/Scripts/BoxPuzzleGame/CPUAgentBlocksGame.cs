@@ -23,7 +23,7 @@ public class CPUAgentBlocksGame : MonoBehaviour
         {
             if (box_game_manager.title_sprites[i].Equals(box_game_manager.current_element_sprite_renderer.sprite))
             {
-                box_game_manager.SetPositionOfCurrentElement(i);
+                box_game_manager.SetPositionOfAgentElement(i);
                 break;
             }
         }
@@ -31,6 +31,6 @@ public class CPUAgentBlocksGame : MonoBehaviour
 
     public void ExecuteRandomAction()
     {
-        box_game_manager.SetPositionOfCurrentElement(Random.Range(0,box_game_manager.title_sprites.Length));
+        box_game_manager.SetPositionOfAgentElement(Random.Range(0,box_game_manager.title_sprites.Length));
     }
 }

@@ -19,24 +19,33 @@ public class DragElement : MonoBehaviour
 
     private void OnMouseDrag()
     {
-        Vector3 curScreenPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 10);
+        if (box_game_manager.current_turn_is_player)
+        {
+            Vector3 curScreenPoint = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 10);
             Vector3 curPosition = Camera.main.ScreenToWorldPoint(curScreenPoint);
             this.GetComponent<Transform>().position = curPosition;
-            
+        }
+
     }
 
     private void OnMouseUp()
     {
-        //yield return new WaitForSeconds(0.2f);
-        box_game_manager.SetPositionBasedOnVector3(this.GetComponent<Transform>());
+        if (box_game_manager.current_turn_is_player)
+        {
+            //yield return new WaitForSeconds(0.2f);
+            box_game_manager.SetPositionBasedOnVector3(this.GetComponent<Transform>());
+        }
     }
 
     private void OnMouseDown()
     {
-        Transform me = this.GetComponent<Transform>();
-        if (!box_game_manager.current_element_transform.Equals(me))
+        if (box_game_manager.current_turn_is_player)
         {
-            box_game_manager.SetCurrentTransform(me);
+            Transform me = this.GetComponent<Transform>();
+            if (!box_game_manager.current_element_transform.Equals(me))
+            {
+                box_game_manager.SetCurrentTransform(me);
+            }
         }
     }
 }
