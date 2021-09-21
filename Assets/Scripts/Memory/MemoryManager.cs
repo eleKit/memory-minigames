@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using JetBrains.Annotations;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using Image = UnityEngine.UI.Image;
 
@@ -25,6 +26,9 @@ public class MemoryManager : MonoBehaviour
 
     private Sprite currentFlippedSprite;
 
+    public GameObject win_canvas_element;
+    public bool current_turn_is_player;
+
     
     // Start is called before the first frame update
     void Start()
@@ -43,6 +47,8 @@ public class MemoryManager : MonoBehaviour
         }
 
         CoverAllBacks();
+        win_canvas_element.SetActive(false);
+        current_turn_is_player = true;
     }
 
     // Update is called once per frame
@@ -121,8 +127,23 @@ public class MemoryManager : MonoBehaviour
         }
     }
 
-
     public void FlipCard(int index)
+    {
+        if (current_turn_is_player)
+        {
+            FlipCardPrivate(index);
+        }
+    }
+    
+    public void FlipCardAgent(int index)
+    {
+        if (!current_turn_is_player)
+        {
+            FlipCardPrivate(index);
+        }
+    }
+
+    private void FlipCardPrivate(int index)
     {
         Sprite s = cardsButtonsDictionary[index].animalFront.GetComponent<Image>().sprite;
         switch (flipped)
@@ -164,5 +185,36 @@ public class MemoryManager : MonoBehaviour
 
         flipped = 0;
 
+        if (CheckVictory())
+        {
+            //TODO win coroutine
+            win_canvas_element.SetActive(true);
+        }
+
+    }
+
+    private bool CheckVictory()
+    {
+        foreach (var key in cardsButtonsDictionary.Keys)
+        {
+            if (!cardsButtonsDictionary[key].won)
+            {
+                return false;
+            }
+        }
+
+        return true;
+    }
+    
+    public void ReloadLevel()
+    {
+        win_canvas_element.SetActive(false);
+        CoverAllBacks();
+        flipped = 0;
+    }
+    
+    public void LoadHomeMenu()
+    {
+        SceneManager.LoadSceneAsync("HomeScene");
     }
 }

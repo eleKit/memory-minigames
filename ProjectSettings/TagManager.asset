@@ -9,6 +9,7 @@ TagManager:
   - boxManager
   - box_title
   - save_number_players
+  - memoryManager
   layers:
   - Default
   - TransparentFX
