@@ -27,6 +27,8 @@ public class MemoryManager : MonoBehaviour
     private Sprite currentFlippedSprite;
 
     public GameObject win_canvas_element;
+    public GameObject game_canvas;
+    public GameObject level_selection_canvas;
     public bool current_turn_is_player;
 
     
@@ -204,6 +206,13 @@ public class MemoryManager : MonoBehaviour
         }
 
         return true;
+    }
+    
+    public void LoadLeveLUI()
+    {
+        game_canvas.SetActive(true);
+        level_selection_canvas.SetActive(false);
+        win_canvas_element.SetActive(false);
     }
     
     public void ReloadLevel()
