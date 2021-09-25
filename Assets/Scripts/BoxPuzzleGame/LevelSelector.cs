@@ -130,7 +130,7 @@ public class LevelSelector : MonoBehaviour
       
    }
 
-   private void GenerateStandardLevelArray(List<BoxesStandardLevels.OrderedDictionary> level_dictionary)
+   private void GenerateStandardLevelArray(List<OrderedDictionary> level_dictionary)
    {
       current_level_elements.Clear();
       foreach (var v in level_dictionary)

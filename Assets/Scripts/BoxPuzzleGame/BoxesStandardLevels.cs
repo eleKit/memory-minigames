@@ -10,12 +10,6 @@ public class BoxesStandardLevels
         public GameObject[] interactable_array;
     }
 
-    public class OrderedDictionary
-    {
-        public int key;
-        public int[] elements_indexes;
-    }
-  
     public List<OrderedDictionary> levelA = new List<OrderedDictionary>()
     {
         new OrderedDictionary() {key = 0, elements_indexes = new[] {0, 1, 2}},

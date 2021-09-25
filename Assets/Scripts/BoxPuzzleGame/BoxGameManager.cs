@@ -378,8 +378,7 @@ public class BoxGameManager : MonoBehaviour
 
    public void LoadLevelSelection()
    {
-      //TODO check if destroy all is useful here
-     // DestroyAll();
+      DestroyAll();
       StopAllCoroutines();
       game_canvas.SetActive(false);
       level_canvas.SetActive(true);
