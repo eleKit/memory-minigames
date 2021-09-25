@@ -12,6 +12,8 @@ public class BoxGameManager : MonoBehaviour
 
    private const int Elements_in_Grid = 9;
 
+   private const int number_of_arrays_of_levels = 5;
+
    /*public GameObject[] colour_title_elements;
    
    
@@ -78,8 +80,8 @@ public class BoxGameManager : MonoBehaviour
 
    public void GenerateRandomLevel()
    {
-      int random = Rnd.Range(0, 5);
-      level_selector.GenerateRandomSingleLevel(random);
+      int random = Rnd.Range(0, number_of_arrays_of_levels + 1);
+      level_selector.GenerateRandomSingleLevel(5);
       SetupLevel();
    }
 

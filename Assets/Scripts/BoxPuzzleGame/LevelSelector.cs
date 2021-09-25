@@ -21,6 +21,11 @@ public class LevelSelector : MonoBehaviour
    [Header("you MUST choose the same order for title and interactable arrays")]
    public GameObject[] others_title_array;
    public GameObject[] others_array;
+   [Header("you MUST choose the same order for title and interactable arrays")]
+   public GameObject[] letters_title_array;
+   public GameObject[] letters_array;
+    
+
 
    public List<LevelElements> current_level_elements{ get; private set; }
 
@@ -41,6 +46,8 @@ public class LevelSelector : MonoBehaviour
       standard_levels.AddToDictionary(2, heart_title_array, heart_array);
       standard_levels.AddToDictionary(3, stars_title_array, stars_array);
       standard_levels.AddToDictionary(4, others_title_array, others_array);
+      standard_levels.AddToDictionary(5, letters_title_array, letters_array);
+      
    }
    
    
@@ -91,10 +98,34 @@ public class LevelSelector : MonoBehaviour
          case 8:
             GenerateStandardLevelArray(standard_levels.level8);
             break;
-         case 9:
-            GenerateStandardLevelArray(standard_levels.level9);
+         case 10:
+            GenerateStandardLevelArray(standard_levels.levelABC);
             break;
-         
+         case 11:
+            GenerateStandardLevelArray(standard_levels.levelDEF);
+            break;
+         case 12:
+            GenerateStandardLevelArray(standard_levels.levelGHI);
+            break;
+         case 13:
+            GenerateStandardLevelArray(standard_levels.levelJKL);
+            break;
+         case 14:
+            GenerateStandardLevelArray(standard_levels.levelMNO);
+            break;
+         case 15:
+            GenerateStandardLevelArray(standard_levels.levelPQR);
+            break;
+         case 16:
+            GenerateStandardLevelArray(standard_levels.levelSTU);
+            break;
+         case 17:
+            GenerateStandardLevelArray(standard_levels.levelVWX);
+            break;
+         case 18:
+            GenerateStandardLevelArray(standard_levels.levelXYZ);
+            break;
+
       }
       
    }
@@ -136,6 +167,9 @@ public class LevelSelector : MonoBehaviour
             break;
          case 4:
             RandomSingleLevelArray(others_title_array, others_array);
+            break;
+         case 5:
+            RandomSingleLevelArray(letters_title_array, letters_array);
             break;
       }
       
