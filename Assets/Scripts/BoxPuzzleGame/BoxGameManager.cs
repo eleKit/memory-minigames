@@ -88,6 +88,7 @@ public class BoxGameManager : MonoBehaviour
    private void SetupLevel()
    {
        LoadLeveLUI();
+       DestroyAll();
        
        //instantiate the boxes symbols in the top area cof each column
        for (int i = 0; i < level_selector.current_level_elements.Count; i++)
@@ -358,6 +359,7 @@ public class BoxGameManager : MonoBehaviour
 
       if (win)
       {
+         Debug.Log("win");
          StartCoroutine(CheckWin());
       }
    }
@@ -376,13 +378,16 @@ public class BoxGameManager : MonoBehaviour
 
    public void LoadLevelSelection()
    {
+      //TODO check if destroy all is useful here
+     // DestroyAll();
+      StopAllCoroutines();
       game_canvas.SetActive(false);
       level_canvas.SetActive(true);
       win_element.SetActive(false);
       hand_mouse.SetActive(false);
    }
 
-   public void DestroyAll()
+   private void DestroyAll()
    {
       GameObject[] title_boxes = GameObject.FindGameObjectsWithTag("box_title");
       foreach (var go in title_boxes)
@@ -419,6 +424,7 @@ public class BoxGameManager : MonoBehaviour
    public void ReloadLevel()
    {
       win_element.SetActive(false);
+      StopAllCoroutines();
       GameObject[] interactable_boxes = GameObject.FindGameObjectsWithTag("box");
       foreach (var go in interactable_boxes)
       {
