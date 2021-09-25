@@ -480,40 +480,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   use_chibi: 0
   use_emoji: 0
-  animalSprites:
-  - {fileID: -8098351698983215534, guid: af55e06bb8a9f45e3983328405b297c7, type: 3}
-  - {fileID: -3715014106726905157, guid: a0e6b510bcbeb45c6b412099c2b39a9c, type: 3}
-  - {fileID: 4765248568253513043, guid: 7ea0056dacc934e2b9e1a0f035b025de, type: 3}
-  - {fileID: -7681667871606205702, guid: 489027f6deb064e689b3fb562bf4630a, type: 3}
-  - {fileID: -1286707764403392295, guid: b7ce0623574ba4fc3b6102a677eb6c7c, type: 3}
-  - {fileID: -8780714157294055251, guid: 7ea0056dacc934e2b9e1a0f035b025de, type: 3}
-  emojiSprites:
-  - {fileID: 8220708520127592286, guid: 5bdc2b2a7bccd47cc879f89a31906f42, type: 3}
-  - {fileID: 21300000, guid: e52cfdc6462b248978c31473263b64d8, type: 3}
-  - {fileID: 21300000, guid: ed7ac0fa5765449c2a1c47cc9462bfe7, type: 3}
-  - {fileID: -8583150262326572680, guid: 8a2e6c1ee6e7942de8c99ede4357da3c, type: 3}
-  - {fileID: 4815476061570213978, guid: 77ca4117238524d21b091cbac1bcff74, type: 3}
-  - {fileID: -7268858456151150532, guid: 8a2e6c1ee6e7942de8c99ede4357da3c, type: 3}
-  chibiSprites:
-  - {fileID: 21300000, guid: 4406465d9db61ed4b8e18c212b5b94f2, type: 3}
-  - {fileID: 21300000, guid: 1f0452ea2f2637a44902634aeca67993, type: 3}
-  - {fileID: 21300000, guid: e4d1eac17c35dbe4daf0fc13992e5bc3, type: 3}
-  - {fileID: 21300000, guid: 524712abb894db54cad4e257bff90eba, type: 3}
-  - {fileID: 21300000, guid: 69791a9266803c746a1e3fde8bbd0b05, type: 3}
-  - {fileID: 21300000, guid: eaa41b6eb1d10604e9755ca0bf5ec8a5, type: 3}
-  cards:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  cards: []
+  level_selector: {fileID: 1638458358}
   flipped: 0
   win_canvas_element: {fileID: 736395425}
   game_canvas: {fileID: 621617399}
@@ -1642,8 +1610,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 56852651}
         m_TargetAssemblyTypeName: MemoryManager, Assembly-CSharp
-        m_MethodName: LoadLeveLUI
-        m_Mode: 1
+        m_MethodName: GenerateLevel
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -2358,8 +2326,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 56852651}
         m_TargetAssemblyTypeName: MemoryManager, Assembly-CSharp
-        m_MethodName: LoadLeveLUI
-        m_Mode: 1
+        m_MethodName: GenerateLevel
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -6719,7 +6687,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1169073069
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8460,7 +8428,7 @@ GameObject:
   - component: {fileID: 1638458359}
   - component: {fileID: 1638458358}
   m_Layer: 0
-  m_Name: MemorySpritesLevel
+  m_Name: MemoryLevelSelector
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8508,7 +8476,6 @@ MonoBehaviour:
   - {fileID: 21300000, guid: e52cfdc6462b248978c31473263b64d8, type: 3}
   - {fileID: -8583150262326572680, guid: 8a2e6c1ee6e7942de8c99ede4357da3c, type: 3}
   - {fileID: -7268858456151150532, guid: 8a2e6c1ee6e7942de8c99ede4357da3c, type: 3}
-  - {fileID: 8283717833697745822, guid: 8a2e6c1ee6e7942de8c99ede4357da3c, type: 3}
   chibiSprites:
   - {fileID: 21300000, guid: 5e103d0db70200d48ae4a7c4449e0d51, type: 3}
   - {fileID: 21300000, guid: 1f0452ea2f2637a44902634aeca67993, type: 3}
@@ -10079,8 +10046,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 56852651}
         m_TargetAssemblyTypeName: MemoryManager, Assembly-CSharp
-        m_MethodName: LoadLeveLUI
-        m_Mode: 1
+        m_MethodName: GenerateLevel
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -10424,8 +10391,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 56852651}
         m_TargetAssemblyTypeName: MemoryManager, Assembly-CSharp
-        m_MethodName: LoadLeveLUI
-        m_Mode: 1
+        m_MethodName: GenerateLevel
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

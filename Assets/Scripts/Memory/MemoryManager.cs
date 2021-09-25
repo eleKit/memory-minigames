@@ -9,15 +9,12 @@ using Image = UnityEngine.UI.Image;
 
 public class MemoryManager : MonoBehaviour
 {
-    public bool use_chibi;
-    public bool use_emoji;
-    
-    public Sprite[] animalSprites;
-    public Sprite[] emojiSprites;
-    public Sprite[] chibiSprites;
-
     public Dictionary<int, MemoryCard> cardsButtonsDictionary;
     public List<MemoryCard> cards;
+
+    private List<Sprite> sprites;
+    
+    public MemoryLevelSelector level_selector;
 
     public int flipped = 0;
 
@@ -35,21 +32,16 @@ public class MemoryManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        level_selector.SetupLevelGenerator();
         InstantiateCards();
-        if (use_chibi)
-        {
-            SetupGame(chibiSprites);
-        } else if (use_emoji)
-        {
-            SetupGame(emojiSprites);
-        }
-        else
-        {
-            SetupGame(animalSprites);
-        }
-
+    }
+    
+    public void GenerateLevel(int level)
+    {
+        sprites = level_selector.GenerateLevel(level);
+        SetupGame();
         CoverAllBacks();
-        win_canvas_element.SetActive(false);
+        LoadLeveLUI();
         current_turn_is_player = true;
     }
 
@@ -88,7 +80,7 @@ public class MemoryManager : MonoBehaviour
 
     }
 
-    void SetupGame(Sprite[] sprites)
+    void SetupGame()
     {
         flipped = 0;
 
@@ -208,7 +200,7 @@ public class MemoryManager : MonoBehaviour
         return true;
     }
     
-    public void LoadLeveLUI()
+    private void LoadLeveLUI()
     {
         game_canvas.SetActive(true);
         level_selection_canvas.SetActive(false);
