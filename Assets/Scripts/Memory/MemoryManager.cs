@@ -9,8 +9,9 @@ using Image = UnityEngine.UI.Image;
 
 public class MemoryManager : MonoBehaviour
 {
-    public Dictionary<int, MemoryCard> cardsButtonsDictionary;
+    
     public List<MemoryCard> cards;
+    private Dictionary<int, MemoryCard> cardsButtonsDictionary;
 
     private List<Sprite> sprites;
     
@@ -34,6 +35,7 @@ public class MemoryManager : MonoBehaviour
     {
         level_selector.SetupLevelGenerator();
         InstantiateCards();
+        LoadLevelMenu();
     }
     
     public void GenerateLevel(string level)
@@ -171,13 +173,11 @@ public class MemoryManager : MonoBehaviour
         //TODO positive feedback
         if (win)
         {
-            Debug.Log("hai vinto");
             cardsButtonsDictionary[first_card_index].won = true;
             cardsButtonsDictionary[second_card_index].won = true;
         }
         else
         {
-            Debug.Log("hai perso");
             yield return new WaitForSeconds(2f);
             CoverLoseBacks();
         }
@@ -209,6 +209,13 @@ public class MemoryManager : MonoBehaviour
     {
         game_canvas.SetActive(true);
         level_selection_canvas.SetActive(false);
+        win_canvas_element.SetActive(false);
+    }
+
+    public void LoadLevelMenu()
+    {
+        game_canvas.SetActive(false);
+        level_selection_canvas.SetActive(true);
         win_canvas_element.SetActive(false);
     }
     

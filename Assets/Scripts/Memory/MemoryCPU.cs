@@ -5,6 +5,8 @@ using UnityEngine;
 public class MemoryCPU : MonoBehaviour
 {
     private MemoryManager memoryManager;
+
+    private Sprite currentFlippedSprite;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,5 +17,11 @@ public class MemoryCPU : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void ExecuteFirstRandomAction()
+    {
+        memoryManager.FlipCardAgent(Random.Range(0,13));
+        //currentFlippedSprite = memoryManager.c
     }
 }

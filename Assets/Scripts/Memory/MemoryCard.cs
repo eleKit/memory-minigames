@@ -9,5 +9,6 @@ public class MemoryCard : MonoBehaviour
     public GameObject animalFront;
     public GameObject backCard;
     public bool won;
+    public bool turned_once;
 }
 
