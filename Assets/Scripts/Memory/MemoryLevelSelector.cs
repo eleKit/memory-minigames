@@ -30,21 +30,45 @@ public class MemoryLevelSelector : MonoBehaviour
 
     }
 
-    public List<Sprite> GenerateLevel(int level)
+    public List<Sprite> GenerateLevel(string level)
     {
         switch (level)
         {
-            case 0:
+            case "A1":
                 return GenerateStandardLevelArray(levels.levelAnimal1);
-            case 1:
-                return GenerateStandardLevelArray(levels.levelChibi1);
-            case 2:
+            case "A2":
+                return GenerateStandardLevelArray(levels.levelAnimal2);
+            case "A3":
+                return GenerateStandardLevelArray(levels.levelAnimal3);
+            case "A4":
+                return GenerateStandardLevelArray(levels.levelAnimal4);
+            case "A5":
+                return GenerateStandardLevelArray(levels.levelAnimal5);
+            case "E":
+                return GenerateStandardLevelArray(levels.levelEmoji);
+            case "I":
                 return GenerateStandardLevelArray(levels.levelItems);
-            case 3:
+            case "C1":
+                return GenerateStandardLevelArray(levels.levelChibi1);
+            case "C2":
+                return GenerateStandardLevelArray(levels.levelChibi2);
+            case "C3":
+                return GenerateStandardLevelArray(levels.levelChibi3);
+            case "C4":
+                return GenerateStandardLevelArray(levels.levelChibi4);
+            case "L1":
                 return GenerateStandardLevelArray(levels.levelLetters1);
+            case "L2":
+                return GenerateStandardLevelArray(levels.levelLetters2);
+            case "L3":
+                return GenerateStandardLevelArray(levels.levelLetters3);
+            case "L4":
+                return GenerateStandardLevelArray(levels.levelLetters4);
+            case "L5":
+                return GenerateStandardLevelArray(levels.levelLetters5);
         }
 
-        return GenerateStandardLevelArray(levels.levelChibi2);
+        return GenerateStandardLevelArray(levels.levelAnimal1);
     }
 
     private List<Sprite> GenerateStandardLevelArray(List<OrderedDictionary> level_dictionary)

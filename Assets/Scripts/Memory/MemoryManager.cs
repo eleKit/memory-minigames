@@ -36,7 +36,7 @@ public class MemoryManager : MonoBehaviour
         InstantiateCards();
     }
     
-    public void GenerateLevel(int level)
+    public void GenerateLevel(string level)
     {
         sprites = level_selector.GenerateLevel(level);
         SetupGame();
@@ -51,6 +51,9 @@ public class MemoryManager : MonoBehaviour
 
     }
 
+    #region Initialization
+
+    
     void InstantiateCards()
     {
         cards = new List<MemoryCard>();
@@ -100,6 +103,8 @@ public class MemoryManager : MonoBehaviour
             }
         }
     }
+    
+    #endregion
 
     void CoverAllBacks()
     {
