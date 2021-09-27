@@ -9,6 +9,20 @@ public class MemoryCard : MonoBehaviour
     public GameObject animalFront;
     public GameObject backCard;
     public bool won;
-    public bool turned_once;
 }
+
+
+public class MemoryCPUFlippedCard
+{
+    public Sprite s;
+    public int index;
+
+    public MemoryCPUFlippedCard(Sprite sp, int i)
+    {
+        s = sp;
+        index = i;
+    }
+}
+
+
 
