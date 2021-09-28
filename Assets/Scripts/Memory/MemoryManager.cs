@@ -9,8 +9,6 @@ using Image = UnityEngine.UI.Image;
 
 public class MemoryManager : MonoBehaviour
 {
-    
-    public List<MemoryCard> cards;
     private Dictionary<int, MemoryCard> cardsButtonsDictionary;
 
     private List<Sprite> sprites;
@@ -61,13 +59,11 @@ public class MemoryManager : MonoBehaviour
     
     void InstantiateCards()
     {
-        cards = new List<MemoryCard>();
         cardsButtonsDictionary = new Dictionary<int, MemoryCard>();
         var fowt = GameObject.FindGameObjectsWithTag("card");
         for(int i =0; i < fowt.Length; i++)
         {
             var mc = fowt[i].GetComponent<MemoryCard>();
-            cards.Add(mc);
             cardsButtonsDictionary.Add(i,mc);
         }
     }
@@ -91,8 +87,10 @@ public class MemoryManager : MonoBehaviour
     void SetupGame()
     {
         flipped = 0;
+
+        List<int> cards_indexes = new List<int>(cardsButtonsDictionary.Keys);
         
-        ShuffleList(cards);
+        ShuffleList(cards_indexes);
         
         int keyOfIndexes = 0;
 
@@ -103,15 +101,15 @@ public class MemoryManager : MonoBehaviour
         {
             for (int j=0; j< 2; j++)
             {
-                if (keyOfIndexes < cards.Count)
+                if (keyOfIndexes < cards_indexes.Count)
                 {
-                    cards[keyOfIndexes].animalFront.GetComponent<Image>().sprite = sprite;
+                    cardsButtonsDictionary[cards_indexes[keyOfIndexes]].animalFront.GetComponent<Image>().sprite = sprite;
                     keyOfIndexes++;
                 }
             }
             
-            cpu_cards.Add(new MemoryCPUFlippedCard(sprite, keyOfIndexes-2, keyOfIndexes-1));
-            cpu_cards.Add(new MemoryCPUFlippedCard(sprite, keyOfIndexes-1, keyOfIndexes-2));
+            cpu_cards.Add(new MemoryCPUFlippedCard(sprite, cards_indexes[keyOfIndexes-2], cards_indexes[keyOfIndexes-1]));
+            cpu_cards.Add(new MemoryCPUFlippedCard(sprite, cards_indexes[keyOfIndexes-1], cards_indexes[keyOfIndexes-2]));
         }
 
         cpu_UPDATER.SetupMatrixCardsCoordinates(cpu_cards);
@@ -121,10 +119,10 @@ public class MemoryManager : MonoBehaviour
 
     void CoverAllBacks()
     {
-        foreach (var card in cards)
+        foreach (var card in cardsButtonsDictionary.Keys)
         {
-            card.backCard.SetActive(true);
-            card.won = false;
+            cardsButtonsDictionary[card].backCard.SetActive(true);
+            cardsButtonsDictionary[card].won = false;
         }
         cpu_UPDATER.ResetFlippedList();
     }

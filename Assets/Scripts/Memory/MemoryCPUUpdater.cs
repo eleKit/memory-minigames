@@ -37,7 +37,6 @@ public class MemoryCPUUpdater : MonoBehaviour
             }
         }
         
-        Debug.Log("cpu cards size:" + cards.Count);
 
     }
 
