@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class MemoryCPUUpdater : MonoBehaviour
 {
@@ -11,20 +12,16 @@ public class MemoryCPUUpdater : MonoBehaviour
 
     public MemoryCPUFlippedCard tmp_card;
 
-    public Dictionary<Sprite, int> cardButtonsInverseDictionary;
-    
-    public MemoryCPUFlippedCard []  cardsMatrix = new MemoryCPUFlippedCard [GRID_SIZE *2];
+    public MemoryCPUFlippedCard []  cardsArray = new MemoryCPUFlippedCard [GRID_SIZE *2];
+    public List<MemoryCPUFlippedCard> seenCards = new List<MemoryCPUFlippedCard>();
 
     private void Start()
     {
-        cardButtonsInverseDictionary = new Dictionary<Sprite, int>();
-       // indexesOfSpritesAlreadySeen = new Queue<int>();
     }
 
     public void ResetFlippedList()
     {
-       // indexesOfSpritesAlreadySeen.Clear();
-        cardButtonsInverseDictionary.Clear();
+       
     }
 
     public void SetupMatrixCardsCoordinates(List<MemoryCPUFlippedCard> cards)
@@ -33,10 +30,62 @@ public class MemoryCPUUpdater : MonoBehaviour
         {
             foreach (var c in cards)
             {
-                cardsMatrix[c.index] = c;
+                cardsArray[c.index] = c;
             }
         }
         
+
+    }
+
+    public void SetSeenCard(int index)
+    {
+        cardsArray[index].seen = true;
+        seenCards.Add(cardsArray[index]);
+    }
+
+    public void SetWonCouple(int index, bool won)
+    {
+        MemoryCPUFlippedCard c = cardsArray[index];
+        c.seen = true;
+        if (won)
+        {
+            c.won = true;
+            cardsArray[c.other_index].won = true;
+            seenCards.Remove(cardsArray[c.other_index]);
+        }
+        else
+        {
+            seenCards.Add(cardsArray[index]);
+        }
+    }
+
+    public MemoryCPUFlippedCard GetFirstSeenCard()
+    {
+        if(seenCards.Count > 0)
+            return seenCards[Random.Range(0, seenCards.Count)];
+        /*foreach (MemoryCPUFlippedCard c in cardsArray)
+        {
+            if (c.seen && !c.won)
+            {
+                return c;
+            }
+        }*/
+
+        /*foreach (MemoryCPUFlippedCard c in cardsArray)
+        {
+            if (c.won == false)
+            {
+                return c;
+            }
+        }*/
+
+        return new MemoryCPUFlippedCard(null, 0, 0, true);
+    }
+
+    public bool CheckIfSecondIsSeen(MemoryCPUFlippedCard card)
+    {
+
+        return cardsArray[card.other_index].seen;
 
     }
 

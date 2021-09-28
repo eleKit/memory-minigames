@@ -165,13 +165,13 @@ public class MemoryManager : MonoBehaviour
                 currentFlippedSprite = s;
                 first_card_index = index;
                 cardsButtonsDictionary[index].backCard.SetActive(false);
-                //cpu_UPDATER.tmp_card = new MemoryCPUFlippedCard(s, index);
+                cpu_UPDATER.SetSeenCard(index);
                 break;
             case 2:
                 second_card_index = index;
                 cardsButtonsDictionary[index].backCard.SetActive(false);
                 bool win = currentFlippedSprite.Equals(s);
-                //cpu_UPDATER.AddPairData(new MemoryCPUFlippedCard(s, index), win);
+                cpu_UPDATER.SetWonCouple(index,win);
                 StartCoroutine(CheckWin(win));
                 break;
             default:

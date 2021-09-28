@@ -19,14 +19,16 @@ public class MemoryCPUFlippedCard
     public int other_index;
     public bool won;
     public bool seen;
+    public bool ERROR_CARD;
 
-    public MemoryCPUFlippedCard(Sprite sp, int i, int o)
+    public MemoryCPUFlippedCard(Sprite sp, int i, int o, bool ERROR = false)
     {
         s = sp;
         index = i;
         other_index = o;
         won = false;
         seen = false;
+        ERROR_CARD = ERROR;
     }
 }
 
