@@ -5,26 +5,54 @@ using UnityEngine;
 
 public class MemoryCPUUpdater : MonoBehaviour
 {
-    public List<int> indexesOfSpritesAlreadySeen;
+    private const int GRID_SIZE = 6;
+    
+    //public Queue<int> indexesOfSpritesAlreadySeen;
 
     public MemoryCPUFlippedCard tmp_card;
 
     public Dictionary<Sprite, int> cardButtonsInverseDictionary;
+    
+    public MemoryCPUFlippedCard []  cardsMatrix = new MemoryCPUFlippedCard [GRID_SIZE *2];
 
     private void Start()
     {
         cardButtonsInverseDictionary = new Dictionary<Sprite, int>();
-        indexesOfSpritesAlreadySeen = new List<int>();
+       // indexesOfSpritesAlreadySeen = new Queue<int>();
     }
 
     public void ResetFlippedList()
     {
-        indexesOfSpritesAlreadySeen.Clear();
+       // indexesOfSpritesAlreadySeen.Clear();
         cardButtonsInverseDictionary.Clear();
+    }
+
+    public void SetupMatrixCardsCoordinates(List<MemoryCPUFlippedCard> cards)
+    {
+        if (cards.Count == GRID_SIZE * 2)
+        {
+            foreach (var c in cards)
+            {
+                cardsMatrix[c.index] = c;
+            }
+        }
+        
+        Debug.Log("cpu cards size:" + cards.Count);
+
     }
 
     public void AddPairData(MemoryCPUFlippedCard c, bool win)
     {
+        if (win)
+        {
+            //nothing + remember to remove the pair if previously saved in the list of seen
+        }
+        else
+        {
+          // add both tmp card and current card c in the dictionary
+          // if one already exists (check also the index) add it into the list
+        }
+        
         /*TODO gestire 4 casi:
          1) si è vinto
          2) si è perso e nessuna carta era uscita mai
@@ -37,5 +65,10 @@ public class MemoryCPUUpdater : MonoBehaviour
          quando si vince gli indici vanno sempre tolti dalla lista
          
          */
+    }
+
+    public void CleanPairsUsed()
+    {
+        
     }
 }

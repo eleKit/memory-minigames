@@ -91,10 +91,13 @@ public class MemoryManager : MonoBehaviour
     void SetupGame()
     {
         flipped = 0;
-
+        
         ShuffleList(cards);
         
         int keyOfIndexes = 0;
+
+        List<MemoryCPUFlippedCard> cpu_cards = new List<MemoryCPUFlippedCard>();
+        
 
         foreach (var sprite in sprites)
         {
@@ -106,7 +109,12 @@ public class MemoryManager : MonoBehaviour
                     keyOfIndexes++;
                 }
             }
+            
+            cpu_cards.Add(new MemoryCPUFlippedCard(sprite, keyOfIndexes-2, keyOfIndexes-1));
+            cpu_cards.Add(new MemoryCPUFlippedCard(sprite, keyOfIndexes-1, keyOfIndexes-2));
         }
+
+        cpu_UPDATER.SetupMatrixCardsCoordinates(cpu_cards);
     }
     
     #endregion
@@ -140,18 +148,16 @@ public class MemoryManager : MonoBehaviour
         }
     }
     
-    public MemoryCPUFlippedCard FlipCardAgent(int index)
+    public void FlipCardAgent(int index)
     {
-        MemoryCPUFlippedCard mfc = null;
         if (!current_turn_is_player)
         {
-            mfc= FlipCardPrivate(index);
+            FlipCardPrivate(index);
         }
-
-        return mfc;
+        
     }
 
-    private MemoryCPUFlippedCard FlipCardPrivate(int index)
+    private void FlipCardPrivate(int index)
     {
         flipped++;
         Sprite s = cardsButtonsDictionary[index].animalFront.GetComponent<Image>().sprite;
@@ -161,21 +167,19 @@ public class MemoryManager : MonoBehaviour
                 currentFlippedSprite = s;
                 first_card_index = index;
                 cardsButtonsDictionary[index].backCard.SetActive(false);
-                cpu_UPDATER.tmp_card = new MemoryCPUFlippedCard(s, index);
+                //cpu_UPDATER.tmp_card = new MemoryCPUFlippedCard(s, index);
                 break;
             case 2:
                 second_card_index = index;
                 cardsButtonsDictionary[index].backCard.SetActive(false);
                 bool win = currentFlippedSprite.Equals(s);
-                cpu_UPDATER.AddPairData(new MemoryCPUFlippedCard(s, index), win);
+                //cpu_UPDATER.AddPairData(new MemoryCPUFlippedCard(s, index), win);
                 StartCoroutine(CheckWin(win));
                 break;
             default:
                 break;
 
         }
-        
-        return new MemoryCPUFlippedCard(s, index);
     }
 
     IEnumerator CheckWin(bool win)

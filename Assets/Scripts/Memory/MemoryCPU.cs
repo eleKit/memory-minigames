@@ -27,21 +27,21 @@ public class MemoryCPU : MonoBehaviour
 
     public void ExecuteFirstRandomAction()
     {
-        currentFlippedCard = memoryManager.FlipCardAgent(Random.Range(0,NUMBER_OF_CARDS +1));
+       memoryManager.FlipCardAgent(Random.Range(0,NUMBER_OF_CARDS +1));
     }
 
     public void ExecuteFirstReasonedAction()
     {
-        var length = cpu_UPDATER.indexesOfSpritesAlreadySeen.Count;
+       /* var length = cpu_UPDATER.indexesOfSpritesAlreadySeen.Count;
         if(length > 0)
         {
             currentFlippedCard =
-                memoryManager.FlipCardAgent(cpu_UPDATER.indexesOfSpritesAlreadySeen[Random.Range(0, length)]);
+                memoryManager.FlipCardAgent(cpu_UPDATER.indexesOfSpritesAlreadySeen.Dequeue());
         }
         else
         {
             ExecuteFirstRandomAction();
-        }     
+        }     */
     }
 
     public void ExecuteSecondSuccessActionIfPossible()

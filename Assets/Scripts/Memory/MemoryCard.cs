@@ -16,11 +16,17 @@ public class MemoryCPUFlippedCard
 {
     public Sprite s;
     public int index;
+    public int other_index;
+    public bool won;
+    public bool seen;
 
-    public MemoryCPUFlippedCard(Sprite sp, int i)
+    public MemoryCPUFlippedCard(Sprite sp, int i, int o)
     {
         s = sp;
         index = i;
+        other_index = o;
+        won = false;
+        seen = false;
     }
 }
 
