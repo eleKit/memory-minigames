@@ -39,7 +39,7 @@ public class MemoryManager : MonoBehaviour
     {
         sprites = level_selector.GenerateLevel(level);
         LoadLeveLUI();
-        CoverAllBacks();
+        CleanLevel();
         SetupGame();
         current_turn_is_player = true;
     }
@@ -115,6 +115,18 @@ public class MemoryManager : MonoBehaviour
     #endregion
 
     void CoverAllBacks()
+    {
+        foreach (var go in memoryDataManager.fixed_cards.Values)
+        {
+            go.backCard.SetActive(true);
+            go.won = false;
+            go.seen = false;
+        }
+        
+        memoryDataManager.ClearDataLists();
+    }
+
+    void CleanLevel()
     {
         memoryDataManager.ResetFlippedList();
     }
@@ -228,6 +240,7 @@ public class MemoryManager : MonoBehaviour
     {
         win_canvas_element.SetActive(false);
         CoverAllBacks();
+        memoryDataManager.SetupNotWonCards();
         flipped = 0;
     }
     

@@ -13,10 +13,7 @@ public class MemoryDataManager : MonoBehaviour
     public Dictionary<int,MemoryCard> fixed_cards = new Dictionary<int, MemoryCard>();
     public Dictionary<int,MemoryCard> seenCards = new Dictionary<int,MemoryCard>();
     public Dictionary<int, MemoryCard> notWonCards = new Dictionary<int,MemoryCard>();
-
-    private void Start()
-    {
-    }
+    
 
     public void ResetFlippedList()
     {
@@ -26,6 +23,11 @@ public class MemoryDataManager : MonoBehaviour
             fixed_cards[key].ResetCard();
         }
         
+        ClearDataLists();
+    }
+
+    public void ClearDataLists()
+    {
         seenCards.Clear();
         notWonCards.Clear();
     }
@@ -49,18 +51,6 @@ public class MemoryDataManager : MonoBehaviour
         seenCards.Remove(key);
     }
 
-    /*public void SetupMatrixCardsCoordinates(List<MemoryCard> cards)
-    {
-        if (cards.Count == GRID_SIZE * 2)
-        {
-            foreach (var c in cards)
-            {
-                cardsArray[c.index] = c;
-            }
-        }
-        
-    }*/
-
     public void SetSeenCard(int index)
     {
         fixed_cards[index].seen = true;
@@ -81,12 +71,10 @@ public class MemoryDataManager : MonoBehaviour
         {
             c.won = true;
             fixed_cards[c.other_index].won = true;
-            Debug.Log("Removed cards, index: " + fixed_cards[c.other_index].index + " other index: " + fixed_cards[c.other_index].other_index);
-            Debug.Log("Removed cards, index: " + fixed_cards[c.index].index + "other index: " + fixed_cards[c.index].other_index);
             RemoveSeenCard(c.other_index);
             RemoveSeenCard(c.index);
             RemoveWonCard(c.other_index);
-            RemoveSeenCard(c.index);
+            RemoveWonCard(c.index);
            
         }
         else
@@ -94,24 +82,7 @@ public class MemoryDataManager : MonoBehaviour
             SetSeenCard(index);
         }
     }
-
-    /*public void LogList()
-    {
-        foreach (var c in seenCards.Keys)
-        {
-            Debug.Log("Added Card Array Values, index: " + seenCards[c].index + " other index: " + seenCards[c].other_index);
-        }
-        
-        Debug.Log("List size finished loop " + seenCards.Keys.Count);
-    }*/
-
-   /* public void LogArray()
-    {
-        foreach (var c in fixed_cards.Keys)
-        {
-            Debug.Log("Card Array Values, index: " + fixed_cards[c].index + ", other index: " + fixed_cards[c].other_index);
-        }
-    }*/
+    
 
     public MemoryCard GetFirstSeenCard()
     {
