@@ -19,10 +19,16 @@ public class MemoryDataManager : MonoBehaviour
 
     public void ResetFlippedList()
     {
-       
+        foreach (var card in cardsArray)
+        {
+            card.backCard.SetActive(true);
+            card.ResetCard();
+        }
+        
+        seenCards.Clear();
     }
 
-    public void SetupMatrixCardsCoordinates(List<MemoryCard> cards)
+    /*public void SetupMatrixCardsCoordinates(List<MemoryCard> cards)
     {
         if (cards.Count == GRID_SIZE * 2)
         {
@@ -32,8 +38,7 @@ public class MemoryDataManager : MonoBehaviour
             }
         }
         
-
-    }
+    }*/
 
     public void SetSeenCard(int index)
     {
@@ -57,9 +62,8 @@ public class MemoryDataManager : MonoBehaviour
             cardsArray[c.other_index].won = true;
             Debug.Log("Removed cards, index: " + cardsArray[c.other_index].index + " other index: " + cardsArray[c.other_index].other_index);
             Debug.Log("Removed cards, index: " + cardsArray[c.index].index + "other index: " + cardsArray[c.index].other_index);
-            Debug.Log("1) true?: " + seenCards.Remove(c.other_index));
-            Debug.Log("2) true?: " + seenCards.Remove(c.index));
-            LogList();
+            seenCards.Remove(c.other_index);
+            seenCards.Remove(c.index);
            
         }
         else
@@ -68,7 +72,7 @@ public class MemoryDataManager : MonoBehaviour
         }
     }
 
-    public void LogList()
+    /*public void LogList()
     {
         foreach (var c in seenCards.Keys)
         {
@@ -76,7 +80,7 @@ public class MemoryDataManager : MonoBehaviour
         }
         
         Debug.Log("List size finished loop " + seenCards.Keys.Count);
-    }
+    }*/
 
     public MemoryCard GetFirstSeenCard()
     {

@@ -5,7 +5,7 @@ using UnityEngine;
 public class MemoryCPU : MonoBehaviour
 {
     private const int NUMBER_OF_CARDS = 11;
-    private MemoryDataManager cpu_UPDATER;
+    private MemoryDataManager memoryDataManager;
     private MemoryManager memoryManager;
 
     private MemoryCard card;
@@ -15,7 +15,7 @@ public class MemoryCPU : MonoBehaviour
     void Start()
     {
         memoryManager = GameObject.FindGameObjectWithTag("memoryManager").GetComponent<MemoryManager>();
-        cpu_UPDATER = GameObject.FindGameObjectWithTag("memoryCPUupdater").GetComponent<MemoryDataManager>();
+        memoryDataManager = GameObject.FindGameObjectWithTag("memoryCPUupdater").GetComponent<MemoryDataManager>();
         card = new MemoryCard( 0, 0, true);
     }
 
@@ -28,7 +28,7 @@ public class MemoryCPU : MonoBehaviour
     public void ExecuteFirstRandomAction()
     {
         var tmp_index = Random.Range(0,NUMBER_OF_CARDS +1);
-        while (cpu_UPDATER.GetCardAtIndex(tmp_index).won)
+        while (memoryDataManager.GetCardAtIndex(tmp_index).won)
         {
             tmp_index = Random.Range(0,NUMBER_OF_CARDS +1);
         }
@@ -38,7 +38,7 @@ public class MemoryCPU : MonoBehaviour
 
     public void ExecuteFirstReasonedAction()
     {
-        card = cpu_UPDATER.GetFirstSeenCard();
+        card = memoryDataManager.GetFirstSeenCard();
 //        Debug.Log("first index action" + card.index);
         if(!card.ERROR_CARD) 
         {memoryManager.FlipCardAgent(card.index);}
@@ -51,7 +51,7 @@ public class MemoryCPU : MonoBehaviour
     public void ExecuteSecondSuccessActionIfPossible()
     {
         //Debug.Log("second index possible action" + card.other_index + "\n" + "is seen? " + cpu_UPDATER.CheckIfSecondIsSeen(card));
-        if(cpu_UPDATER.CheckIfSecondIsSeen(card))
+        if(memoryDataManager.CheckIfSecondIsSeen(card))
         {
             memoryManager.FlipCardAgent(card.other_index);
         }
@@ -64,7 +64,7 @@ public class MemoryCPU : MonoBehaviour
     public void ExecuteSecondRandomAction()
     {
         var tmp_index = Random.Range(0,NUMBER_OF_CARDS +1);
-        while (tmp_index == card.index || cpu_UPDATER.GetCardAtIndex(tmp_index).won)
+        while (tmp_index == card.index || memoryDataManager.GetCardAtIndex(tmp_index).won)
         {
             tmp_index = Random.Range(0,NUMBER_OF_CARDS +1);
         }

@@ -9,8 +9,8 @@ using Image = UnityEngine.UI.Image;
 
 public class MemoryManager : MonoBehaviour
 {
-    private List<MemoryCard> tmp_cards;
-    
+    private Dictionary<int,MemoryCard> fixed_cards;
+
     private List<Sprite> sprites;
     
     public MemoryLevelSelector level_selector;
@@ -34,7 +34,7 @@ public class MemoryManager : MonoBehaviour
     void Start()
     {
         memoryDataManager = GameObject.FindGameObjectWithTag("memoryCPUupdater").GetComponent<MemoryDataManager>();
-        tmp_cards = new List<MemoryCard>();
+        fixed_cards = new Dictionary<int, MemoryCard>();
         level_selector.SetupLevelGenerator();
         InstantiateCards();
         LoadLevelMenu();
@@ -61,10 +61,10 @@ public class MemoryManager : MonoBehaviour
     void InstantiateCards()
     {
         var fowt = GameObject.FindGameObjectsWithTag("card");
-        foreach (var t in fowt)
+        for (int i = 0; i<fowt.Length; i++)
         {
-            var mc = t.GetComponent<MemoryCard>();
-            tmp_cards.Add(mc);
+            var mc = fowt[i].GetComponent<MemoryCard>();
+            fixed_cards.Add(i,mc);
         }
     }
 
@@ -88,19 +88,20 @@ public class MemoryManager : MonoBehaviour
     {
         flipped = 0;
 
-        ShuffleList(tmp_cards);
+        List<int> tmp_cards_indexes = new List<int>(fixed_cards.Keys);
+
+        ShuffleList(tmp_cards_indexes);
         
         int keyOfIndexes = 0;
-
-
+        
         foreach (var sprite in sprites)
         {
             MemoryCard[] mc = new MemoryCard[2];
             for (int j=0; j< 2; j++)
             {
-                if (keyOfIndexes < tmp_cards.Count)
+                if (keyOfIndexes < tmp_cards_indexes.Count)
                 {
-                    mc[j] = tmp_cards[keyOfIndexes];
+                    mc[j] = fixed_cards[tmp_cards_indexes[keyOfIndexes]];
                     mc[j].animalFront.GetComponent<Image>().sprite = sprite;
                     memoryDataManager.cardsArray[mc[j].index]= mc[j];
                     keyOfIndexes++;
@@ -117,11 +118,6 @@ public class MemoryManager : MonoBehaviour
 
     void CoverAllBacks()
     {
-        foreach (var card in memoryDataManager.cardsArray)
-        {
-            card.backCard.SetActive(true);
-            card.won = false;
-        }
         memoryDataManager.ResetFlippedList();
     }
 

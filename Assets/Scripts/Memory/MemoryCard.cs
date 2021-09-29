@@ -27,14 +27,10 @@ public class MemoryCard : MonoBehaviour
     {
         seen = false;
         won = false;
+        other_index = 0;
         ERROR_CARD = false;
     }
-
-    public void SetIndexes(int ind, int other)
-    {
-        index = ind;
-        other_index = other;
-    }
+    
 
 }
 
