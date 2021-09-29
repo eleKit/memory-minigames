@@ -107,6 +107,7 @@ public class MemoryManager : MonoBehaviour
             
         }
         
+        memoryDataManager.SetupNotWonCards();
         //memoryDataManager.LogArray();
         
     }

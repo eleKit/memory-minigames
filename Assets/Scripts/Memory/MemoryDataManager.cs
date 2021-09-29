@@ -12,6 +12,7 @@ public class MemoryDataManager : MonoBehaviour
 
     public Dictionary<int,MemoryCard> fixed_cards = new Dictionary<int, MemoryCard>();
     public Dictionary<int,MemoryCard> seenCards = new Dictionary<int,MemoryCard>();
+    public Dictionary<int, MemoryCard> notWonCards = new Dictionary<int,MemoryCard>();
 
     private void Start()
     {
@@ -26,6 +27,26 @@ public class MemoryDataManager : MonoBehaviour
         }
         
         seenCards.Clear();
+        notWonCards.Clear();
+    }
+
+    public void SetupNotWonCards()
+    {
+        foreach (var key in fixed_cards.Keys)
+        {
+         notWonCards.Add(key, fixed_cards[key]);   
+        }
+        
+    }
+
+    private void RemoveWonCard(int key)
+    {
+        notWonCards.Remove(key);
+    }
+
+    private void RemoveSeenCard(int key)
+    {
+        seenCards.Remove(key);
     }
 
     /*public void SetupMatrixCardsCoordinates(List<MemoryCard> cards)
@@ -62,8 +83,10 @@ public class MemoryDataManager : MonoBehaviour
             fixed_cards[c.other_index].won = true;
             Debug.Log("Removed cards, index: " + fixed_cards[c.other_index].index + " other index: " + fixed_cards[c.other_index].other_index);
             Debug.Log("Removed cards, index: " + fixed_cards[c.index].index + "other index: " + fixed_cards[c.index].other_index);
-            seenCards.Remove(c.other_index);
-            seenCards.Remove(c.index);
+            RemoveSeenCard(c.other_index);
+            RemoveSeenCard(c.index);
+            RemoveWonCard(c.other_index);
+            RemoveSeenCard(c.index);
            
         }
         else
@@ -82,13 +105,13 @@ public class MemoryDataManager : MonoBehaviour
         Debug.Log("List size finished loop " + seenCards.Keys.Count);
     }*/
 
-    public void LogArray()
+   /* public void LogArray()
     {
         foreach (var c in fixed_cards.Keys)
         {
             Debug.Log("Card Array Values, index: " + fixed_cards[c].index + ", other index: " + fixed_cards[c].other_index);
         }
-    }
+    }*/
 
     public MemoryCard GetFirstSeenCard()
     {

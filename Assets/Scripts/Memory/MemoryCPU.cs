@@ -27,12 +27,9 @@ public class MemoryCPU : MonoBehaviour
 
     public void ExecuteFirstRandomAction()
     {
-        var tmp_index = Random.Range(0,NUMBER_OF_CARDS +1);
-        while (memoryDataManager.GetCardAtIndex(tmp_index).won)
-        {
-            tmp_index = Random.Range(0,NUMBER_OF_CARDS +1);
-        }
-        memoryManager.FlipCardAgent(Random.Range(0, NUMBER_OF_CARDS + 1));
+        List<int> tmp_list = new List<int>(memoryDataManager.notWonCards.Keys);
+        var tmp_index = Random.Range(0,tmp_list.Count);
+        memoryManager.FlipCardAgent(tmp_list[tmp_index]);
 
     }
 
@@ -63,11 +60,12 @@ public class MemoryCPU : MonoBehaviour
 
     public void ExecuteSecondRandomAction()
     {
-        var tmp_index = Random.Range(0,NUMBER_OF_CARDS +1);
-        while (tmp_index == card.index || memoryDataManager.GetCardAtIndex(tmp_index).won)
+        List<int> tmp_list = new List<int>(memoryDataManager.notWonCards.Keys);
+        var tmp_index = Random.Range(0,tmp_list.Count);
+        while (tmp_list[tmp_index] == card.index)
         {
-            tmp_index = Random.Range(0,NUMBER_OF_CARDS +1);
+            tmp_index = Random.Range(0,tmp_list.Count);
         }
-        memoryManager.FlipCardAgent(tmp_index);
+        memoryManager.FlipCardAgent(tmp_list[tmp_index]);
     }
 }
