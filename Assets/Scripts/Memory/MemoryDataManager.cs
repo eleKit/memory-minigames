@@ -10,7 +10,7 @@ public class MemoryDataManager : MonoBehaviour
     
     //public Queue<int> indexesOfSpritesAlreadySeen;
 
-    public MemoryCard []  cardsArray = new MemoryCard [GRID_SIZE *2];
+    public Dictionary<int,MemoryCard> fixed_cards = new Dictionary<int, MemoryCard>();
     public Dictionary<int,MemoryCard> seenCards = new Dictionary<int,MemoryCard>();
 
     private void Start()
@@ -19,10 +19,10 @@ public class MemoryDataManager : MonoBehaviour
 
     public void ResetFlippedList()
     {
-        foreach (var card in cardsArray)
+        foreach (var key in fixed_cards.Keys)
         {
-            card.backCard.SetActive(true);
-            card.ResetCard();
+            fixed_cards[key].backCard.SetActive(true);
+            fixed_cards[key].ResetCard();
         }
         
         seenCards.Clear();
@@ -42,10 +42,10 @@ public class MemoryDataManager : MonoBehaviour
 
     public void SetSeenCard(int index)
     {
-        cardsArray[index].seen = true;
+        fixed_cards[index].seen = true;
         try
         {
-            seenCards.Add(index, cardsArray[index]);
+            seenCards.Add(index, fixed_cards[index]);
         }
         catch (Exception e)
         {
@@ -55,13 +55,13 @@ public class MemoryDataManager : MonoBehaviour
 
     public void SetWonCouple(int index, bool won)
     {
-        MemoryCard c = cardsArray[index];
+        MemoryCard c = fixed_cards[index];
         if (won)
         {
             c.won = true;
-            cardsArray[c.other_index].won = true;
-            Debug.Log("Removed cards, index: " + cardsArray[c.other_index].index + " other index: " + cardsArray[c.other_index].other_index);
-            Debug.Log("Removed cards, index: " + cardsArray[c.index].index + "other index: " + cardsArray[c.index].other_index);
+            fixed_cards[c.other_index].won = true;
+            Debug.Log("Removed cards, index: " + fixed_cards[c.other_index].index + " other index: " + fixed_cards[c.other_index].other_index);
+            Debug.Log("Removed cards, index: " + fixed_cards[c.index].index + "other index: " + fixed_cards[c.index].other_index);
             seenCards.Remove(c.other_index);
             seenCards.Remove(c.index);
            
@@ -81,6 +81,14 @@ public class MemoryDataManager : MonoBehaviour
         
         Debug.Log("List size finished loop " + seenCards.Keys.Count);
     }*/
+
+    public void LogArray()
+    {
+        foreach (var c in fixed_cards.Keys)
+        {
+            Debug.Log("Card Array Values, index: " + fixed_cards[c].index + ", other index: " + fixed_cards[c].other_index);
+        }
+    }
 
     public MemoryCard GetFirstSeenCard()
     {
@@ -111,13 +119,13 @@ public class MemoryDataManager : MonoBehaviour
     public bool CheckIfSecondIsSeen(MemoryCard card)
     {
 
-        return cardsArray[card.other_index].seen;
+        return fixed_cards[card.other_index].seen;
 
     }
 
     public MemoryCard GetCardAtIndex(int index)
     {
-        return cardsArray[index];
+        return fixed_cards[index];
     }
 
     public void AddPairData(MemoryCard c, bool win)

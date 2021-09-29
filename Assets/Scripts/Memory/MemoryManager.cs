@@ -9,8 +9,6 @@ using Image = UnityEngine.UI.Image;
 
 public class MemoryManager : MonoBehaviour
 {
-    private Dictionary<int,MemoryCard> fixed_cards;
-
     private List<Sprite> sprites;
     
     public MemoryLevelSelector level_selector;
@@ -19,8 +17,6 @@ public class MemoryManager : MonoBehaviour
 
     private int first_card_index;
     private int second_card_index;
-
-    private Sprite currentFlippedSprite;
 
     public GameObject win_canvas_element;
     public GameObject game_canvas;
@@ -34,7 +30,6 @@ public class MemoryManager : MonoBehaviour
     void Start()
     {
         memoryDataManager = GameObject.FindGameObjectWithTag("memoryCPUupdater").GetComponent<MemoryDataManager>();
-        fixed_cards = new Dictionary<int, MemoryCard>();
         level_selector.SetupLevelGenerator();
         InstantiateCards();
         LoadLevelMenu();
@@ -43,9 +38,9 @@ public class MemoryManager : MonoBehaviour
     public void GenerateLevel(string level)
     {
         sprites = level_selector.GenerateLevel(level);
-        SetupGame();
-        CoverAllBacks();
         LoadLeveLUI();
+        CoverAllBacks();
+        SetupGame();
         current_turn_is_player = true;
     }
 
@@ -61,10 +56,10 @@ public class MemoryManager : MonoBehaviour
     void InstantiateCards()
     {
         var fowt = GameObject.FindGameObjectsWithTag("card");
-        for (int i = 0; i<fowt.Length; i++)
+        foreach (var t in fowt)
         {
-            var mc = fowt[i].GetComponent<MemoryCard>();
-            fixed_cards.Add(i,mc);
+            var mc = t.GetComponent<MemoryCard>();
+            memoryDataManager.fixed_cards.Add(mc.index,mc);
         }
     }
 
@@ -88,7 +83,7 @@ public class MemoryManager : MonoBehaviour
     {
         flipped = 0;
 
-        List<int> tmp_cards_indexes = new List<int>(fixed_cards.Keys);
+        List<int> tmp_cards_indexes = new List<int>(memoryDataManager.fixed_cards.Keys);
 
         ShuffleList(tmp_cards_indexes);
         
@@ -96,21 +91,23 @@ public class MemoryManager : MonoBehaviour
         
         foreach (var sprite in sprites)
         {
-            MemoryCard[] mc = new MemoryCard[2];
+            int[] mc = new int[2];
             for (int j=0; j< 2; j++)
             {
                 if (keyOfIndexes < tmp_cards_indexes.Count)
                 {
-                    mc[j] = fixed_cards[tmp_cards_indexes[keyOfIndexes]];
-                    mc[j].animalFront.GetComponent<Image>().sprite = sprite;
-                    memoryDataManager.cardsArray[mc[j].index]= mc[j];
+                    memoryDataManager.fixed_cards[tmp_cards_indexes[keyOfIndexes]].animalFront.GetComponent<Image>().sprite = sprite;
+                    mc[j] = keyOfIndexes;
                     keyOfIndexes++;
                 }
             }
 
-            memoryDataManager.cardsArray[mc[0].index].other_index = memoryDataManager.cardsArray[mc[1].index].index;
-            memoryDataManager.cardsArray[mc[1].index].other_index = memoryDataManager.cardsArray[mc[0].index].index;
+            memoryDataManager.fixed_cards[tmp_cards_indexes[mc[0]]].SetOtherIndex(tmp_cards_indexes[mc[1]]);
+            memoryDataManager.fixed_cards[tmp_cards_indexes[mc[1]]].SetOtherIndex(tmp_cards_indexes[mc[0]]);
+            
         }
+        
+        //memoryDataManager.LogArray();
         
     }
     
@@ -123,7 +120,7 @@ public class MemoryManager : MonoBehaviour
 
     void CoverLoseBacks()
     {
-        foreach (var mc in memoryDataManager.cardsArray)
+        foreach (var mc in memoryDataManager.fixed_cards.Values)
         {
             if (!mc.won)
             {
@@ -152,19 +149,19 @@ public class MemoryManager : MonoBehaviour
     private void FlipCardPrivate(int index)
     {
         flipped++;
-        Sprite s = memoryDataManager.cardsArray[index].animalFront.GetComponent<Image>().sprite;
+        Sprite s = memoryDataManager.fixed_cards[index].animalFront.GetComponent<Image>().sprite;
         switch (flipped)
         {
             case 1:
-                currentFlippedSprite = s;
                 first_card_index = index;
-                memoryDataManager.cardsArray[index].backCard.SetActive(false);
+                memoryDataManager.fixed_cards[index].backCard.SetActive(false);
                 memoryDataManager.SetSeenCard(index);
                 break;
             case 2:
                 second_card_index = index;
-                memoryDataManager.cardsArray[index].backCard.SetActive(false);
-                bool win = currentFlippedSprite.Equals(s);
+                memoryDataManager.fixed_cards[index].backCard.SetActive(false);
+                bool win = first_card_index.Equals(memoryDataManager.fixed_cards[index].other_index);
+                Debug.Log("first index: " + first_card_index + ", second index: " + index);
                 memoryDataManager.SetWonCouple(index,win);
                 StartCoroutine(CheckWin(win));
                 break;
@@ -180,8 +177,8 @@ public class MemoryManager : MonoBehaviour
         //TODO positive feedback
         if (win)
         {
-            memoryDataManager.cardsArray[first_card_index].won = true;
-            memoryDataManager.cardsArray[second_card_index].won = true;
+            memoryDataManager.fixed_cards[first_card_index].won = true;
+            memoryDataManager.fixed_cards[second_card_index].won = true;
         }
         else
         {
@@ -201,7 +198,7 @@ public class MemoryManager : MonoBehaviour
 
     private bool CheckVictory()
     {
-        foreach (var card in memoryDataManager.cardsArray)
+        foreach (var card in memoryDataManager.fixed_cards.Values)
         {
             if (!card.won)
             {

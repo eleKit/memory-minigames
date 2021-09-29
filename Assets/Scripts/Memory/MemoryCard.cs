@@ -30,6 +30,11 @@ public class MemoryCard : MonoBehaviour
         other_index = 0;
         ERROR_CARD = false;
     }
+
+    public void SetOtherIndex(int other)
+    {
+        other_index = other;
+    }
     
 
 }
