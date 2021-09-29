@@ -27,13 +27,19 @@ public class MemoryCPU : MonoBehaviour
 
     public void ExecuteFirstRandomAction()
     {
-       memoryManager.FlipCardAgent(Random.Range(0,NUMBER_OF_CARDS +1));
+        var tmp_index = Random.Range(0,NUMBER_OF_CARDS +1);
+        while (cpu_UPDATER.GetCardAtIndex(tmp_index).won)
+        {
+            tmp_index = Random.Range(0,NUMBER_OF_CARDS +1);
+        }
+        memoryManager.FlipCardAgent(Random.Range(0, NUMBER_OF_CARDS + 1));
+
     }
 
     public void ExecuteFirstReasonedAction()
     {
         card = cpu_UPDATER.GetFirstSeenCard();
-        Debug.Log("first index action" + card.index);
+//        Debug.Log("first index action" + card.index);
         if(!card.ERROR_CARD) 
         {memoryManager.FlipCardAgent(card.index);}
         else
@@ -44,7 +50,7 @@ public class MemoryCPU : MonoBehaviour
 
     public void ExecuteSecondSuccessActionIfPossible()
     {
-        Debug.Log("second index possible action" + card.other_index + "\n" + "is seen? " + cpu_UPDATER.CheckIfSecondIsSeen(card));
+        //Debug.Log("second index possible action" + card.other_index + "\n" + "is seen? " + cpu_UPDATER.CheckIfSecondIsSeen(card));
         if(cpu_UPDATER.CheckIfSecondIsSeen(card))
         {
             memoryManager.FlipCardAgent(card.other_index);
@@ -58,7 +64,7 @@ public class MemoryCPU : MonoBehaviour
     public void ExecuteSecondRandomAction()
     {
         var tmp_index = Random.Range(0,NUMBER_OF_CARDS +1);
-        while (tmp_index == card.index)
+        while (tmp_index == card.index || cpu_UPDATER.GetCardAtIndex(tmp_index).won)
         {
             tmp_index = Random.Range(0,NUMBER_OF_CARDS +1);
         }

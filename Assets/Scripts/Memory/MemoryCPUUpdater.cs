@@ -13,7 +13,7 @@ public class MemoryCPUUpdater : MonoBehaviour
     public MemoryCPUFlippedCard tmp_card;
 
     public MemoryCPUFlippedCard []  cardsArray = new MemoryCPUFlippedCard [GRID_SIZE *2];
-    public List<MemoryCPUFlippedCard> seenCards = new List<MemoryCPUFlippedCard>();
+    public Dictionary<int,MemoryCPUFlippedCard> seenCards = new Dictionary<int,MemoryCPUFlippedCard>();
 
     private void Start()
     {
@@ -40,29 +40,53 @@ public class MemoryCPUUpdater : MonoBehaviour
     public void SetSeenCard(int index)
     {
         cardsArray[index].seen = true;
-        seenCards.Add(cardsArray[index]);
+        try
+        {
+            seenCards.Add(index, cardsArray[index]);
+        }
+        catch (Exception e)
+        {
+            //index already exisits
+        }
     }
 
     public void SetWonCouple(int index, bool won)
     {
         MemoryCPUFlippedCard c = cardsArray[index];
-        c.seen = true;
         if (won)
         {
             c.won = true;
             cardsArray[c.other_index].won = true;
-            seenCards.Remove(cardsArray[c.other_index]);
+            Debug.Log("Removed cards, index: " + cardsArray[c.other_index].index + " other index: " + cardsArray[c.other_index].other_index);
+            Debug.Log("Removed cards, index: " + cardsArray[c.index].index + "other index: " + cardsArray[c.index].other_index);
+            Debug.Log("1) true?: " + seenCards.Remove(c.other_index));
+            Debug.Log("2) true?: " + seenCards.Remove(c.index));
+            LogList();
+           
         }
         else
         {
-            seenCards.Add(cardsArray[index]);
+            SetSeenCard(index);
         }
+    }
+
+    public void LogList()
+    {
+        foreach (var c in seenCards.Keys)
+        {
+            Debug.Log("Added Card Array Values, index: " + seenCards[c].index + " other index: " + seenCards[c].other_index);
+        }
+        
+        Debug.Log("List size finished loop " + seenCards.Keys.Count);
     }
 
     public MemoryCPUFlippedCard GetFirstSeenCard()
     {
-        if(seenCards.Count > 0)
-            return seenCards[Random.Range(0, seenCards.Count)];
+        if (seenCards.Keys.Count > 0)
+        {
+            List<int> keys = new List<int>(seenCards.Keys);
+            return seenCards[keys[Random.Range(0, keys.Count)]];
+        }
         /*foreach (MemoryCPUFlippedCard c in cardsArray)
         {
             if (c.seen && !c.won)
@@ -87,6 +111,11 @@ public class MemoryCPUUpdater : MonoBehaviour
 
         return cardsArray[card.other_index].seen;
 
+    }
+
+    public MemoryCPUFlippedCard GetCardAtIndex(int index)
+    {
+        return cardsArray[index];
     }
 
     public void AddPairData(MemoryCPUFlippedCard c, bool win)
