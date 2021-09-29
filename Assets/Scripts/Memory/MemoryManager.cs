@@ -9,8 +9,8 @@ using Image = UnityEngine.UI.Image;
 
 public class MemoryManager : MonoBehaviour
 {
-    private Dictionary<int, MemoryCard> cardsButtonsDictionary;
-
+    private List<MemoryCard> tmp_cards;
+    
     private List<Sprite> sprites;
     
     public MemoryLevelSelector level_selector;
@@ -27,13 +27,14 @@ public class MemoryManager : MonoBehaviour
     public GameObject level_selection_canvas;
     public bool current_turn_is_player;
 
-    private MemoryCPUUpdater cpu_UPDATER;
+    private MemoryDataManager memoryDataManager;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        cpu_UPDATER = GameObject.FindGameObjectWithTag("memoryCPUupdater").GetComponent<MemoryCPUUpdater>();
+        memoryDataManager = GameObject.FindGameObjectWithTag("memoryCPUupdater").GetComponent<MemoryDataManager>();
+        tmp_cards = new List<MemoryCard>();
         level_selector.SetupLevelGenerator();
         InstantiateCards();
         LoadLevelMenu();
@@ -59,12 +60,11 @@ public class MemoryManager : MonoBehaviour
     
     void InstantiateCards()
     {
-        cardsButtonsDictionary = new Dictionary<int, MemoryCard>();
         var fowt = GameObject.FindGameObjectsWithTag("card");
-        for(int i =0; i < fowt.Length; i++)
+        foreach (var t in fowt)
         {
-            var mc = fowt[i].GetComponent<MemoryCard>();
-            cardsButtonsDictionary.Add(i,mc);
+            var mc = t.GetComponent<MemoryCard>();
+            tmp_cards.Add(mc);
         }
     }
 
@@ -88,48 +88,46 @@ public class MemoryManager : MonoBehaviour
     {
         flipped = 0;
 
-        List<int> cards_indexes = new List<int>(cardsButtonsDictionary.Keys);
-        
-        ShuffleList(cards_indexes);
+        ShuffleList(tmp_cards);
         
         int keyOfIndexes = 0;
 
-        List<MemoryCPUFlippedCard> cpu_cards = new List<MemoryCPUFlippedCard>();
-        
 
         foreach (var sprite in sprites)
         {
+            MemoryCard[] mc = new MemoryCard[2];
             for (int j=0; j< 2; j++)
             {
-                if (keyOfIndexes < cards_indexes.Count)
+                if (keyOfIndexes < tmp_cards.Count)
                 {
-                    cardsButtonsDictionary[cards_indexes[keyOfIndexes]].animalFront.GetComponent<Image>().sprite = sprite;
+                    mc[j] = tmp_cards[keyOfIndexes];
+                    mc[j].animalFront.GetComponent<Image>().sprite = sprite;
+                    memoryDataManager.cardsArray[mc[j].index]= mc[j];
                     keyOfIndexes++;
                 }
             }
-            
-            cpu_cards.Add(new MemoryCPUFlippedCard(sprite, cards_indexes[keyOfIndexes-2], cards_indexes[keyOfIndexes-1]));
-            cpu_cards.Add(new MemoryCPUFlippedCard(sprite, cards_indexes[keyOfIndexes-1], cards_indexes[keyOfIndexes-2]));
-        }
 
-        cpu_UPDATER.SetupMatrixCardsCoordinates(cpu_cards);
+            memoryDataManager.cardsArray[mc[0].index].other_index = memoryDataManager.cardsArray[mc[1].index].index;
+            memoryDataManager.cardsArray[mc[1].index].other_index = memoryDataManager.cardsArray[mc[0].index].index;
+        }
+        
     }
     
     #endregion
 
     void CoverAllBacks()
     {
-        foreach (var card in cardsButtonsDictionary.Keys)
+        foreach (var card in memoryDataManager.cardsArray)
         {
-            cardsButtonsDictionary[card].backCard.SetActive(true);
-            cardsButtonsDictionary[card].won = false;
+            card.backCard.SetActive(true);
+            card.won = false;
         }
-        cpu_UPDATER.ResetFlippedList();
+        memoryDataManager.ResetFlippedList();
     }
 
     void CoverLoseBacks()
     {
-        foreach (var mc in cardsButtonsDictionary.Values)
+        foreach (var mc in memoryDataManager.cardsArray)
         {
             if (!mc.won)
             {
@@ -158,20 +156,20 @@ public class MemoryManager : MonoBehaviour
     private void FlipCardPrivate(int index)
     {
         flipped++;
-        Sprite s = cardsButtonsDictionary[index].animalFront.GetComponent<Image>().sprite;
+        Sprite s = memoryDataManager.cardsArray[index].animalFront.GetComponent<Image>().sprite;
         switch (flipped)
         {
             case 1:
                 currentFlippedSprite = s;
                 first_card_index = index;
-                cardsButtonsDictionary[index].backCard.SetActive(false);
-                cpu_UPDATER.SetSeenCard(index);
+                memoryDataManager.cardsArray[index].backCard.SetActive(false);
+                memoryDataManager.SetSeenCard(index);
                 break;
             case 2:
                 second_card_index = index;
-                cardsButtonsDictionary[index].backCard.SetActive(false);
+                memoryDataManager.cardsArray[index].backCard.SetActive(false);
                 bool win = currentFlippedSprite.Equals(s);
-                cpu_UPDATER.SetWonCouple(index,win);
+                memoryDataManager.SetWonCouple(index,win);
                 StartCoroutine(CheckWin(win));
                 break;
             default:
@@ -186,8 +184,8 @@ public class MemoryManager : MonoBehaviour
         //TODO positive feedback
         if (win)
         {
-            cardsButtonsDictionary[first_card_index].won = true;
-            cardsButtonsDictionary[second_card_index].won = true;
+            memoryDataManager.cardsArray[first_card_index].won = true;
+            memoryDataManager.cardsArray[second_card_index].won = true;
         }
         else
         {
@@ -207,9 +205,9 @@ public class MemoryManager : MonoBehaviour
 
     private bool CheckVictory()
     {
-        foreach (var key in cardsButtonsDictionary.Keys)
+        foreach (var card in memoryDataManager.cardsArray)
         {
-            if (!cardsButtonsDictionary[key].won)
+            if (!card.won)
             {
                 return false;
             }

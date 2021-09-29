@@ -9,27 +9,33 @@ public class MemoryCard : MonoBehaviour
     public GameObject animalFront;
     public GameObject backCard;
     public bool won;
-}
-
-
-public class MemoryCPUFlippedCard
-{
-    public Sprite s;
     public int index;
-    public int other_index;
-    public bool won;
     public bool seen;
-    public bool ERROR_CARD;
+    public int other_index;
+    public bool ERROR_CARD = false;
 
-    public MemoryCPUFlippedCard(Sprite sp, int i, int o, bool ERROR = false)
+    public MemoryCard(int ind, int other, bool ERROR = false)
     {
-        s = sp;
-        index = i;
-        other_index = o;
+        index = ind;
+        other_index = other;
         won = false;
         seen = false;
         ERROR_CARD = ERROR;
     }
+
+    public void ResetCard()
+    {
+        seen = false;
+        won = false;
+        ERROR_CARD = false;
+    }
+
+    public void SetIndexes(int ind, int other)
+    {
+        index = ind;
+        other_index = other;
+    }
+
 }
 
 

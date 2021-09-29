@@ -4,16 +4,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-public class MemoryCPUUpdater : MonoBehaviour
+public class MemoryDataManager : MonoBehaviour
 {
     private const int GRID_SIZE = 6;
     
     //public Queue<int> indexesOfSpritesAlreadySeen;
 
-    public MemoryCPUFlippedCard tmp_card;
-
-    public MemoryCPUFlippedCard []  cardsArray = new MemoryCPUFlippedCard [GRID_SIZE *2];
-    public Dictionary<int,MemoryCPUFlippedCard> seenCards = new Dictionary<int,MemoryCPUFlippedCard>();
+    public MemoryCard []  cardsArray = new MemoryCard [GRID_SIZE *2];
+    public Dictionary<int,MemoryCard> seenCards = new Dictionary<int,MemoryCard>();
 
     private void Start()
     {
@@ -24,7 +22,7 @@ public class MemoryCPUUpdater : MonoBehaviour
        
     }
 
-    public void SetupMatrixCardsCoordinates(List<MemoryCPUFlippedCard> cards)
+    public void SetupMatrixCardsCoordinates(List<MemoryCard> cards)
     {
         if (cards.Count == GRID_SIZE * 2)
         {
@@ -52,7 +50,7 @@ public class MemoryCPUUpdater : MonoBehaviour
 
     public void SetWonCouple(int index, bool won)
     {
-        MemoryCPUFlippedCard c = cardsArray[index];
+        MemoryCard c = cardsArray[index];
         if (won)
         {
             c.won = true;
@@ -80,7 +78,7 @@ public class MemoryCPUUpdater : MonoBehaviour
         Debug.Log("List size finished loop " + seenCards.Keys.Count);
     }
 
-    public MemoryCPUFlippedCard GetFirstSeenCard()
+    public MemoryCard GetFirstSeenCard()
     {
         if (seenCards.Keys.Count > 0)
         {
@@ -103,22 +101,22 @@ public class MemoryCPUUpdater : MonoBehaviour
             }
         }*/
 
-        return new MemoryCPUFlippedCard(null, 0, 0, true);
+        return new MemoryCard(0, 0, true);
     }
 
-    public bool CheckIfSecondIsSeen(MemoryCPUFlippedCard card)
+    public bool CheckIfSecondIsSeen(MemoryCard card)
     {
 
         return cardsArray[card.other_index].seen;
 
     }
 
-    public MemoryCPUFlippedCard GetCardAtIndex(int index)
+    public MemoryCard GetCardAtIndex(int index)
     {
         return cardsArray[index];
     }
 
-    public void AddPairData(MemoryCPUFlippedCard c, bool win)
+    public void AddPairData(MemoryCard c, bool win)
     {
         if (win)
         {

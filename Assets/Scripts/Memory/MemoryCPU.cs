@@ -5,18 +5,18 @@ using UnityEngine;
 public class MemoryCPU : MonoBehaviour
 {
     private const int NUMBER_OF_CARDS = 11;
-    private MemoryCPUUpdater cpu_UPDATER;
+    private MemoryDataManager cpu_UPDATER;
     private MemoryManager memoryManager;
 
-    private MemoryCPUFlippedCard card;
+    private MemoryCard card;
 
     
     // Start is called before the first frame update
     void Start()
     {
         memoryManager = GameObject.FindGameObjectWithTag("memoryManager").GetComponent<MemoryManager>();
-        cpu_UPDATER = GameObject.FindGameObjectWithTag("memoryCPUupdater").GetComponent<MemoryCPUUpdater>();
-        card = new MemoryCPUFlippedCard(null, 0, 0, true);
+        cpu_UPDATER = GameObject.FindGameObjectWithTag("memoryCPUupdater").GetComponent<MemoryDataManager>();
+        card = new MemoryCard( 0, 0, true);
     }
 
     // Update is called once per frame
