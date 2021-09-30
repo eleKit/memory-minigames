@@ -10,7 +10,15 @@ using Image = UnityEngine.UI.Image;
 public class MemoryManager : MonoBehaviour
 {
     private List<Sprite> sprites;
-    
+
+    public GameObject Player1;
+    public GameObject Player2;
+
+    private Image player1Image;
+    private Image player2Image;
+
+    private Color hilightColor = new Color(0, 1, 1);
+
     public MemoryLevelSelector level_selector;
     
     private SaveNumPlayers save_num_players;
@@ -36,17 +44,28 @@ public class MemoryManager : MonoBehaviour
     {
         memoryDataManager = GameObject.FindGameObjectWithTag("memoryCPUupdater").GetComponent<MemoryDataManager>();
         save_num_players = GameObject.FindGameObjectWithTag("save_number_players").GetComponent<SaveNumPlayers>();
+        player1Image = Player1.GetComponent<Image>();
+        player2Image = Player2.GetComponent<Image>();
 
         switch (save_num_players.GetPlayOption())
         {
             case SaveNumPlayers.PlayOptions.agent:
                 cpuIsOn = true;
+                Player1.SetActive(true);
+                Player2.SetActive(true);
                 break;
             case SaveNumPlayers.PlayOptions.couple:
                 multiplayer = true;
+                Player1.SetActive(true);
+                Player2.SetActive(true);
+                break;
+            default:
+                Player1.SetActive(true);
+                Player2.SetActive(false);
                 break;
         }
         
+        ResetColors();
         level_selector.SetupLevelGenerator();
         InstantiateCards();
         LoadLevelMenu();
@@ -59,6 +78,7 @@ public class MemoryManager : MonoBehaviour
         CleanLevel();
         SetupGame();
         current_turn_is_player = true;
+        player1Image.color = hilightColor;
     }
 
     // Update is called once per frame
@@ -179,6 +199,18 @@ public class MemoryManager : MonoBehaviour
     void ChangeCPUTurn()
     {
         current_turn_is_player = !current_turn_is_player;
+        ResetColors();
+        if (current_turn_is_player)
+            player1Image.color = hilightColor;
+        else 
+            player2Image.color = hilightColor;
+        
+    }
+
+    void ResetColors()
+    {
+        player1Image.color = Color.white;
+        player2Image.color = Color.white;
     }
 
     private void FlipCardPrivate(int index)
@@ -197,10 +229,6 @@ public class MemoryManager : MonoBehaviour
                 memoryDataManager.fixed_cards[index].backCard.SetActive(false);
                 bool win = first_card_index.Equals(memoryDataManager.fixed_cards[index].other_index);
                 memoryDataManager.SetWonCouple(index,win);
-                if (cpuIsOn)
-                {
-                    ChangeCPUTurn();
-                }
                 StartCoroutine(CheckWin(win));
                 break;
             default:
@@ -223,13 +251,19 @@ public class MemoryManager : MonoBehaviour
             yield return new WaitForSeconds(2f);
             CoverLoseBacks();
         }
-
+        
+        if (cpuIsOn)
+        {
+            ChangeCPUTurn();
+        }
+        
         flipped = 0;
 
         if (CheckVictory())
         {
             //TODO win coroutine
             win_canvas_element.SetActive(true);
+            ResetColors();
         }
 
     }

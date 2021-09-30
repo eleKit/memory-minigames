@@ -12,7 +12,7 @@ public class SaveNumPlayers : Singleton<SaveNumPlayers>
         couple
     }
 
-    private PlayOptions play_option;
+    private PlayOptions play_option = PlayOptions.agent;
 
     private HomeMenuManager.GameTypes game_type;
     void Awake()
@@ -31,8 +31,8 @@ public class SaveNumPlayers : Singleton<SaveNumPlayers>
     // Start is called before the first frame update
     void Start()
     {
-        play_option = PlayOptions.none;
-        game_type = HomeMenuManager.GameTypes.none;
+       // play_option = PlayOptions.none;
+       // game_type = HomeMenuManager.GameTypes.none;
     }
 
     public void SetPlayOption(PlayOptions option)

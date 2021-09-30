@@ -5,9 +5,21 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using Random = System.Random;
 using Rnd = UnityEngine.Random;
+using Image = UnityEngine.UI.Image;
 
 public class BoxGameManager : MonoBehaviour
 {
+   public GameObject Player1;
+   public GameObject Player2;
+   public GameObject switchPlayerButton;
+
+   private Image player1Image;
+   private Image player2Image;
+
+   private Color hilightColor = new Color(0, 1, 1);
+   
+   private SaveNumPlayers save_num_players;
+   
    private const int Grid_Dimension = 3;
 
    private const int Elements_in_Grid = 9;
@@ -53,6 +65,9 @@ public class BoxGameManager : MonoBehaviour
    private int index = 0;
 
    public bool current_turn_is_player;
+   
+   private bool cpuIsOn;
+   private bool multiplayer;
 
    [Header("game canvas")] public GameObject game_canvas;
    [Header("win canvas")] public GameObject win_element;
@@ -63,6 +78,31 @@ public class BoxGameManager : MonoBehaviour
    {
       title_sprites = new Sprite[Grid_Dimension];
       indexes_sequence_of_elements_to_instantiate = new List<int>();
+      save_num_players = GameObject.FindGameObjectWithTag("save_number_players").GetComponent<SaveNumPlayers>();
+      player1Image = Player1.GetComponent<Image>();
+      player2Image = Player2.GetComponent<Image>();
+      switch (save_num_players.GetPlayOption())
+      {
+         case SaveNumPlayers.PlayOptions.agent:
+            cpuIsOn = true;
+            Player1.SetActive(true);
+            Player2.SetActive(true);
+            switchPlayerButton.SetActive(true);
+            break;
+         case SaveNumPlayers.PlayOptions.couple:
+            multiplayer = true;
+            Player1.SetActive(true);
+            Player2.SetActive(true);
+            switchPlayerButton.SetActive(true);
+            break;
+         default:
+            Player1.SetActive(true);
+            Player2.SetActive(false);
+            switchPlayerButton.SetActive(false);
+            break;
+      }
+
+      ResetColors();
       level_selector.SetupLevelGenerator();
       LoadLevelSelection();
    }
@@ -117,6 +157,7 @@ public class BoxGameManager : MonoBehaviour
       // instantiate the first interactable box
       IntantiateBox();
       current_turn_is_player = true;
+      player1Image.color = hilightColor;
    }
    
 
@@ -160,6 +201,17 @@ public class BoxGameManager : MonoBehaviour
    public void ChangeCPUTurn()
    {
       current_turn_is_player = !current_turn_is_player;
+      ResetColors();
+      if (current_turn_is_player)
+         player1Image.color = hilightColor;
+      else 
+         player2Image.color = hilightColor;
+   }
+   
+   void ResetColors()
+   {
+      player1Image.color = Color.white;
+      player2Image.color = Color.white;
    }
 
    private bool SetPositionPrivateFunction(int x_index)
