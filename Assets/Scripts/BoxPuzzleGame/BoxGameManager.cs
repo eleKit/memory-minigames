@@ -154,11 +154,10 @@ public class BoxGameManager : MonoBehaviour
       if (!current_turn_is_player)
       {
          SetPositionPrivateFunction(x_index);
-         
       }
    }
 
-   public void ChangeTurn()
+   public void ChangeCPUTurn()
    {
       current_turn_is_player = !current_turn_is_player;
    }
@@ -188,7 +187,6 @@ public class BoxGameManager : MonoBehaviour
       {
          CheckWinAndNotInstantiate();
       }
-
       return done;
    }
 

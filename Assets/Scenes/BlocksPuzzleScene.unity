@@ -10081,7 +10081,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2052316363}
         m_TargetAssemblyTypeName: BoxGameManager, Assembly-CSharp
-        m_MethodName: ChangeTurn
+        m_MethodName: ChangeCPUTurn
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

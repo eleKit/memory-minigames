@@ -12,6 +12,8 @@ public class MemoryManager : MonoBehaviour
     private List<Sprite> sprites;
     
     public MemoryLevelSelector level_selector;
+    
+    private SaveNumPlayers save_num_players;
 
     public int flipped = 0;
 
@@ -25,11 +27,26 @@ public class MemoryManager : MonoBehaviour
 
     private MemoryDataManager memoryDataManager;
 
+    private bool cpuIsOn;
+    private bool multiplayer;
+
 
     // Start is called before the first frame update
     void Start()
     {
         memoryDataManager = GameObject.FindGameObjectWithTag("memoryCPUupdater").GetComponent<MemoryDataManager>();
+        save_num_players = GameObject.FindGameObjectWithTag("save_number_players").GetComponent<SaveNumPlayers>();
+
+        switch (save_num_players.GetPlayOption())
+        {
+            case SaveNumPlayers.PlayOptions.agent:
+                cpuIsOn = true;
+                break;
+            case SaveNumPlayers.PlayOptions.couple:
+                multiplayer = true;
+                break;
+        }
+        
         level_selector.SetupLevelGenerator();
         InstantiateCards();
         LoadLevelMenu();
@@ -158,6 +175,11 @@ public class MemoryManager : MonoBehaviour
         }
         
     }
+    
+    void ChangeCPUTurn()
+    {
+        current_turn_is_player = !current_turn_is_player;
+    }
 
     private void FlipCardPrivate(int index)
     {
@@ -175,6 +197,10 @@ public class MemoryManager : MonoBehaviour
                 memoryDataManager.fixed_cards[index].backCard.SetActive(false);
                 bool win = first_card_index.Equals(memoryDataManager.fixed_cards[index].other_index);
                 memoryDataManager.SetWonCouple(index,win);
+                if (cpuIsOn)
+                {
+                    ChangeCPUTurn();
+                }
                 StartCoroutine(CheckWin(win));
                 break;
             default:

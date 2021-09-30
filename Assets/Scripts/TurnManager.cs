@@ -38,7 +38,7 @@ public class TurnManager : MonoBehaviour
 
     public void ChangeBoxTurn()
     {
-        box_game_manager.ChangeTurn();
+        box_game_manager.ChangeCPUTurn();
     }
     
     public void ChangeMemoryTurn()
