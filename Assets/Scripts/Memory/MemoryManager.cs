@@ -174,7 +174,6 @@ public class MemoryManager : MonoBehaviour
                 second_card_index = index;
                 memoryDataManager.fixed_cards[index].backCard.SetActive(false);
                 bool win = first_card_index.Equals(memoryDataManager.fixed_cards[index].other_index);
-                Debug.Log("first index: " + first_card_index + ", second index: " + index);
                 memoryDataManager.SetWonCouple(index,win);
                 StartCoroutine(CheckWin(win));
                 break;
