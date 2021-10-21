@@ -5,9 +5,12 @@ using UnityEngine;
 public class CPUAgentBlocksGame : MonoBehaviour
 {
     private BoxGameManager box_game_manager;
+
+    //private Queue<BoxGameManager.BoxElement> moved_left_items;
     // Start is called before the first frame update
     void Start()
     {
+        //moved_left_items = new Queue<BoxGameManager.BoxElement>();
         box_game_manager = GameObject.FindGameObjectWithTag("boxManager").GetComponent<BoxGameManager>();
     }
 
@@ -32,5 +35,12 @@ public class CPUAgentBlocksGame : MonoBehaviour
     public void ExecuteRandomAction()
     {
         box_game_manager.SetPositionOfAgentElement(Random.Range(0,box_game_manager.title_sprites.Length));
+    }
+
+    public void FixWrongAction()
+    {
+        //BoxElement element = box_game_manager.wrong_items.Dequeue();
+        //box_game_manager.SetMostLeftPositionOfAgentElement(element.GetTransform());
+
     }
 }

@@ -10,6 +10,8 @@ public class DragElement : MonoBehaviour
     private BoxGameManager box_game_manager;
     public int x_grid_index_current = -1;
     public int y_grid_index_current = -1;
+    public int x_correct_index = -1;
+    public int instantiation_index;
 
     private void Start()
     {
@@ -41,11 +43,25 @@ public class DragElement : MonoBehaviour
     {
         if (box_game_manager.current_turn_is_player)
         {
-            Transform me = this.GetComponent<Transform>();
-            if (!box_game_manager.current_element_transform.Equals(me))
-            {
-                box_game_manager.SetCurrentTransform(me);
-            }
+            SetThisAsCurrentElement();
         }
+    }
+
+    private void SetThisAsCurrentElement()
+    {
+        Transform me = this.GetComponent<Transform>();
+        if (!box_game_manager.current_element_transform.Equals(me))
+        {
+            box_game_manager.SetCurrentTransform(me);
+        }
+    }
+
+    public void SetAgentOnMouseDown()
+    {
+        if (!box_game_manager.current_turn_is_player)
+        {
+            SetThisAsCurrentElement();
+        }
+
     }
 }

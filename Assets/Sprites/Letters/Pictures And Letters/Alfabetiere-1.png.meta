@@ -1,0 +1,816 @@
+fileFormatVersion: 2
+guid: f556ea21a874945c09beed0fbc0b5415
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3616684539048417917
+    second: Alfabetiere-1_0
+  - first:
+      213: 7664647110647820766
+    second: Alfabetiere-1_1
+  - first:
+      213: -4755108107591967902
+    second: Alfabetiere-1_2
+  - first:
+      213: -5988674337792990087
+    second: Alfabetiere-1_3
+  - first:
+      213: 4527443342331511301
+    second: Alfabetiere-1_4
+  - first:
+      213: 4129855061585602946
+    second: Alfabetiere-1_5
+  - first:
+      213: -1291080938390248208
+    second: Alfabetiere-1_6
+  - first:
+      213: -6743786833959165794
+    second: Alfabetiere-1_7
+  - first:
+      213: -5347188029255823999
+    second: Alfabetiere-1_8
+  - first:
+      213: 6656206006235263892
+    second: Alfabetiere-1_9
+  - first:
+      213: 2860775918144745954
+    second: Alfabetiere-1_10
+  - first:
+      213: -3246620020874155666
+    second: Alfabetiere-1_11
+  - first:
+      213: 3221724264601139141
+    second: Alfabetiere-1_12
+  - first:
+      213: -1789387647253288492
+    second: Alfabetiere-1_13
+  - first:
+      213: -5067068119357435359
+    second: Alfabetiere-1_14
+  - first:
+      213: 7553272958529790573
+    second: Alfabetiere-1_15
+  - first:
+      213: 4479419806883113750
+    second: Alfabetiere-1_16
+  - first:
+      213: 8769940776944460261
+    second: Alfabetiere-1_17
+  - first:
+      213: -5058577927772301935
+    second: Alfabetiere-1_18
+  - first:
+      213: -1527187136938853835
+    second: Alfabetiere-1_19
+  - first:
+      213: -3540537071873472285
+    second: Alfabetiere-1_20
+  - first:
+      213: 4161989720412726027
+    second: Alfabetiere-1_21
+  - first:
+      213: -1689376126103546477
+    second: Alfabetiere-1_22
+  - first:
+      213: 1850348068993107256
+    second: Alfabetiere-1_23
+  - first:
+      213: -6379393073686846207
+    second: Alfabetiere-1_24
+  - first:
+      213: -3467430456969623958
+    second: Alfabetiere-1_25
+  - first:
+      213: -8582653637210362718
+    second: Alfabetiere-1_26
+  - first:
+      213: 489587785245630860
+    second: Alfabetiere-1_27
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Alfabetiere-1_0
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 2673
+        width: 600
+        height: 803
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7ad0ae1d6b013230800000000000000
+      internalID: 3616684539048417917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alfabetiere-1_1
+      rect:
+        serializedVersion: 2
+        x: 632
+        y: 2673
+        width: 600
+        height: 803
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed133e620fb4e5a60800000000000000
+      internalID: 7664647110647820766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alfabetiere-1_2
+      rect:
+        serializedVersion: 2
+        x: 1232
+        y: 2673
+        width: 600
+        height: 803
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26b966aae56720eb0800000000000000
+      internalID: -4755108107591967902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alfabetiere-1_3
+      rect:
+        serializedVersion: 2
+        x: 1832
+        y: 2673
+        width: 600
+        height: 803
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 974e95c4b64f3eca0800000000000000
+      internalID: -5988674337792990087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alfabetiere-1_4
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 1870
+        width: 600
+        height: 803
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50280608bb5b4de30800000000000000
+      internalID: 4527443342331511301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alfabetiere-1_5
+      rect:
+        serializedVersion: 2
+        x: 632
+        y: 1870
+        width: 600
+        height: 803
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 289a8af2c41305930800000000000000
+      internalID: 4129855061585602946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alfabetiere-1_6
+      rect:
+        serializedVersion: 2
+        x: 1232
+        y: 1870
+        width: 600
+        height: 803
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f4a8fa1ab8251ee0800000000000000
+      internalID: -1291080938390248208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alfabetiere-1_7
+      rect:
+        serializedVersion: 2
+        x: 1832
+        y: 1870
+        width: 600
+        height: 803
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9068e8ca914962a0800000000000000
+      internalID: -6743786833959165794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alfabetiere-1_8
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 1067
+        width: 600
+        height: 803
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18d4cf861d8fac5b0800000000000000
+      internalID: -5347188029255823999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alfabetiere-1_9
+      rect:
+        serializedVersion: 2
+        x: 632
+        y: 1067
+        width: 600
+        height: 803
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4937979b8189f5c50800000000000000
+      internalID: 6656206006235263892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alfabetiere-1_10
+      rect:
+        serializedVersion: 2
+        x: 1232
+        y: 1067
+        width: 600
+        height: 803
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e1720f5a8483b720800000000000000
+      internalID: 2860775918144745954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alfabetiere-1_11
+      rect:
+        serializedVersion: 2
+        x: 1832
+        y: 1067
+        width: 600
+        height: 803
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e69ef17da40b1f2d0800000000000000
+      internalID: -3246620020874155666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alfabetiere-1_12
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 264
+        width: 600
+        height: 803
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c7bec3362dd5bc20800000000000000
+      internalID: 3221724264601139141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alfabetiere-1_13
+      rect:
+        serializedVersion: 2
+        x: 632
+        y: 264
+        width: 600
+        height: 803
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d9eef75a61da27e0800000000000000
+      internalID: -1789387647253288492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alfabetiere-1_14
+      rect:
+        serializedVersion: 2
+        x: 1232
+        y: 264
+        width: 600
+        height: 803
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1225ef454682ea9b0800000000000000
+      internalID: -5067068119357435359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alfabetiere-1_15
+      rect:
+        serializedVersion: 2
+        x: 1832
+        y: 264
+        width: 600
+        height: 803
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d626bb0acbd92d860800000000000000
+      internalID: 7553272958529790573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alfabetiere-1_16
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 3327
+        width: 179
+        height: 102
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61bed15d4981a2e30800000000000000
+      internalID: 4479419806883113750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alfabetiere-1_17
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 3305
+        width: 166
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e1ecf6eba615b970800000000000000
+      internalID: 8769940776944460261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alfabetiere-1_18
+      rect:
+        serializedVersion: 2
+        x: 683
+        y: 3334
+        width: 169
+        height: 93
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 195108a1d225cc9b0800000000000000
+      internalID: -5058577927772301935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alfabetiere-1_19
+      rect:
+        serializedVersion: 2
+        x: 1067
+        y: 3324
+        width: 131
+        height: 92
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53ab63de3675ecae0800000000000000
+      internalID: -1527187136938853835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alfabetiere-1_20
+      rect:
+        serializedVersion: 2
+        x: 1865
+        y: 2532
+        width: 203
+        height: 107
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e841ecaa4c7ddec0800000000000000
+      internalID: -3540537071873472285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alfabetiere-1_21
+      rect:
+        serializedVersion: 2
+        x: 2234
+        y: 2530
+        width: 155
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b03270c799b52c930800000000000000
+      internalID: 4161989720412726027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alfabetiere-1_22
+      rect:
+        serializedVersion: 2
+        x: 681
+        y: 1739
+        width: 171
+        height: 92
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 395929f2d512e88e0800000000000000
+      internalID: -1689376126103546477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alfabetiere-1_23
+      rect:
+        serializedVersion: 2
+        x: 1042
+        y: 1717
+        width: 161
+        height: 113
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8350a23e3c1cda910800000000000000
+      internalID: 1850348068993107256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alfabetiere-1_24
+      rect:
+        serializedVersion: 2
+        x: 1282
+        y: 1730
+        width: 149
+        height: 99
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 105ee488cc7d777a0800000000000000
+      internalID: -6379393073686846207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alfabetiere-1_25
+      rect:
+        serializedVersion: 2
+        x: 1647
+        y: 1734
+        width: 151
+        height: 82
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6684f0ee5631efc0800000000000000
+      internalID: -3467430456969623958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alfabetiere-1_26
+      rect:
+        serializedVersion: 2
+        x: 1874
+        y: 1732
+        width: 133
+        height: 92
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2acacd36df944e880800000000000000
+      internalID: -8582653637210362718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Alfabetiere-1_27
+      rect:
+        serializedVersion: 2
+        x: 2251
+        y: 1730
+        width: 141
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c81afe92f7d5bc600800000000000000
+      internalID: 489587785245630860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -9,6 +9,7 @@ using Image = UnityEngine.UI.Image;
 
 public class BoxGameManager : MonoBehaviour
 {
+   
    public GameObject Player1;
    public GameObject Player2;
    public GameObject switchPlayerButton;
@@ -49,7 +50,7 @@ public class BoxGameManager : MonoBehaviour
    public float line_vert_overflow_x_position;
 
    private bool[,] xy = new bool[Grid_Dimension, Grid_Dimension];
-   private Sprite[,] xy_sprites = new Sprite[Grid_Dimension, Grid_Dimension];
+   //private BoxElement[,] xy_sprites = new BoxElement[Grid_Dimension, Grid_Dimension];
 
    public Sprite[] title_sprites {get; private set;}
 
@@ -62,6 +63,7 @@ public class BoxGameManager : MonoBehaviour
 
    public GameObject hand_mouse;
 
+   //index used to instantiate the moving boxes in a level
    private int index = 0;
 
    public bool current_turn_is_player;
@@ -73,10 +75,13 @@ public class BoxGameManager : MonoBehaviour
    [Header("win canvas")] public GameObject win_element;
    [Header("levels canvas")] public GameObject level_canvas;
 
-
+   public BoxDataManager box_data_manager;
+   
+   
    private void Start()
    {
       title_sprites = new Sprite[Grid_Dimension];
+      //wrong_items = new Queue<BoxElement>();
       indexes_sequence_of_elements_to_instantiate = new List<int>();
       save_num_players = GameObject.FindGameObjectWithTag("save_number_players").GetComponent<SaveNumPlayers>();
       player1Image = Player1.GetComponent<Image>();
@@ -121,7 +126,7 @@ public class BoxGameManager : MonoBehaviour
    public void GenerateRandomLevel()
    {
       int random = Rnd.Range(0, number_of_arrays_of_levels + 1);
-      level_selector.GenerateRandomSingleLevel(5);
+      level_selector.GenerateRandomSingleLevel(random);
       SetupLevel();
    }
 
@@ -189,14 +194,6 @@ public class BoxGameManager : MonoBehaviour
          SetPositionPrivateFunction(x_index);
       }
    }
-   
-   public void SetPositionOfAgentElement(int x_index)
-   {
-      if (!current_turn_is_player)
-      {
-         SetPositionPrivateFunction(x_index);
-      }
-   }
 
    public void ChangeCPUTurn()
    {
@@ -213,39 +210,42 @@ public class BoxGameManager : MonoBehaviour
       player1Image.color = Color.white;
       player2Image.color = Color.white;
    }
-
-   private bool SetPositionPrivateFunction(int x_index)
+   
+   
+   #endregion
+   
+   #region AgentFunctions
+   
+   
+   public void SetPositionOfAgentElement(int x_index)
    {
-      bool instantiate = ResetIndexes(current_element_drag_script.x_grid_index_current, current_element_drag_script.y_grid_index_current);
-      bool done = false;
-      for (int y_index = 0; y_index < Grid_Dimension; y_index++)
+      if (!current_turn_is_player)
       {
-         if (!xy[x_index, y_index])
-         {
-            xy[x_index, y_index] = true;
-            done = true;
-            xy_sprites[x_index, y_index] = current_element_sprite_renderer.sprite;
-            current_element_transform.position = new Vector3(x_positions[x_index], y_positions[y_index], 0f);
-            current_element_drag_script.x_grid_index_current = x_index;
-            current_element_drag_script.y_grid_index_current = y_index;
-            break;
-         }
+         SetPositionPrivateFunction(x_index);
       }
-
-      if (instantiate && done)
-      {
-         InstantiateNext();
-      } else if (done)
-      {
-         CheckWinAndNotInstantiate();
-      }
-      return done;
    }
 
+   public void SetMostLeftPositionOfAgentElement(Transform t)
+   {
+      if (!current_turn_is_player)
+      {
+         SetLeftMostPosition(t);
+      }
+   }
+   
+   private void SetLeftMostPosition(Transform t)
+   {
+      ResetALL();
+      t.position = new Vector3(Rnd.Range(line_vert_1_x_position - 2, line_vert_1_x_position), 
+         Rnd.Range(0.3f, 2.4f), 0f);
+   }
+
+   
    #endregion
+   
 
    #region On Mouse Up Functions
-
+   
    public void SetPositionBasedOnVector3(Transform t)
    {
       //current_section = go_on ? PlazaSections.part1 : PlazaSections.init
@@ -291,21 +291,52 @@ public class BoxGameManager : MonoBehaviour
 
    }
 
+   #endregion
+
+   #region Common Functions
+
+   private bool SetPositionPrivateFunction(int x_index)
+   {
+      bool instantiate = ResetIndexes(current_element_drag_script.x_grid_index_current, current_element_drag_script.y_grid_index_current);
+      bool done = false;
+      for (int y_index = 0; y_index < Grid_Dimension; y_index++)
+      {
+         if (!xy[x_index, y_index])
+         {
+            xy[x_index, y_index] = true;
+            done = true;
+            // xy_sprites[x_index, y_index] = new BoxElement(current_element_transform, current_element_sprite_renderer.sprite, current_element_drag_script);
+            current_element_transform.position = new Vector3(x_positions[x_index], y_positions[y_index], 0f);
+            current_element_drag_script.x_grid_index_current = x_index;
+            current_element_drag_script.y_grid_index_current = y_index;
+            break;
+         }
+      }
+
+      if (instantiate && done)
+      {
+         InstantiateNext();
+      } else if (done)
+      {
+         CheckWinAndNotInstantiate();
+      }
+      /* if (!title_sprites[x_index].Equals(xy_sprites[x_index, y_index].GetSprite()))
+       enqueue */
+      return done;
+   }
+   
+   
    private void ResetALL()
    {
       ResetIndexes(current_element_drag_script.x_grid_index_current,
          current_element_drag_script.y_grid_index_current);
       if (!(current_element_drag_script.x_grid_index_current == -1 &&
-          current_element_drag_script.y_grid_index_current == -1))
+            current_element_drag_script.y_grid_index_current == -1))
       {
          current_element_drag_script.x_grid_index_current = -2;
          current_element_drag_script.y_grid_index_current = -2;
       }
    }
-
-   #endregion
-
-   #region Common Functions
 
 
    /// <summary>
@@ -359,6 +390,20 @@ public class BoxGameManager : MonoBehaviour
       current_element_drag_script = go.GetComponent<DragElement>();
       current_element_transform = go.transform;
       current_element_sprite_renderer = go.GetComponent<SpriteRenderer>();
+      for (int i = 0; i < Grid_Dimension; i++)
+      {
+         if (!title_sprites[i].Equals(current_element_sprite_renderer.sprite))
+         {
+            current_element_drag_script.x_correct_index = i;
+            break;
+         }
+      }
+
+      current_element_drag_script.instantiation_index = index;
+      
+      box_data_manager.box_items.Add(index, 
+         new BoxElement(current_element_transform, current_element_drag_script, current_element_sprite_renderer));
+
    }
 
 
@@ -379,6 +424,11 @@ public class BoxGameManager : MonoBehaviour
       }
    }
 
+   #endregion
+
+   #region Win
+
+   
    private void CheckWinAndNotInstantiate()
    {
       if (index >= indexes_sequence_of_elements_to_instantiate.Count)
@@ -387,25 +437,23 @@ public class BoxGameManager : MonoBehaviour
       }
 
    }
-
-   #endregion
-
-   #region Win
-
+   
    private void CheckWinAndStartCoroutine()
    {
       bool win = true;
-      for (int i = 0; i < Grid_Dimension; i++)
+      //wrong_items.Clear();
+     /* for (int i = 0; i < Grid_Dimension; i++)
       {
          for (int j = 0; j < Grid_Dimension; j++)
          {
-            if (!title_sprites[i].Equals(xy_sprites[i, j]))
+            if (!title_sprites[i].Equals(xy_sprites[i, j].GetSprite()))
             {
                win = false;
+               //wrong_items.Enqueue(xy_sprites[i, j]);
                break;
             }
          }
-      }
+      }*/
 
       if (win)
       {
@@ -452,7 +500,7 @@ public class BoxGameManager : MonoBehaviour
       }
 
       xy = new bool[Grid_Dimension,Grid_Dimension];
-      xy_sprites = new Sprite[Grid_Dimension, Grid_Dimension];
+      //xy_sprites = new BoxElement[Grid_Dimension, Grid_Dimension];
       index = 0;
 
    }
@@ -481,7 +529,7 @@ public class BoxGameManager : MonoBehaviour
       }
 
       xy = new bool[Grid_Dimension,Grid_Dimension];
-      xy_sprites = new Sprite[Grid_Dimension, Grid_Dimension];
+     // xy_sprites = new BoxElement[Grid_Dimension, Grid_Dimension];
       // setup the index of the indexes_sequence_of_elements_to_instantiate at 0
       index = 0;
 
