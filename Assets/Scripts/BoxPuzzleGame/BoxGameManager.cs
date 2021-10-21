@@ -107,6 +107,7 @@ public class BoxGameManager : MonoBehaviour
             break;
       }
 
+      box_data_manager.SetupDataManager();
       ResetColors();
       level_selector.SetupLevelGenerator();
       LoadLevelSelection();
@@ -129,43 +130,7 @@ public class BoxGameManager : MonoBehaviour
       level_selector.GenerateRandomSingleLevel(random);
       SetupLevel();
    }
-
-   private void SetupLevel()
-   {
-       LoadLeveLUI();
-       DestroyAll();
-       
-       //instantiate the boxes symbols in the top area cof each column
-       for (int i = 0; i < level_selector.current_level_elements.Count; i++)
-       {
-          Instantiate(level_selector.GetCurrentLevelElement(i).title_element,
-             new Vector3(x_positions[i], y_title_position, 0f), Quaternion.identity);
-          title_sprites[i] = level_selector.GetCurrentLevelElement(i).title_element.GetComponent<SpriteRenderer>()
-             .sprite;
-       }
-       
-       //setup the list with sequence of boxes in order, it is repeated 3 times since the play columns are 3
-      indexes_sequence_of_elements_to_instantiate.Clear();
-      for (int i = 0; i < level_selector.current_level_elements.Count; i++)
-      {
-         indexes_sequence_of_elements_to_instantiate.Add(i);
-         indexes_sequence_of_elements_to_instantiate.Add(i);
-         indexes_sequence_of_elements_to_instantiate.Add(i);
-      }
-
-      //randomize the elements in the list
-      RandomizeIndexesSequence();
-
-      // setup the index of the indexes_sequence_of_elements_to_instantiate at 0
-      index = 0;
-
-      // instantiate the first interactable box
-      IntantiateBox();
-      current_turn_is_player = true;
-      player1Image.color = hilightColor;
-   }
    
-
    private void RandomizeIndexesSequence()
    {
       Random rng = new Random();
@@ -240,7 +205,6 @@ public class BoxGameManager : MonoBehaviour
          Rnd.Range(0.3f, 2.4f), 0f);
    }
 
-   
    #endregion
    
 
@@ -284,7 +248,6 @@ public class BoxGameManager : MonoBehaviour
       } else if (t.position.x >= line_vert_overflow_x_position)
       {
          ResetALL();
-         //TODO avoid to reach this area
          t.position = new Vector3(x_default_position, t.position.y, 0f);
       }
 
@@ -305,11 +268,30 @@ public class BoxGameManager : MonoBehaviour
          {
             xy[x_index, y_index] = true;
             done = true;
-            // xy_sprites[x_index, y_index] = new BoxElement(current_element_transform, current_element_sprite_renderer.sprite, current_element_drag_script);
             current_element_transform.position = new Vector3(x_positions[x_index], y_positions[y_index], 0f);
             current_element_drag_script.x_grid_index_current = x_index;
             current_element_drag_script.y_grid_index_current = y_index;
             break;
+         }
+      }
+
+      // here the agent has access to know if the move is wrong
+      /* infatti la lista di sbagliati si è incrementata di 1 e la CPU ha accesso alla lista */
+      if (current_element_drag_script.x_correct_index != x_index)
+      {
+         box_data_manager.box_items[current_element_drag_script.instantiation_index].win = false;
+         if (!box_data_manager.wrong_box_items.ContainsKey(current_element_drag_script.instantiation_index))
+         {
+            box_data_manager.wrong_box_items.Add(current_element_drag_script.instantiation_index,
+               box_data_manager.box_items[current_element_drag_script.instantiation_index]);
+         }
+      }
+      else
+      {
+         box_data_manager.box_items[current_element_drag_script.instantiation_index].win = true;
+         if (box_data_manager.wrong_box_items.ContainsKey(current_element_drag_script.instantiation_index))
+         {
+            box_data_manager.wrong_box_items.Remove(current_element_drag_script.instantiation_index);
          }
       }
 
@@ -320,8 +302,7 @@ public class BoxGameManager : MonoBehaviour
       {
          CheckWinAndNotInstantiate();
       }
-      /* if (!title_sprites[x_index].Equals(xy_sprites[x_index, y_index].GetSprite()))
-       enqueue */
+      
       return done;
    }
    
@@ -392,7 +373,7 @@ public class BoxGameManager : MonoBehaviour
       current_element_sprite_renderer = go.GetComponent<SpriteRenderer>();
       for (int i = 0; i < Grid_Dimension; i++)
       {
-         if (!title_sprites[i].Equals(current_element_sprite_renderer.sprite))
+         if (title_sprites[i].Equals(current_element_sprite_renderer.sprite))
          {
             current_element_drag_script.x_correct_index = i;
             break;
@@ -441,19 +422,21 @@ public class BoxGameManager : MonoBehaviour
    private void CheckWinAndStartCoroutine()
    {
       bool win = true;
-      //wrong_items.Clear();
-     /* for (int i = 0; i < Grid_Dimension; i++)
+
+      if (box_data_manager.box_items.Keys.Count == (Grid_Dimension * Grid_Dimension))
       {
-         for (int j = 0; j < Grid_Dimension; j++)
+         foreach (var key in box_data_manager.box_items.Keys)
          {
-            if (!title_sprites[i].Equals(xy_sprites[i, j].GetSprite()))
+            if (!box_data_manager.box_items[key].win)
             {
+               Debug.Log("false index: " + key);
                win = false;
-               //wrong_items.Enqueue(xy_sprites[i, j]);
                break;
             }
          }
-      }*/
+      }
+      
+      Debug.Log("full size: " + box_data_manager.box_items.Keys.Count + " ; wrong size: " + box_data_manager.wrong_box_items.Keys.Count);
 
       if (win)
       {
@@ -473,15 +456,41 @@ public class BoxGameManager : MonoBehaviour
 
    #region Menu
 
-
-   public void LoadLevelSelection()
+   private void SetupLevel()
    {
+      LoadLeveLUI();
       DestroyAll();
-      StopAllCoroutines();
-      game_canvas.SetActive(false);
-      level_canvas.SetActive(true);
-      win_element.SetActive(false);
-      hand_mouse.SetActive(false);
+       
+      box_data_manager.ResetDataManager();
+       
+      //instantiate the boxes symbols in the top area cof each column
+      for (int i = 0; i < level_selector.current_level_elements.Count; i++)
+      {
+         Instantiate(level_selector.GetCurrentLevelElement(i).title_element,
+            new Vector3(x_positions[i], y_title_position, 0f), Quaternion.identity);
+         title_sprites[i] = level_selector.GetCurrentLevelElement(i).title_element.GetComponent<SpriteRenderer>()
+            .sprite;
+      }
+       
+      //setup the list with sequence of boxes in order, it is repeated 3 times since the play columns are 3
+      indexes_sequence_of_elements_to_instantiate.Clear();
+      for (int i = 0; i < level_selector.current_level_elements.Count; i++)
+      {
+         indexes_sequence_of_elements_to_instantiate.Add(i);
+         indexes_sequence_of_elements_to_instantiate.Add(i);
+         indexes_sequence_of_elements_to_instantiate.Add(i);
+      }
+
+      //randomize the elements in the list
+      RandomizeIndexesSequence();
+
+      // setup the index of the indexes_sequence_of_elements_to_instantiate at 0
+      index = 0;
+
+      // instantiate the first interactable box
+      IntantiateBox();
+      current_turn_is_player = true;
+      player1Image.color = hilightColor;
    }
 
    private void DestroyAll()
@@ -504,7 +513,41 @@ public class BoxGameManager : MonoBehaviour
       index = 0;
 
    }
+   
+   public void ReloadLevel()
+   {
+      win_element.SetActive(false);
+      StopAllCoroutines();
+      box_data_manager.ResetDataManager();
+      GameObject[] interactable_boxes = GameObject.FindGameObjectsWithTag("box");
+      foreach (var go in interactable_boxes)
+      {
+         Destroy(go);
+      }
 
+      xy = new bool[Grid_Dimension,Grid_Dimension];
+      // xy_sprites = new BoxElement[Grid_Dimension, Grid_Dimension];
+      // setup the index of the indexes_sequence_of_elements_to_instantiate at 0
+      index = 0;
+
+      // instantiate the first interactable box
+      IntantiateBox();
+   }
+   
+   #endregion
+
+   #region MenuUI
+
+   public void LoadLevelSelection()
+   {
+      DestroyAll();
+      StopAllCoroutines();
+      game_canvas.SetActive(false);
+      level_canvas.SetActive(true);
+      win_element.SetActive(false);
+      hand_mouse.SetActive(false);
+   }
+   
    public void LoadLeveLUI()
    {
       game_canvas.SetActive(true);
@@ -517,31 +560,14 @@ public class BoxGameManager : MonoBehaviour
    {
       win_element.SetActive(true);
    }
-
-   public void ReloadLevel()
-   {
-      win_element.SetActive(false);
-      StopAllCoroutines();
-      GameObject[] interactable_boxes = GameObject.FindGameObjectsWithTag("box");
-      foreach (var go in interactable_boxes)
-      {
-         Destroy(go);
-      }
-
-      xy = new bool[Grid_Dimension,Grid_Dimension];
-     // xy_sprites = new BoxElement[Grid_Dimension, Grid_Dimension];
-      // setup the index of the indexes_sequence_of_elements_to_instantiate at 0
-      index = 0;
-
-      // instantiate the first interactable box
-      IntantiateBox();
-   }
-
-   #endregion
+   
 
    public void LoadHomeMenu()
    {
       SceneManager.LoadSceneAsync("HomeScene");
    }
+   
+   
+   #endregion
    
 }
