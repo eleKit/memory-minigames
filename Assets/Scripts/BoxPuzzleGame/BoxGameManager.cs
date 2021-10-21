@@ -182,19 +182,21 @@ public class BoxGameManager : MonoBehaviour
    #region AgentFunctions
    
    
-   public void SetPositionOfAgentElement(int x_index)
+   public bool SetPositionOfAgentElement(int x_index)
    {
       if (!current_turn_is_player)
       {
-         SetPositionPrivateFunction(x_index);
+         return SetPositionPrivateFunction(x_index);
       }
+
+      return false;
    }
 
-   public void SetMostLeftPositionOfAgentElement(Transform t)
+   public void SetMostLeftPositionOfAgentElement()
    {
       if (!current_turn_is_player)
       {
-         SetLeftMostPosition(t);
+         SetLeftMostPosition(current_element_transform);
       }
    }
    
@@ -330,6 +332,13 @@ public class BoxGameManager : MonoBehaviour
       current_element_drag_script = t.gameObject.GetComponent<DragElement>();
       current_element_sprite_renderer = t.gameObject.GetComponent<SpriteRenderer>();
 
+   }
+
+   public void SetCurrentTransformAgent(BoxElement elem)
+   {
+      current_element_transform = elem.GetTransform();
+      current_element_drag_script = elem.GetDragElement();
+      current_element_sprite_renderer = elem.GetSpriteRenderer();
    }
 
    /// <summary>

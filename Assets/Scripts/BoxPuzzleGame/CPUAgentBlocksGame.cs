@@ -5,6 +5,7 @@ using UnityEngine;
 public class CPUAgentBlocksGame : MonoBehaviour
 {
     private BoxGameManager box_game_manager;
+    public BoxDataManager box_data_manager;
 
     //private Queue<BoxGameManager.BoxElement> moved_left_items;
     // Start is called before the first frame update
@@ -22,13 +23,21 @@ public class CPUAgentBlocksGame : MonoBehaviour
 
     public void ExecuteSuccessAction()
     {
+        bool success = false;
         for (int i = 0; i < box_game_manager.title_sprites.Length; i++)
         {
             if (box_game_manager.title_sprites[i].Equals(box_game_manager.current_element_sprite_renderer.sprite))
             {
-                box_game_manager.SetPositionOfAgentElement(i);
+                success = box_game_manager.SetPositionOfAgentElement(i);
                 break;
             }
+        }
+        
+        Debug.Log("success: " + success);
+
+        if (!success)
+        {
+            SetCurrentElementAndMoveLeftMost();
         }
     }
 
@@ -42,5 +51,19 @@ public class CPUAgentBlocksGame : MonoBehaviour
         //BoxElement element = box_game_manager.wrong_items.Dequeue();
         //box_game_manager.SetMostLeftPositionOfAgentElement(element.GetTransform());
 
+    }
+
+    private void SetCurrentElementAndMoveLeftMost()
+    {
+        if (box_data_manager.wrong_box_items.Keys.Count > 0)
+        {
+            foreach (var key in box_data_manager.wrong_box_items.Keys)
+            {
+                box_game_manager.SetCurrentTransformAgent(box_data_manager.wrong_box_items[key]);
+                break;
+            }
+            
+            box_game_manager.SetMostLeftPositionOfAgentElement();
+        }
     }
 }
