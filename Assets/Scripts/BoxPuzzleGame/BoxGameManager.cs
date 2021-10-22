@@ -59,7 +59,7 @@ public class BoxGameManager : MonoBehaviour
 
    public Transform current_element_transform { get; private set; } //value used by hand mouse indicator
    public SpriteRenderer current_element_sprite_renderer { get; private set; }
-   private DragElement current_element_drag_script;
+   public DragElement current_element_drag_script { get; private set; }
 
    public GameObject hand_mouse;
 
@@ -197,6 +197,14 @@ public class BoxGameManager : MonoBehaviour
       if (!current_turn_is_player)
       {
          SetLeftMostPosition(current_element_transform);
+
+         for (int i = 0; i < Grid_Dimension; i++)
+         {
+            for (int j = 0; j < Grid_Dimension; j++)
+            {
+               Debug.Log("xy " + xy[i,j] + " x val: " + i + " , y val: " + j);
+            }
+         }
       }
    }
    
@@ -215,7 +223,6 @@ public class BoxGameManager : MonoBehaviour
    public void SetPositionBasedOnVector3(Transform t)
    {
       //current_section = go_on ? PlazaSections.part1 : PlazaSections.init
-      float x_index = 0f;
 
       if (t.position.x < line_vert_1_x_position)
       {
@@ -313,6 +320,7 @@ public class BoxGameManager : MonoBehaviour
    {
       ResetIndexes(current_element_drag_script.x_grid_index_current,
          current_element_drag_script.y_grid_index_current);
+      box_data_manager.box_items[current_element_drag_script.instantiation_index].win = false;
       if (!(current_element_drag_script.x_grid_index_current == -1 &&
             current_element_drag_script.y_grid_index_current == -1))
       {
@@ -339,6 +347,20 @@ public class BoxGameManager : MonoBehaviour
       current_element_transform = elem.GetTransform();
       current_element_drag_script = elem.GetDragElement();
       current_element_sprite_renderer = elem.GetSpriteRenderer();
+   }
+
+   public bool CheckIndexesFree()
+   {
+      int x_index = current_element_drag_script.x_grid_index_current;
+      int y_index = current_element_drag_script.y_grid_index_current;
+      
+      if ((x_index == -1 && y_index == -1) || ( x_index == -2 && y_index == -2))
+      {
+         return true;
+      } 
+      
+      return false;
+      
    }
 
    /// <summary>

@@ -23,17 +23,17 @@ public class CPUAgentBlocksGame : MonoBehaviour
 
     public void ExecuteSuccessAction()
     {
-        bool success = false;
-        for (int i = 0; i < box_game_manager.title_sprites.Length; i++)
+        bool available = box_game_manager.CheckIndexesFree();
+        bool success = true;
+
+        if (available)
         {
-            if (box_game_manager.title_sprites[i].Equals(box_game_manager.current_element_sprite_renderer.sprite))
-            {
-                success = box_game_manager.SetPositionOfAgentElement(i);
-                break;
-            }
+            success = box_game_manager.SetPositionOfAgentElement(
+                box_game_manager.current_element_drag_script.x_correct_index);
+        } else
+        {
+            SetCurrentElementAndMoveLeftMost();
         }
-        
-        Debug.Log("success: " + success);
 
         if (!success)
         {
