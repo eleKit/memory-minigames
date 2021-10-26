@@ -260,57 +260,42 @@ public class BoxGameManager : MonoBehaviour
    private bool SetPositionPrivateFunction(int x_index)
    {
       bool instantiate = ResetIndexes(current_element_drag_script.x_grid_index_current, current_element_drag_script.y_grid_index_current);
-      bool done = false;
+      int y_index = GetYIndexFree(x_index);
+      bool done = y_index != -1;
       //here i verify if the set position of the current item has success
-      for (int y_index = 0; y_index < Grid_Dimension; y_index++)
+     if (done)
       {
-         if (!xy[x_index, y_index])
+         xy[x_index, y_index] = true;
+         current_element_transform.position = new Vector3(x_positions[x_index], y_positions[y_index], 0f);
+         current_element_drag_script.x_grid_index_current = x_index;
+         current_element_drag_script.y_grid_index_current = y_index;
+         //update agent's lists and win condition
+         bool box_win = current_element_drag_script.x_correct_index == x_index;
+         box_data_manager.box_items[current_element_drag_script.instantiation_index].win = box_win;
+         if (box_win)
          {
-            xy[x_index, y_index] = true;
-            done = true;
-            current_element_transform.position = new Vector3(x_positions[x_index], y_positions[y_index], 0f);
-            current_element_drag_script.x_grid_index_current = x_index;
-            current_element_drag_script.y_grid_index_current = y_index;
-            break;
+            if (box_data_manager.wrong_box_items.ContainsKey(current_element_drag_script.instantiation_index))
+            {
+               box_data_manager.wrong_box_items.Remove(current_element_drag_script.instantiation_index);
+            }
          }
-      }
-      /* here the agent has access to know if the move is wrong
-       * the BoxItem.win value is used also to check the win condition in this BoxGameManager script
-       */
-      
-      //there update wrong list because, and set BoxItem.win = false
-      //because the index is not correct, whenever the set position was successful or not
-      if (current_element_drag_script.x_correct_index != x_index)
-      {
-         box_data_manager.box_items[current_element_drag_script.instantiation_index].win = false;
-         //check if wrong list already contains this key
-         if (!box_data_manager.wrong_box_items.ContainsKey(current_element_drag_script.instantiation_index))
+         else
          {
-            box_data_manager.wrong_box_items.Add(current_element_drag_script.instantiation_index,
-               box_data_manager.box_items[current_element_drag_script.instantiation_index]);
+            if (!box_data_manager.wrong_box_items.ContainsKey(current_element_drag_script.instantiation_index))
+            {
+               box_data_manager.wrong_box_items.Add(current_element_drag_script.instantiation_index,
+                  box_data_manager.box_items[current_element_drag_script.instantiation_index]);
+            }
          }
-      }
-      //there update wrong list removing the item, and set BoxItem.win = true
-      //because the index is correct, and the set position was successful
-      //if the set position was not successful nothing should happen
-      else if(done)
-      {
-         Debug.Log("updating win value");
-         box_data_manager.box_items[current_element_drag_script.instantiation_index].win = true;
-         if (box_data_manager.wrong_box_items.ContainsKey(current_element_drag_script.instantiation_index))
-         {
-            box_data_manager.wrong_box_items.Remove(current_element_drag_script.instantiation_index);
-         }
-      }
 
-      if (instantiate && done)
-      {
-         InstantiateNext();
-      } else if (done)
-      {
-         CheckWinAndNotInstantiate();
+         if (instantiate)
+         {
+            InstantiateNext();
+         } else
+         {
+            CheckWinAndNotInstantiate();
+         }
       }
-      
       return done;
    }
    
@@ -367,7 +352,7 @@ public class BoxGameManager : MonoBehaviour
       
    }
 
-   public bool CheckIfASpecificIndexISFree(int x_index)
+   public bool CheckIfASpecificIndexIsFree(int x_index)
    {
       for (int y_index = 0; y_index < Grid_Dimension; y_index++)
       {
@@ -379,15 +364,18 @@ public class BoxGameManager : MonoBehaviour
       return false;
 
    }
-
-   public int GetGridElements()
-   {
-      return Grid_Dimension * Grid_Dimension;
-   }
    
-   public int GetGridDimension()
+   private int GetYIndexFree(int x_index)
    {
-      return Grid_Dimension;
+      for (int y_index = 0; y_index < Grid_Dimension; y_index++)
+      {
+         if (!xy[x_index, y_index])
+         {
+            return y_index;
+         }
+      }
+      return -1;
+
    }
 
    /// <summary>
@@ -401,15 +389,24 @@ public class BoxGameManager : MonoBehaviour
       {
          return false;
          
-      } else if (!(x_index == -1 && y_index == -1))
+      }
+      if (!(x_index == -1 && y_index == -1))
       {
          xy[x_index, y_index] = false;
          return false;
       }
-      else
-      {
-         return true;
-      }
+      return true;
+   }
+   
+   
+   public int GetGridElements()
+   {
+      return Grid_Dimension * Grid_Dimension;
+   }
+   
+   public int GetGridDimension()
+   {
+      return Grid_Dimension;
    }
 
    #endregion

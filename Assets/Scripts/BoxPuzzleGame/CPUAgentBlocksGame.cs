@@ -47,7 +47,7 @@ public class CPUAgentBlocksGame : MonoBehaviour
         bool done = false;
         for (int i = 0; i < box_game_manager.GetGridElements() ; i++)
         {
-            if (box_game_manager.CheckIfASpecificIndexISFree(tmp_x_index))
+            if (box_game_manager.CheckIfASpecificIndexIsFree(tmp_x_index))
             {
                 done = true;
                 break;
