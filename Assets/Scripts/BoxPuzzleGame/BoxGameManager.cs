@@ -23,8 +23,6 @@ public class BoxGameManager : MonoBehaviour
    
    private const int Grid_Dimension = 3;
 
-   private const int Elements_in_Grid = 9;
-
    private const int number_of_arrays_of_levels = 5;
 
    /*public GameObject[] colour_title_elements;
@@ -367,6 +365,29 @@ public class BoxGameManager : MonoBehaviour
       
       return false;
       
+   }
+
+   public bool CheckIfASpecificIndexISFree(int x_index)
+   {
+      for (int y_index = 0; y_index < Grid_Dimension; y_index++)
+      {
+         if (!xy[x_index, y_index])
+         {
+            return true;
+         }
+      }
+      return false;
+
+   }
+
+   public int GetGridElements()
+   {
+      return Grid_Dimension * Grid_Dimension;
+   }
+   
+   public int GetGridDimension()
+   {
+      return Grid_Dimension;
    }
 
    /// <summary>

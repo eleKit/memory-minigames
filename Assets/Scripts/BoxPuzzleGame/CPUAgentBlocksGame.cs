@@ -43,7 +43,25 @@ public class CPUAgentBlocksGame : MonoBehaviour
 
     public void ExecuteRandomAction()
     {
-        box_game_manager.SetPositionOfAgentElement(Random.Range(0,box_game_manager.title_sprites.Length));
+        int tmp_x_index = Random.Range(0, box_game_manager.title_sprites.Length);
+        bool done = false;
+        for (int i = 0; i < box_game_manager.GetGridElements() ; i++)
+        {
+            if (box_game_manager.CheckIfASpecificIndexISFree(tmp_x_index))
+            {
+                done = true;
+                break;
+            }
+            tmp_x_index = Random.Range(0, box_game_manager.GetGridDimension());
+        }
+        if (done)
+        {
+            box_game_manager.SetPositionOfAgentElement(tmp_x_index);
+        }
+        else
+        {
+            SetCurrentElementAndMoveLeftMost();
+        }
     }
 
     public void FixWrongAction()
