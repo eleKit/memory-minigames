@@ -198,12 +198,9 @@ public class BoxGameManager : MonoBehaviour
       {
          SetLeftMostPosition(current_element_transform);
 
-         for (int i = 0; i < Grid_Dimension; i++)
+         foreach (var key in box_data_manager.box_items.Keys)
          {
-            for (int j = 0; j < Grid_Dimension; j++)
-            {
-               Debug.Log("xy " + xy[i,j] + " x val: " + i + " , y val: " + j);
-            }
+            Debug.Log( "key elements: " + key + " , " + box_data_manager.box_items[key].win);
          }
       }
    }
@@ -271,6 +268,7 @@ public class BoxGameManager : MonoBehaviour
    {
       bool instantiate = ResetIndexes(current_element_drag_script.x_grid_index_current, current_element_drag_script.y_grid_index_current);
       bool done = false;
+      //here i verify if the set position of the current item has success
       for (int y_index = 0; y_index < Grid_Dimension; y_index++)
       {
          if (!xy[x_index, y_index])
@@ -283,20 +281,28 @@ public class BoxGameManager : MonoBehaviour
             break;
          }
       }
-
-      // here the agent has access to know if the move is wrong
-      /* infatti la lista di sbagliati si è incrementata di 1 e la CPU ha accesso alla lista */
+      /* here the agent has access to know if the move is wrong
+       * the BoxItem.win value is used also to check the win condition in this BoxGameManager script
+       */
+      
+      //there update wrong list because, and set BoxItem.win = false
+      //because the index is not correct, whenever the set position was successful or not
       if (current_element_drag_script.x_correct_index != x_index)
       {
          box_data_manager.box_items[current_element_drag_script.instantiation_index].win = false;
+         //check if wrong list already contains this key
          if (!box_data_manager.wrong_box_items.ContainsKey(current_element_drag_script.instantiation_index))
          {
             box_data_manager.wrong_box_items.Add(current_element_drag_script.instantiation_index,
                box_data_manager.box_items[current_element_drag_script.instantiation_index]);
          }
       }
-      else
+      //there update wrong list removing the item, and set BoxItem.win = true
+      //because the index is correct, and the set position was successful
+      //if the set position was not successful nothing should happen
+      else if(done)
       {
+         Debug.Log("updating win value");
          box_data_manager.box_items[current_element_drag_script.instantiation_index].win = true;
          if (box_data_manager.wrong_box_items.ContainsKey(current_element_drag_script.instantiation_index))
          {
@@ -321,6 +327,11 @@ public class BoxGameManager : MonoBehaviour
       ResetIndexes(current_element_drag_script.x_grid_index_current,
          current_element_drag_script.y_grid_index_current);
       box_data_manager.box_items[current_element_drag_script.instantiation_index].win = false;
+      if (!box_data_manager.wrong_box_items.ContainsKey(current_element_drag_script.instantiation_index))
+      {
+         box_data_manager.wrong_box_items.Add(current_element_drag_script.instantiation_index,
+            box_data_manager.box_items[current_element_drag_script.instantiation_index]);
+      }
       if (!(current_element_drag_script.x_grid_index_current == -1 &&
             current_element_drag_script.y_grid_index_current == -1))
       {

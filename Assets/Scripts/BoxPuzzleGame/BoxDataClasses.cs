@@ -34,10 +34,3 @@ public class BoxElement
     
 }
 
-
-public class IntCoordinates
-{
-    public int x;
-    public int y;
-
-}
