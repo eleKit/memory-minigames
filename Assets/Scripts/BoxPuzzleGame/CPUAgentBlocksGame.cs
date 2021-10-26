@@ -28,7 +28,6 @@ public class CPUAgentBlocksGame : MonoBehaviour
 
         if (available)
         {
-            Debug.Log("here try to find a position");
             success = box_game_manager.SetPositionOfAgentElement(
                 box_game_manager.current_element_drag_script.x_correct_index);
         } else

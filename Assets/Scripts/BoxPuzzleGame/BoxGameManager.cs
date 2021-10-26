@@ -197,11 +197,6 @@ public class BoxGameManager : MonoBehaviour
       if (!current_turn_is_player)
       {
          SetLeftMostPosition(current_element_transform);
-
-         foreach (var key in box_data_manager.box_items.Keys)
-         {
-            Debug.Log( "key elements: " + key + " , " + box_data_manager.box_items[key].win);
-         }
       }
    }
    
@@ -471,15 +466,12 @@ public class BoxGameManager : MonoBehaviour
          {
             if (!box_data_manager.box_items[key].win)
             {
-               Debug.Log("false index: " + key);
                win = false;
                break;
             }
          }
       }
       
-      Debug.Log("full size: " + box_data_manager.box_items.Keys.Count + " ; wrong size: " + box_data_manager.wrong_box_items.Keys.Count);
-
       if (win)
       {
          Debug.Log("win");
