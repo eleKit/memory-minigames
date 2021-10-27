@@ -68,6 +68,22 @@ PrefabInstance:
       value: moving-letter-A Variant
       objectReference: {fileID: 0}
     - target: {fileID: 7589692757726960079, guid: e2a63a766fb9c45908d0b5e8c3f31641, type: 3}
+      propertyPath: m_Size.x
+      value: 2.749792
+      objectReference: {fileID: 0}
+    - target: {fileID: 7589692757726960079, guid: e2a63a766fb9c45908d0b5e8c3f31641, type: 3}
+      propertyPath: m_Size.y
+      value: 2.6027582
+      objectReference: {fileID: 0}
+    - target: {fileID: 7589692757726960079, guid: e2a63a766fb9c45908d0b5e8c3f31641, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.028024137
+      objectReference: {fileID: 0}
+    - target: {fileID: 7589692757726960079, guid: e2a63a766fb9c45908d0b5e8c3f31641, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.015164256
+      objectReference: {fileID: 0}
+    - target: {fileID: 7589692757726960079, guid: e2a63a766fb9c45908d0b5e8c3f31641, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
       value: 2.58
       objectReference: {fileID: 0}
