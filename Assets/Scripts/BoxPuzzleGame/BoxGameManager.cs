@@ -272,12 +272,10 @@ public class BoxGameManager : MonoBehaviour
          //update agent's lists and win condition
          bool box_win = current_element_drag_script.x_correct_index == x_index;
          box_data_manager.box_items[current_element_drag_script.instantiation_index].win = box_win;
+         RemoveFromLeftmostDictionary();
          if (box_win)
          {
-            if (box_data_manager.wrong_box_items.ContainsKey(current_element_drag_script.instantiation_index))
-            {
-               box_data_manager.wrong_box_items.Remove(current_element_drag_script.instantiation_index);
-            }
+            RemoveFromWrongDictionary();
          }
          else
          {
@@ -287,7 +285,6 @@ public class BoxGameManager : MonoBehaviour
                   box_data_manager.box_items[current_element_drag_script.instantiation_index]);
             }
          }
-
          if (instantiate)
          {
             InstantiateNext();
@@ -298,6 +295,24 @@ public class BoxGameManager : MonoBehaviour
       }
       return done;
    }
+
+   private void RemoveFromWrongDictionary()
+   {
+      try
+      {
+         box_data_manager.wrong_box_items.Remove(current_element_drag_script.instantiation_index);
+      } catch(Exception e){Debug.Log("wrong list does not contain current item");}
+     
+   }
+   
+   private void RemoveFromLeftmostDictionary()
+   {
+      try
+      {
+         box_data_manager.leftmost_items.Remove(current_element_drag_script.instantiation_index);
+      } catch(Exception e){Debug.Log("leftmost list does not contain current item");}
+
+   }
    
    
    private void ResetALL()
@@ -305,11 +320,18 @@ public class BoxGameManager : MonoBehaviour
       ResetIndexes(current_element_drag_script.x_grid_index_current,
          current_element_drag_script.y_grid_index_current);
       box_data_manager.box_items[current_element_drag_script.instantiation_index].win = false;
-      if (!box_data_manager.wrong_box_items.ContainsKey(current_element_drag_script.instantiation_index))
+      //Remove from wrong items list
+      if (box_data_manager.wrong_box_items.ContainsKey(current_element_drag_script.instantiation_index))
       {
-         box_data_manager.wrong_box_items.Add(current_element_drag_script.instantiation_index,
+         box_data_manager.wrong_box_items.Remove(current_element_drag_script.instantiation_index);
+      }
+      //Add to leftmost items list
+      if (!box_data_manager.leftmost_items.ContainsKey(current_element_drag_script.instantiation_index))
+      {
+         box_data_manager.leftmost_items.Add(current_element_drag_script.instantiation_index,
             box_data_manager.box_items[current_element_drag_script.instantiation_index]);
       }
+
       if (!(current_element_drag_script.x_grid_index_current == -1 &&
             current_element_drag_script.y_grid_index_current == -1))
       {
@@ -489,6 +511,9 @@ public class BoxGameManager : MonoBehaviour
             }
          }
       }
+      
+      Debug.Log("list size: " + box_data_manager.box_items.Count + " , wrong size: " + box_data_manager.wrong_box_items.Count 
+                + "\n left size: " + box_data_manager.leftmost_items.Count);
       
       if (win)
       {

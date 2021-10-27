@@ -28,16 +28,27 @@ public class CPUAgentBlocksGame : MonoBehaviour
 
         if (available)
         {
+            
+            Debug.Log("success try");
             success = box_game_manager.SetPositionOfAgentElement(
                 box_game_manager.current_element_drag_script.x_correct_index);
         } else
         {
-            SetCurrentElementAndMoveLeftMost();
+            TryFromWrongOrLeftmost();
         }
 
         if (!success)
         {
-            SetCurrentElementAndMoveLeftMost();
+            TryFromWrongOrLeftmost();
+        }
+    }
+
+    private void TryFromWrongOrLeftmost()
+    {
+        if (!SetCurrentElementAndMoveLeftMost())
+        {
+            Debug.Log("here");
+            PickFromLeftmostList();
         }
     }
 
@@ -64,24 +75,33 @@ public class CPUAgentBlocksGame : MonoBehaviour
         }
     }
 
-    public void FixWrongAction()
+    private bool SetCurrentElementAndMoveLeftMost()
     {
-        //BoxElement element = box_game_manager.wrong_items.Dequeue();
-        //box_game_manager.SetMostLeftPositionOfAgentElement(element.GetTransform());
-
-    }
-
-    private void SetCurrentElementAndMoveLeftMost()
-    {
-        if (box_data_manager.wrong_box_items.Keys.Count > 0)
+        bool list_not_empty = box_data_manager.wrong_box_items.Keys.Count > 0;
+        if (list_not_empty)
         {
             foreach (var key in box_data_manager.wrong_box_items.Keys)
             {
                 box_game_manager.SetCurrentTransformAgent(box_data_manager.wrong_box_items[key]);
                 break;
             }
-            
             box_game_manager.SetMostLeftPositionOfAgentElement();
         }
+
+        return list_not_empty;
+    }
+
+    private void PickFromLeftmostList()
+    {
+        if (box_data_manager.leftmost_items.Keys.Count > 0)
+        {
+            foreach (var key in box_data_manager.leftmost_items.Keys)
+            {
+                box_game_manager.SetCurrentTransformAgent(box_data_manager.leftmost_items[key]);
+                break;
+            }
+        }
+        box_game_manager.SetPositionOfAgentElement(
+            box_game_manager.current_element_drag_script.x_correct_index);
     }
 }
