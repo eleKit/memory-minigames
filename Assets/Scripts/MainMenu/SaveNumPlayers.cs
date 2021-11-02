@@ -4,17 +4,11 @@ using UnityEngine;
 
 public class SaveNumPlayers : Singleton<SaveNumPlayers>
 {
-    public enum PlayOptions
-    {
-        none,
-        single,
-        agent,
-        couple
-    }
 
+    //TODO when publish make this PlayOptions.none
     private PlayOptions play_option = PlayOptions.agent;
 
-    private HomeMenuManager.GameTypes game_type;
+    private GameTypes game_type;
     void Awake()
     {
 
@@ -65,12 +59,12 @@ public class SaveNumPlayers : Singleton<SaveNumPlayers>
         play_option = PlayOptions.couple;
     }
 
-    public void SetGameType(HomeMenuManager.GameTypes type)
+    public void SetGameType(GameTypes type)
     {
         game_type = type;
     }
 
-    public HomeMenuManager.GameTypes GetGameType()
+    public GameTypes GetGameType()
     {
         return game_type;
     }

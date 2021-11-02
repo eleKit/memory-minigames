@@ -86,13 +86,13 @@ public class BoxGameManager : MonoBehaviour
       player2Image = Player2.GetComponent<Image>();
       switch (save_num_players.GetPlayOption())
       {
-         case SaveNumPlayers.PlayOptions.agent:
+         case PlayOptions.agent:
             cpuIsOn = true;
             Player1.SetActive(true);
             Player2.SetActive(true);
             switchPlayerButton.SetActive(true);
             break;
-         case SaveNumPlayers.PlayOptions.couple:
+         case PlayOptions.couple:
             multiplayer = true;
             Player1.SetActive(true);
             Player2.SetActive(true);
@@ -429,6 +429,11 @@ public class BoxGameManager : MonoBehaviour
    public int GetGridDimension()
    {
       return Grid_Dimension;
+   }
+
+   public bool GetIfAllItemsAreOnScreen()
+   {
+      return index >= indexes_sequence_of_elements_to_instantiate.Count;
    }
 
    #endregion

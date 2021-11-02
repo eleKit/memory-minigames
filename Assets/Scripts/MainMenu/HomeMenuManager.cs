@@ -13,13 +13,6 @@ public class HomeMenuManager : MonoBehaviour
 
     private SaveNumPlayers save_number_players;
 
-    public enum GameTypes
-    {
-        none,
-        memory,
-        boxes,
-    }
-
     private const string memory_scene_name = "MemoryScene";
     private const string boxes_scene_name = "BlocksPuzzleScene";
     
@@ -68,7 +61,7 @@ public class HomeMenuManager : MonoBehaviour
 
     public void LoadNextScene()
     {
-        if (!save_number_players.GetPlayOption().Equals(SaveNumPlayers.PlayOptions.none))
+        if (!save_number_players.GetPlayOption().Equals(PlayOptions.none))
         {
             save_number_players.SetGameType(current_game_type);
             switch (current_game_type)

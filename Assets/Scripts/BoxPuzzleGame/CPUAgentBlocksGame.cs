@@ -52,6 +52,18 @@ public class CPUAgentBlocksGame : MonoBehaviour
         }
     }
 
+    public void ExecuteRandMaybe()
+    {
+        if (box_game_manager.GetIfAllItemsAreOnScreen())
+        {
+            ExecuteSuccessAction();
+        }
+        else
+        {
+            ExecuteRandomAction();
+        }
+    }
+
     public void ExecuteRandomAction()
     {
         int tmp_x_index = Random.Range(0, box_game_manager.title_sprites.Length);
@@ -69,10 +81,10 @@ public class CPUAgentBlocksGame : MonoBehaviour
         {
             box_game_manager.SetPositionOfAgentElement(tmp_x_index);
         }
-        else
+        /*else
         {
             SetCurrentElementAndMoveLeftMost();
-        }
+        }*/
     }
 
     private bool SetCurrentElementAndMoveLeftMost()
