@@ -32,7 +32,6 @@ public class BoxGameManager : MonoBehaviour
 */
    private List<int> indexes_sequence_of_elements_to_instantiate;
 
-
    public LevelSelector level_selector;
 
    public float y_title_position;
@@ -72,6 +71,8 @@ public class BoxGameManager : MonoBehaviour
    [Header("game canvas")] public GameObject game_canvas;
    [Header("win canvas")] public GameObject win_element;
    [Header("levels canvas")] public GameObject level_canvas;
+   [Header("symbols panel in level canvas")] public GameObject symbols_panel;
+   [Header("letters panel in level canvas")] public GameObject letters_panel;
 
    public BoxDataManager box_data_manager;
    
@@ -626,8 +627,21 @@ public class BoxGameManager : MonoBehaviour
       StopAllCoroutines();
       game_canvas.SetActive(false);
       level_canvas.SetActive(true);
+      LoadSymbolsPanel();
       win_element.SetActive(false);
       hand_mouse.SetActive(false);
+   }
+
+   public void LoadLettersPanel()
+   {
+      letters_panel.SetActive(true);
+      symbols_panel.SetActive(false);
+   }
+   
+   public void LoadSymbolsPanel()
+   {
+      letters_panel.SetActive(false);
+      symbols_panel.SetActive(true);
    }
    
    public void LoadLeveLUI()
