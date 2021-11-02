@@ -49,12 +49,12 @@ public class MemoryManager : MonoBehaviour
 
         switch (save_num_players.GetPlayOption())
         {
-            case SaveNumPlayers.PlayOptions.agent:
+            case PlayOptions.agent:
                 cpuIsOn = true;
                 Player1.SetActive(true);
                 Player2.SetActive(true);
                 break;
-            case SaveNumPlayers.PlayOptions.couple:
+            case PlayOptions.couple:
                 multiplayer = true;
                 Player1.SetActive(true);
                 Player2.SetActive(true);
