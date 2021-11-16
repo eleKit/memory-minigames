@@ -92,6 +92,31 @@ public class MemoryStandardLevels
     {
         new OrderedDictionary() {key = 4, elements_indexes = new[] {24, 25, 0, 1, 2, 3}},
     };
+    
+    public List<OrderedDictionary> levelFaces1 = new List<OrderedDictionary>()
+    {
+        new OrderedDictionary() {key = 5, elements_indexes = new[] {0, 7, 8, 11, 14, 19 }},
+    };
+    
+    public List<OrderedDictionary> levelFaces2 = new List<OrderedDictionary>()
+    {
+        new OrderedDictionary() {key = 5, elements_indexes = new[] {1, 2, 10, 12, 15, 20 }},
+    };
+    
+    public List<OrderedDictionary> levelFaces3 = new List<OrderedDictionary>()
+    {
+        new OrderedDictionary() {key = 5, elements_indexes = new[] {3, 4, 5, 13, 14, 27 }},
+    };
+    
+    public List<OrderedDictionary> levelFaces4 = new List<OrderedDictionary>()
+    {
+        new OrderedDictionary() {key = 5, elements_indexes = new[] {6, 9, 16, 17, 25, 26 }},
+    };
+    
+    public List<OrderedDictionary> levelFaces5 = new List<OrderedDictionary>()
+    {
+        new OrderedDictionary() {key = 5, elements_indexes = new[] {2, 11, 18, 21, 23, 24}},
+    };
 
     
     

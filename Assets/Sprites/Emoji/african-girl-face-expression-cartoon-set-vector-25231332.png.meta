@@ -1,0 +1,528 @@
+fileFormatVersion: 2
+guid: 70847f9700bf445d49a29e76e44b37c9
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6988702258787899340
+    second: african-girl-face-expression-cartoon-set-vector-25231332_0
+  - first:
+      213: 4137005773768542002
+    second: african-girl-face-expression-cartoon-set-vector-25231332_1
+  - first:
+      213: 6895393411351349873
+    second: african-girl-face-expression-cartoon-set-vector-25231332_2
+  - first:
+      213: -8411681593940982472
+    second: african-girl-face-expression-cartoon-set-vector-25231332_3
+  - first:
+      213: -5491014766685382425
+    second: african-girl-face-expression-cartoon-set-vector-25231332_4
+  - first:
+      213: -7600994737663052053
+    second: african-girl-face-expression-cartoon-set-vector-25231332_5
+  - first:
+      213: -4863603987789922982
+    second: african-girl-face-expression-cartoon-set-vector-25231332_6
+  - first:
+      213: 8512663580408451308
+    second: african-girl-face-expression-cartoon-set-vector-25231332_7
+  - first:
+      213: -6731902408240963335
+    second: african-girl-face-expression-cartoon-set-vector-25231332_8
+  - first:
+      213: -6087409074610862618
+    second: african-girl-face-expression-cartoon-set-vector-25231332_9
+  - first:
+      213: 4720042302962900486
+    second: african-girl-face-expression-cartoon-set-vector-25231332_10
+  - first:
+      213: -3412366056282243140
+    second: african-girl-face-expression-cartoon-set-vector-25231332_11
+  - first:
+      213: -375473869392029563
+    second: african-girl-face-expression-cartoon-set-vector-25231332_12
+  - first:
+      213: 8451458235861915204
+    second: african-girl-face-expression-cartoon-set-vector-25231332_13
+  - first:
+      213: 4375879909518902711
+    second: african-girl-face-expression-cartoon-set-vector-25231332_14
+  - first:
+      213: 1865517170485829717
+    second: african-girl-face-expression-cartoon-set-vector-25231332_15
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: african-girl-face-expression-cartoon-set-vector-25231332_0
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 832
+        width: 206
+        height: 191
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc7d5083dabdcf060800000000000000
+      internalID: 6988702258787899340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: african-girl-face-expression-cartoon-set-vector-25231332_1
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 832
+        width: 208
+        height: 191
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 237c63b15d8996930800000000000000
+      internalID: 4137005773768542002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: african-girl-face-expression-cartoon-set-vector-25231332_2
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 832
+        width: 207
+        height: 191
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17a8a2636cb51bf50800000000000000
+      internalID: 6895393411351349873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: african-girl-face-expression-cartoon-set-vector-25231332_3
+      rect:
+        serializedVersion: 2
+        x: 746
+        y: 833
+        width: 206
+        height: 191
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 835c4754824b34b80800000000000000
+      internalID: -8411681593940982472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: african-girl-face-expression-cartoon-set-vector-25231332_4
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 598
+        width: 207
+        height: 191
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e81b4f892ffbc3b0800000000000000
+      internalID: -5491014766685382425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: african-girl-face-expression-cartoon-set-vector-25231332_5
+      rect:
+        serializedVersion: 2
+        x: 276
+        y: 598
+        width: 206
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be6faf1de87d38690800000000000000
+      internalID: -7600994737663052053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: african-girl-face-expression-cartoon-set-vector-25231332_6
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 598
+        width: 206
+        height: 190
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5dbb9b01f1018cb0800000000000000
+      internalID: -4863603987789922982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: african-girl-face-expression-cartoon-set-vector-25231332_7
+      rect:
+        serializedVersion: 2
+        x: 753
+        y: 598
+        width: 207
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce096a2ac6e032670800000000000000
+      internalID: 8512663580408451308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: african-girl-face-expression-cartoon-set-vector-25231332_8
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 367
+        width: 207
+        height: 190
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f063364d6a7392a0800000000000000
+      internalID: -6731902408240963335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: african-girl-face-expression-cartoon-set-vector-25231332_9
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 367
+        width: 206
+        height: 191
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e58459f2bd258ba0800000000000000
+      internalID: -6087409074610862618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: african-girl-face-expression-cartoon-set-vector-25231332_10
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 367
+        width: 206
+        height: 191
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60e9be87775f08140800000000000000
+      internalID: 4720042302962900486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: african-girl-face-expression-cartoon-set-vector-25231332_11
+      rect:
+        serializedVersion: 2
+        x: 748
+        y: 366
+        width: 206
+        height: 191
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbf32bbb627d4a0d0800000000000000
+      internalID: -3412366056282243140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: african-girl-face-expression-cartoon-set-vector-25231332_12
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 132
+        width: 206
+        height: 191
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5885270518c0acaf0800000000000000
+      internalID: -375473869392029563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: african-girl-face-expression-cartoon-set-vector-25231332_13
+      rect:
+        serializedVersion: 2
+        x: 274
+        y: 132
+        width: 206
+        height: 190
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 446599edc7c994570800000000000000
+      internalID: 8451458235861915204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: african-girl-face-expression-cartoon-set-vector-25231332_14
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 132
+        width: 207
+        height: 190
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b584a2e79f3abc30800000000000000
+      internalID: 4375879909518902711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: african-girl-face-expression-cartoon-set-vector-25231332_15
+      rect:
+        serializedVersion: 2
+        x: 753
+        y: 132
+        width: 206
+        height: 190
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 550233d8bf5a3e910800000000000000
+      internalID: 1865517170485829717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

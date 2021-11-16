@@ -1,0 +1,528 @@
+fileFormatVersion: 2
+guid: 6f23a765f685c42029da86032c5c7108
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1740776808354477542
+    second: cute-boy-face-expression-cartoon-set-vector-24803805_0
+  - first:
+      213: 1849838115790550949
+    second: cute-boy-face-expression-cartoon-set-vector-24803805_1
+  - first:
+      213: -7512485951284787593
+    second: cute-boy-face-expression-cartoon-set-vector-24803805_2
+  - first:
+      213: 496324569297326227
+    second: cute-boy-face-expression-cartoon-set-vector-24803805_3
+  - first:
+      213: 1627744680220888409
+    second: cute-boy-face-expression-cartoon-set-vector-24803805_4
+  - first:
+      213: 7543373158493178293
+    second: cute-boy-face-expression-cartoon-set-vector-24803805_5
+  - first:
+      213: 747171524919248983
+    second: cute-boy-face-expression-cartoon-set-vector-24803805_6
+  - first:
+      213: -2573528441760440937
+    second: cute-boy-face-expression-cartoon-set-vector-24803805_7
+  - first:
+      213: -5874364010480023002
+    second: cute-boy-face-expression-cartoon-set-vector-24803805_8
+  - first:
+      213: -5412785690200000912
+    second: cute-boy-face-expression-cartoon-set-vector-24803805_9
+  - first:
+      213: 4875105154663061048
+    second: cute-boy-face-expression-cartoon-set-vector-24803805_10
+  - first:
+      213: 8847061906021438896
+    second: cute-boy-face-expression-cartoon-set-vector-24803805_11
+  - first:
+      213: -8200381788731264353
+    second: cute-boy-face-expression-cartoon-set-vector-24803805_12
+  - first:
+      213: 6276672040616969148
+    second: cute-boy-face-expression-cartoon-set-vector-24803805_13
+  - first:
+      213: 8463278210814128566
+    second: cute-boy-face-expression-cartoon-set-vector-24803805_14
+  - first:
+      213: -4711596218899869735
+    second: cute-boy-face-expression-cartoon-set-vector-24803805_15
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: cute-boy-face-expression-cartoon-set-vector-24803805_0
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 840
+        width: 183
+        height: 202
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e5f43fb84b782810800000000000000
+      internalID: 1740776808354477542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cute-boy-face-expression-cartoon-set-vector-24803805_1
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 840
+        width: 183
+        height: 202
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a77ca727f1fba910800000000000000
+      internalID: 1849838115790550949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cute-boy-face-expression-cartoon-set-vector-24803805_2
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 840
+        width: 183
+        height: 202
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 776ce8584d94eb790800000000000000
+      internalID: -7512485951284787593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cute-boy-face-expression-cartoon-set-vector-24803805_3
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 840
+        width: 183
+        height: 202
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 390144ee09c43e600800000000000000
+      internalID: 496324569297326227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cute-boy-face-expression-cartoon-set-vector-24803805_4
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 599
+        width: 183
+        height: 202
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95d09999929e69610800000000000000
+      internalID: 1627744680220888409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cute-boy-face-expression-cartoon-set-vector-24803805_5
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 599
+        width: 183
+        height: 202
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b9c330dbe17fa860800000000000000
+      internalID: 7543373158493178293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cute-boy-face-expression-cartoon-set-vector-24803805_6
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 599
+        width: 183
+        height: 202
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75849111b8c7e5a00800000000000000
+      internalID: 747171524919248983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cute-boy-face-expression-cartoon-set-vector-24803805_7
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 599
+        width: 183
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79d1181748df84cd0800000000000000
+      internalID: -2573528441760440937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cute-boy-face-expression-cartoon-set-vector-24803805_8
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 358
+        width: 183
+        height: 202
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62acff16e011a7ea0800000000000000
+      internalID: -5874364010480023002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cute-boy-face-expression-cartoon-set-vector-24803805_9
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 358
+        width: 183
+        height: 202
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 076bf4ac71ce1e4b0800000000000000
+      internalID: -5412785690200000912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cute-boy-face-expression-cartoon-set-vector-24803805_10
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 358
+        width: 183
+        height: 202
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8361e5a0f4ad7a340800000000000000
+      internalID: 4875105154663061048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cute-boy-face-expression-cartoon-set-vector-24803805_11
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 358
+        width: 183
+        height: 202
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b55c460ee317ca70800000000000000
+      internalID: 8847061906021438896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cute-boy-face-expression-cartoon-set-vector-24803805_12
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 118
+        width: 183
+        height: 202
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f92371ce534623e80800000000000000
+      internalID: -8200381788731264353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cute-boy-face-expression-cartoon-set-vector-24803805_13
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 118
+        width: 183
+        height: 202
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb3c99837f73b1750800000000000000
+      internalID: 6276672040616969148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cute-boy-face-expression-cartoon-set-vector-24803805_14
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 117
+        width: 183
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b131ee31ba937570800000000000000
+      internalID: 8463278210814128566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cute-boy-face-expression-cartoon-set-vector-24803805_15
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 117
+        width: 183
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9df4667b33c0d9eb0800000000000000
+      internalID: -4711596218899869735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

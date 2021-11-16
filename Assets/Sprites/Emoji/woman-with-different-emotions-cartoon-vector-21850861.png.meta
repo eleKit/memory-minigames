@@ -1,0 +1,840 @@
+fileFormatVersion: 2
+guid: 44998c45bdb2c4813b0470a0ec490c37
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4708668449489432706
+    second: woman-with-different-emotions-cartoon-vector-21850861_0
+  - first:
+      213: 5308718040885280968
+    second: woman-with-different-emotions-cartoon-vector-21850861_1
+  - first:
+      213: -5209721524185666873
+    second: woman-with-different-emotions-cartoon-vector-21850861_2
+  - first:
+      213: -389357879524832323
+    second: woman-with-different-emotions-cartoon-vector-21850861_3
+  - first:
+      213: -972149581637158339
+    second: woman-with-different-emotions-cartoon-vector-21850861_4
+  - first:
+      213: -6433642124678379151
+    second: woman-with-different-emotions-cartoon-vector-21850861_5
+  - first:
+      213: 7396471123815363455
+    second: woman-with-different-emotions-cartoon-vector-21850861_6
+  - first:
+      213: -8102785452890909097
+    second: woman-with-different-emotions-cartoon-vector-21850861_7
+  - first:
+      213: -1667265096430529432
+    second: woman-with-different-emotions-cartoon-vector-21850861_8
+  - first:
+      213: -1621850678580076934
+    second: woman-with-different-emotions-cartoon-vector-21850861_9
+  - first:
+      213: -3746159233896689996
+    second: woman-with-different-emotions-cartoon-vector-21850861_10
+  - first:
+      213: -3719708374431944969
+    second: woman-with-different-emotions-cartoon-vector-21850861_11
+  - first:
+      213: -2501056624756829118
+    second: woman-with-different-emotions-cartoon-vector-21850861_12
+  - first:
+      213: 5907767968448249217
+    second: woman-with-different-emotions-cartoon-vector-21850861_13
+  - first:
+      213: 5566391545502523161
+    second: woman-with-different-emotions-cartoon-vector-21850861_14
+  - first:
+      213: -997125760329050486
+    second: woman-with-different-emotions-cartoon-vector-21850861_15
+  - first:
+      213: -8564672637694671698
+    second: woman-with-different-emotions-cartoon-vector-21850861_16
+  - first:
+      213: -5934506556379810883
+    second: woman-with-different-emotions-cartoon-vector-21850861_17
+  - first:
+      213: 4244148713045306730
+    second: woman-with-different-emotions-cartoon-vector-21850861_18
+  - first:
+      213: -3293876350751186524
+    second: woman-with-different-emotions-cartoon-vector-21850861_19
+  - first:
+      213: -2174349004567655390
+    second: woman-with-different-emotions-cartoon-vector-21850861_20
+  - first:
+      213: 259401047556317530
+    second: woman-with-different-emotions-cartoon-vector-21850861_21
+  - first:
+      213: -5059906754616038106
+    second: woman-with-different-emotions-cartoon-vector-21850861_22
+  - first:
+      213: -3930794966554966131
+    second: woman-with-different-emotions-cartoon-vector-21850861_23
+  - first:
+      213: 6558474752046308077
+    second: woman-with-different-emotions-cartoon-vector-21850861_24
+  - first:
+      213: 1049144273574126099
+    second: woman-with-different-emotions-cartoon-vector-21850861_25
+  - first:
+      213: 6682416473622248717
+    second: woman-with-different-emotions-cartoon-vector-21850861_26
+  - first:
+      213: -1207962214051930305
+    second: woman-with-different-emotions-cartoon-vector-21850861_27
+  - first:
+      213: -8353929035640704154
+    second: woman-with-different-emotions-cartoon-vector-21850861_28
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: woman-with-different-emotions-cartoon-vector-21850861_0
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 759
+        width: 178
+        height: 277
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28038e8d10d885140800000000000000
+      internalID: 4708668449489432706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: woman-with-different-emotions-cartoon-vector-21850861_1
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 766
+        width: 212
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c0ccaf6eea5ca940800000000000000
+      internalID: 5308718040885280968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: woman-with-different-emotions-cartoon-vector-21850861_2
+      rect:
+        serializedVersion: 2
+        x: 787
+        y: 754
+        width: 134
+        height: 293
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cae43440e953b7b0800000000000000
+      internalID: -5209721524185666873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: woman-with-different-emotions-cartoon-vector-21850861_3
+      rect:
+        serializedVersion: 2
+        x: 838
+        y: 722
+        width: 20
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbb4c6c4219b89af0800000000000000
+      internalID: -389357879524832323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: woman-with-different-emotions-cartoon-vector-21850861_4
+      rect:
+        serializedVersion: 2
+        x: 841
+        y: 712
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3af8fd2b1b3282f0800000000000000
+      internalID: -972149581637158339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: woman-with-different-emotions-cartoon-vector-21850861_5
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 432
+        width: 167
+        height: 277
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1794e82139c17b6a0800000000000000
+      internalID: -6433642124678379151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: woman-with-different-emotions-cartoon-vector-21850861_6
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 699
+        width: 14
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f73f2768c4b85a660800000000000000
+      internalID: 7396471123815363455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: woman-with-different-emotions-cartoon-vector-21850861_7
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 433
+        width: 146
+        height: 276
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7561c3d9f8f1d8f80800000000000000
+      internalID: -8102785452890909097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: woman-with-different-emotions-cartoon-vector-21850861_8
+      rect:
+        serializedVersion: 2
+        x: 764
+        y: 432
+        width: 149
+        height: 277
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 864d9d47a3facd8e0800000000000000
+      internalID: -1667265096430529432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: woman-with-different-emotions-cartoon-vector-21850861_9
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 679
+        width: 21
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7e128896670e79e0800000000000000
+      internalID: -1621850678580076934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: woman-with-different-emotions-cartoon-vector-21850861_10
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 639
+        width: 27
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bec9875608f20cc0800000000000000
+      internalID: -3746159233896689996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: woman-with-different-emotions-cartoon-vector-21850861_11
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 578
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fe20f9f0f0f06cc0800000000000000
+      internalID: -3719708374431944969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: woman-with-different-emotions-cartoon-vector-21850861_12
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 567
+        width: 13
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2445b3e30467a4dd0800000000000000
+      internalID: -2501056624756829118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: woman-with-different-emotions-cartoon-vector-21850861_13
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 103
+        width: 134
+        height: 293
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18df9c6aaab9cf150800000000000000
+      internalID: 5907767968448249217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: woman-with-different-emotions-cartoon-vector-21850861_14
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 263
+        width: 59
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91f5a6e5e9bcf3d40800000000000000
+      internalID: 5566391545502523161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: woman-with-different-emotions-cartoon-vector-21850861_15
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 102
+        width: 133
+        height: 277
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a86123b676f7922f0800000000000000
+      internalID: -997125760329050486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: woman-with-different-emotions-cartoon-vector-21850861_16
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 291
+        width: 57
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea483b41d9b242980800000000000000
+      internalID: -8564672637694671698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: woman-with-different-emotions-cartoon-vector-21850861_17
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 287
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db331c5bab564ada0800000000000000
+      internalID: -5934506556379810883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: woman-with-different-emotions-cartoon-vector-21850861_18
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 278
+        width: 20
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6d2ffe94ce36ea30800000000000000
+      internalID: 4244148713045306730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: woman-with-different-emotions-cartoon-vector-21850861_19
+      rect:
+        serializedVersion: 2
+        x: 766
+        y: 102
+        width: 146
+        height: 277
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a16a6329ecc942d0800000000000000
+      internalID: -3293876350751186524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: woman-with-different-emotions-cartoon-vector-21850861_20
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 230
+        width: 47
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22c450db91923d1e0800000000000000
+      internalID: -2174349004567655390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: woman-with-different-emotions-cartoon-vector-21850861_21
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 256
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5165fdd0e3999300800000000000000
+      internalID: 259401047556317530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: woman-with-different-emotions-cartoon-vector-21850861_22
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 251
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62de28e7d9997c9b0800000000000000
+      internalID: -5059906754616038106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: woman-with-different-emotions-cartoon-vector-21850861_23
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 251
+        width: 19
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d87099dddc20379c0800000000000000
+      internalID: -3930794966554966131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: woman-with-different-emotions-cartoon-vector-21850861_24
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 256
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dea9618e902640b50800000000000000
+      internalID: 6558474752046308077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: woman-with-different-emotions-cartoon-vector-21850861_25
+      rect:
+        serializedVersion: 2
+        x: 760
+        y: 207
+        width: 8
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3126580882f4f8e00800000000000000
+      internalID: 1049144273574126099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: woman-with-different-emotions-cartoon-vector-21850861_26
+      rect:
+        serializedVersion: 2
+        x: 910
+        y: 195
+        width: 8
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0df877b066bcbc50800000000000000
+      internalID: 6682416473622248717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: woman-with-different-emotions-cartoon-vector-21850861_27
+      rect:
+        serializedVersion: 2
+        x: 919
+        y: 198
+        width: 5
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3f175134c47c3fe0800000000000000
+      internalID: -1207962214051930305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: woman-with-different-emotions-cartoon-vector-21850861_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1000
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66370d79dc1e01c80800000000000000
+      internalID: -8353929035640704154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

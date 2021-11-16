@@ -24,6 +24,9 @@ public class LevelSelector : MonoBehaviour
    [Header("you MUST choose the same order for title and interactable arrays")]
    public GameObject[] letters_title_array;
    public GameObject[] letters_array;
+   [Header("you MUST choose the same order for title and interactable arrays")]
+   public GameObject[] faces_title_array;
+   public GameObject[] faces_array;
     
 
 

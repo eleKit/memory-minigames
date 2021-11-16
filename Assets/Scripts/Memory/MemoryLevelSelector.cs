@@ -9,6 +9,7 @@ public class MemoryLevelSelector : MonoBehaviour
     public Sprite[] itemsSprites;
     public Sprite[] chibiSprites;
     public Sprite[] lettersSprites;
+    public Sprite[] facesSprites;
     
     private MemoryStandardLevels levels = new MemoryStandardLevels();
     
@@ -21,6 +22,7 @@ public class MemoryLevelSelector : MonoBehaviour
         levels.AddToDictionary(2, itemsSprites);
         levels.AddToDictionary(3, chibiSprites);
         levels.AddToDictionary(4, lettersSprites);
+        levels.AddToDictionary(5, facesSprites);
 
     }
 
@@ -64,8 +66,18 @@ public class MemoryLevelSelector : MonoBehaviour
                 return GenerateStandardLevelArray(levels.levelLetters3);
             case "L4":
                 return GenerateStandardLevelArray(levels.levelLetters4);
-            case "L5":
-                return GenerateStandardLevelArray(levels.levelLetters5);
+            case "F1":
+                return GenerateStandardLevelArray(levels.levelFaces1);
+            case "F2":
+                return GenerateStandardLevelArray(levels.levelFaces2);
+            case "F3":
+                return GenerateStandardLevelArray(levels.levelFaces3);
+            case "F4":
+                return GenerateStandardLevelArray(levels.levelFaces4);
+            case "F5":
+                return GenerateStandardLevelArray(levels.levelFaces5);
+            
+            
         }
 
         return GenerateStandardLevelArray(levels.levelAnimal1);
