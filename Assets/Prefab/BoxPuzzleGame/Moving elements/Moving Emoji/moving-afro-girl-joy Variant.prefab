@@ -57,11 +57,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 121065743993684702, guid: b03d871e21cdc4a7e85c2bbcc070b296, type: 3}
       propertyPath: m_Name
-      value: moving-afro-girl-joy
+      value: moving-afro-girl-joy Variant
       objectReference: {fileID: 0}
     - target: {fileID: 121065743993684703, guid: b03d871e21cdc4a7e85c2bbcc070b296, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -4863603987789922982, guid: 70847f9700bf445d49a29e76e44b37c9, type: 3}
+    - target: {fileID: 8442554822859567852, guid: b03d871e21cdc4a7e85c2bbcc070b296, type: 3}
+      propertyPath: m_SortingLayer
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8442554822859567852, guid: b03d871e21cdc4a7e85c2bbcc070b296, type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1757948857
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b03d871e21cdc4a7e85c2bbcc070b296, type: 3}

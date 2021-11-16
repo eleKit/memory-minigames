@@ -138,6 +138,28 @@ public class BoxesStandardLevels
         new OrderedDictionary() {key = 5, elements_indexes = new[] {23, 24, 25}},
     };
     
+    public List<OrderedDictionary> levelF1 = new List<OrderedDictionary>()
+    {
+        new OrderedDictionary() {key = 6, elements_indexes = new[] {0, 10, 17}}, //angry, happy, cry
+    };
+    
+    
+    public List<OrderedDictionary> levelF2 = new List<OrderedDictionary>()
+    {
+        new OrderedDictionary() {key = 6, elements_indexes = new[] {16, 4, 14}}, //disappointed, happy, disgusted
+    };
+
+    
+    public List<OrderedDictionary> levelF3 = new List<OrderedDictionary>()
+    {
+        new OrderedDictionary() {key = 6, elements_indexes = new[] {8, 6, 19}}, //angry2, sad, joy
+    };
+    
+    public List<OrderedDictionary> levelF4 = new List<OrderedDictionary>()
+    {
+        new OrderedDictionary() {key = 6, elements_indexes = new[] {20, 4, 9}}, //disappointed, joy, cry
+    };
+
     #endregion
     
 

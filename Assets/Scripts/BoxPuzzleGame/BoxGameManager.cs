@@ -73,6 +73,7 @@ public class BoxGameManager : MonoBehaviour
    [Header("levels canvas")] public GameObject level_canvas;
    [Header("symbols panel in level canvas")] public GameObject symbols_panel;
    [Header("letters panel in level canvas")] public GameObject letters_panel;
+   [Header("faces panel in level canvas")] public GameObject faces_panel;
 
    public BoxDataManager box_data_manager;
    
@@ -125,7 +126,21 @@ public class BoxGameManager : MonoBehaviour
 
    public void GenerateRandomLevel()
    {
-      int random = Rnd.Range(0, number_of_arrays_of_levels + 1);
+      int random = Rnd.Range(0, 4 + 1);
+      level_selector.GenerateRandomSingleLevel(random);
+      SetupLevel();
+   }
+
+   public void GenerateRandomLettersLevel()
+   {
+      int random = 5;
+      level_selector.GenerateRandomSingleLevel(random);
+      SetupLevel();
+   }
+   
+   public void GenerateRandomFacesLevel()
+   {
+      int random = 6;
       level_selector.GenerateRandomSingleLevel(random);
       SetupLevel();
    }
@@ -636,12 +651,21 @@ public class BoxGameManager : MonoBehaviour
    {
       letters_panel.SetActive(true);
       symbols_panel.SetActive(false);
+      faces_panel.SetActive(false);
    }
    
    public void LoadSymbolsPanel()
    {
       letters_panel.SetActive(false);
       symbols_panel.SetActive(true);
+      faces_panel.SetActive(false);
+   }
+   
+   public void LoadFacesPanel()
+   {
+      letters_panel.SetActive(false);
+      symbols_panel.SetActive(false);
+      faces_panel.SetActive(true);
    }
    
    public void LoadLeveLUI()

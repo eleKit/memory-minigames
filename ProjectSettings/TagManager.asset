@@ -51,6 +51,9 @@ TagManager:
   - name: wall
     uniqueID: 2768769841
     locked: 0
+  - name: boxes_bg
+    uniqueID: 2537018439
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0

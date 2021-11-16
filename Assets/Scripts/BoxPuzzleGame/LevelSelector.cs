@@ -50,6 +50,7 @@ public class LevelSelector : MonoBehaviour
       standard_levels.AddToDictionary(3, stars_title_array, stars_array);
       standard_levels.AddToDictionary(4, others_title_array, others_array);
       standard_levels.AddToDictionary(5, letters_title_array, letters_array);
+      standard_levels.AddToDictionary(6, faces_title_array, faces_array);
       
    }
    
@@ -128,6 +129,18 @@ public class LevelSelector : MonoBehaviour
          case 18:
             GenerateStandardLevelArray(standard_levels.levelXYZ);
             break;
+         case 19:
+            GenerateStandardLevelArray(standard_levels.levelF1);
+            break;
+         case 20:
+            GenerateStandardLevelArray(standard_levels.levelF2);
+            break;
+         case 21:
+            GenerateStandardLevelArray(standard_levels.levelF3);
+            break;
+         case 22:
+            GenerateStandardLevelArray(standard_levels.levelF4);
+            break;
 
       }
       
@@ -173,6 +186,9 @@ public class LevelSelector : MonoBehaviour
             break;
          case 5:
             RandomSingleLevelArray(letters_title_array, letters_array);
+            break;
+         case 6:
+            RandomSingleLevelArray(faces_title_array, faces_array);
             break;
       }
       
