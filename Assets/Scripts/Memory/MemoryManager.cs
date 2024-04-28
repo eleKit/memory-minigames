@@ -298,8 +298,11 @@ public class MemoryManager : MonoBehaviour
         
         flipped = 0;
 
-        yield return StartCoroutine(ChangeTurn());
-        
+        if (cpuIsOn || multiplayer)
+        {
+            yield return StartCoroutine(ChangeTurn());
+        }
+
 
         if (CheckVictory())
         {

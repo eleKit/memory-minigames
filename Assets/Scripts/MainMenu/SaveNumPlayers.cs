@@ -6,7 +6,7 @@ public class SaveNumPlayers : Singleton<SaveNumPlayers>
 {
 
     //TODO when publish make this PlayOptions.none
-    private PlayOptions play_option = PlayOptions.agent;
+    public PlayOptions play_option = PlayOptions.agent;
 
     private GameTypes game_type;
     void Awake()

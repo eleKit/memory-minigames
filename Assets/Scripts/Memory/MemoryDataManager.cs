@@ -107,7 +107,7 @@ public class MemoryDataManager : MonoBehaviour
             }
         }*/
 
-        return new MemoryCard(0, 0, true);
+        return null;
     }
 
     public bool CheckIfSecondIsSeen(MemoryCard card)

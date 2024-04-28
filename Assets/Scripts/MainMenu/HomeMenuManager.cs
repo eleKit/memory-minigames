@@ -59,11 +59,21 @@ public class HomeMenuManager : MonoBehaviour
         error_option_canvas.SetActive(false);
     }
 
-    public void LoadNextScene()
+    public void LoadNextScene(int i)
     {
-        if (!save_number_players.GetPlayOption().Equals(PlayOptions.none))
+        switch (i)
         {
-            save_number_players.SetGameType(current_game_type);
+            case 1:
+                save_number_players.SetCPU();
+                break;
+            case 2:
+                save_number_players.Set2Players();
+                break;
+            default:
+                save_number_players.SetSinglePlayer();
+                break;
+        }
+        save_number_players.SetGameType(current_game_type);
             switch (current_game_type)
             {
                 case GameTypes.memory:
@@ -73,11 +83,6 @@ public class HomeMenuManager : MonoBehaviour
                     SceneManager.LoadSceneAsync(boxes_scene_name);
                     break;
             }
-                
-        } else
-        {
-            StartCoroutine(ShowOptionErrorCanvas());
-        }
 
     }
 

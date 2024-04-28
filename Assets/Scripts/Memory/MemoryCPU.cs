@@ -17,7 +17,7 @@ public class MemoryCPU : MonoBehaviour
     {
         memoryManager = GameObject.FindGameObjectWithTag("memoryManager").GetComponent<MemoryManager>();
         memoryDataManager = GameObject.FindGameObjectWithTag("memoryCPUupdater").GetComponent<MemoryDataManager>();
-        card = new MemoryCard( 0, 0, true);
+        card = null;
     }
     
     
@@ -48,7 +48,7 @@ public class MemoryCPU : MonoBehaviour
     {
         card = memoryDataManager.GetFirstSeenCard();
 //        Debug.Log("first index action" + card.index);
-        if(!card.ERROR_CARD) 
+        if(card != null) 
         {memoryManager.FlipCardAgent(card.index);}
         else
         {
