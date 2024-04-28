@@ -41,6 +41,8 @@ public class MemoryManager : MonoBehaviour
     public bool current_turn_is_player;
 
     private MemoryDataManager memoryDataManager;
+    private SFXManager sfx_manager;
+    private MusicManager music_manager;
 
     private bool cpuIsOn;
     private bool multiplayer;
@@ -51,6 +53,8 @@ public class MemoryManager : MonoBehaviour
     {
         memoryDataManager = GameObject.FindGameObjectWithTag("memoryCPUupdater").GetComponent<MemoryDataManager>();
         save_num_players = GameObject.FindGameObjectWithTag("save_number_players").GetComponent<SaveNumPlayers>();
+        sfx_manager = GameObject.FindGameObjectWithTag("sfx_manager").GetComponent<SFXManager>();
+        music_manager = GameObject.FindGameObjectWithTag("music_manager").GetComponent<MusicManager>();
         player1Image = Player1.GetComponent<Image>();
         player2Image = Player2.GetComponent<Image>();
         scorePlayer1Text = Player1.GetComponentInChildren<Text>();
@@ -248,12 +252,14 @@ public class MemoryManager : MonoBehaviour
             case 1:
                 first_card_index = index;
                 memoryDataManager.fixed_cards[index].backCard.SetActive(false);
+                sfx_manager.music_utilities_script.Play("Flip", false);
                 memoryDataManager.SetSeenCard(index);
                 break;
             case 2:
                 second_card_index = index;
                 memoryDataManager.fixed_cards[index].backCard.SetActive(false);
                 bool win = first_card_index.Equals(memoryDataManager.fixed_cards[index].other_index);
+                sfx_manager.music_utilities_script.Play("Flip", false);
                 memoryDataManager.SetWonCouple(index,win);
                 StartCoroutine(CheckWin(win));
                 break;
@@ -292,7 +298,7 @@ public class MemoryManager : MonoBehaviour
         }
         else
         {
-            yield return new WaitForSeconds(8f);
+            yield return new WaitForSeconds(save_num_players.memory_card_speed);
             CoverLoseBacks();
         }
         
@@ -309,6 +315,10 @@ public class MemoryManager : MonoBehaviour
             //TODO win coroutine
             win_canvas_element.SetActive(true);
             ResetColors();
+            music_manager.music_utilities_script.StopAll();
+            music_manager.music_utilities_script.Play("Win", false);
+            yield return new WaitForSeconds(4f);
+            music_manager.music_utilities_script.Play("BG");
         }
 
     }

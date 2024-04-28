@@ -11,6 +11,8 @@ TagManager:
   - save_number_players
   - memoryManager
   - memoryCPUupdater
+  - music_manager
+  - sfx_manager
   layers:
   - Default
   - TransparentFX

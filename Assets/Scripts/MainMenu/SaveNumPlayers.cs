@@ -8,6 +8,8 @@ public class SaveNumPlayers : Singleton<SaveNumPlayers>
     //TODO when publish make this PlayOptions.none
     public PlayOptions play_option = PlayOptions.agent;
 
+    public float memory_card_speed = 8;
+
     private GameTypes game_type;
     void Awake()
     {

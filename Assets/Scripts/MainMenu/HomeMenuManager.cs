@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class HomeMenuManager : MonoBehaviour
 {
     public GameObject choose_game_canvas;
     public GameObject choose_mode_canvas;
     public GameObject error_option_canvas;
+    public Slider slider_memory;
 
     private GameTypes current_game_type = GameTypes.none;
 
@@ -35,15 +37,6 @@ public class HomeMenuManager : MonoBehaviour
         current_game_type = GameTypes.none;
     }
 
-    public void SetMemory()
-    {
-        current_game_type = GameTypes.memory;   
-    }
-    
-    public void SetBoxesGame()
-    {
-        current_game_type = GameTypes.boxes;   
-    }
 
     public void ActivateChooseGame()
     {
@@ -52,11 +45,22 @@ public class HomeMenuManager : MonoBehaviour
         error_option_canvas.SetActive(false);
     }
     
-    public void ActivateChooseMode()
+    public void ActivateChooseMode(bool box)
     {
-        choose_game_canvas.SetActive(false);
-        choose_mode_canvas.SetActive(true);
-        error_option_canvas.SetActive(false);
+        if (box)
+        {
+            current_game_type = GameTypes.boxes;   
+            LoadNextScene(0);
+        }
+        else
+        {
+            current_game_type = GameTypes.memory;
+            choose_game_canvas.SetActive(false);
+            choose_mode_canvas.SetActive(true);
+            error_option_canvas.SetActive(false);
+        }
+
+        
     }
 
     public void LoadNextScene(int i)
@@ -74,9 +78,12 @@ public class HomeMenuManager : MonoBehaviour
                 break;
         }
         save_number_players.SetGameType(current_game_type);
-            switch (current_game_type)
+        switch (current_game_type)
             {
                 case GameTypes.memory:
+                    save_number_players.memory_card_speed = slider_memory.value;
+                    Debug.Log(save_number_players.memory_card_speed);
+                    Debug.Log(slider_memory.value);
                     SceneManager.LoadSceneAsync(memory_scene_name);
                     break;
                 case GameTypes.boxes:
