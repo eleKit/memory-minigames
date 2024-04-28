@@ -85,11 +85,5 @@ public class HomeMenuManager : MonoBehaviour
             }
 
     }
-
-    IEnumerator ShowOptionErrorCanvas()
-    {
-        error_option_canvas.SetActive(true);
-        yield return new WaitForSeconds(1f);
-        error_option_canvas.SetActive(false);
-    }
+    
 }
