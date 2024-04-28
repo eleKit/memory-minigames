@@ -14,6 +14,13 @@ public class MemoryManager : MonoBehaviour
     public GameObject Player1;
     public GameObject Player2;
 
+    public Text scorePlayer1Text;
+    public Text scorePlayer2Text;
+
+    private int scorePlayer1;
+    private int scorePlayer2;
+    
+
     private Image player1Image;
     private Image player2Image;
 
@@ -46,6 +53,10 @@ public class MemoryManager : MonoBehaviour
         save_num_players = GameObject.FindGameObjectWithTag("save_number_players").GetComponent<SaveNumPlayers>();
         player1Image = Player1.GetComponent<Image>();
         player2Image = Player2.GetComponent<Image>();
+        scorePlayer1Text = Player1.GetComponentInChildren<Text>();
+        scorePlayer2Text = Player2.GetComponentInChildren<Text>();
+        scorePlayer1 = 0;
+        scorePlayer2 = 0;
 
         switch (save_num_players.GetPlayOption())
         {
@@ -166,6 +177,9 @@ public class MemoryManager : MonoBehaviour
     void CleanLevel()
     {
         memoryDataManager.ResetFlippedList();
+        scorePlayer1 = 0;
+        scorePlayer2 = 0;
+        UpdatePlayerScores();
     }
 
     void CoverLoseBacks()
@@ -181,7 +195,8 @@ public class MemoryManager : MonoBehaviour
 
     public void FlipCard(int index)
     {
-        if (current_turn_is_player)
+        Debug.Log(current_turn_is_player || multiplayer);
+        if (current_turn_is_player || multiplayer)
         {
             FlipCardPrivate(index);
         }
@@ -189,14 +204,14 @@ public class MemoryManager : MonoBehaviour
     
     public void FlipCardAgent(int index)
     {
-        if (!current_turn_is_player)
+        if (!current_turn_is_player && cpuIsOn)
         {
             FlipCardPrivate(index);
         }
         
     }
     
-    void ChangeCPUTurn()
+    IEnumerator ChangeTurn()
     {
         current_turn_is_player = !current_turn_is_player;
         ResetColors();
@@ -204,6 +219,16 @@ public class MemoryManager : MonoBehaviour
             player1Image.color = hilightColor;
         else 
             player2Image.color = hilightColor;
+        
+        yield return new WaitForSeconds(2f);
+        
+        if (!current_turn_is_player)
+        {
+            if (cpuIsOn)
+            {
+                EventManager.TriggerEvent("activateTurnCPU",  null);
+            }
+        }
         
     }
 
@@ -217,6 +242,7 @@ public class MemoryManager : MonoBehaviour
     {
         flipped++;
         Sprite s = memoryDataManager.fixed_cards[index].animalFront.GetComponent<Image>().sprite;
+        Debug.Log("here " + flipped);
         switch (flipped)
         {
             case 1:
@@ -237,6 +263,12 @@ public class MemoryManager : MonoBehaviour
         }
     }
 
+    void UpdatePlayerScores()
+    {
+        scorePlayer1Text.text = scorePlayer1.ToString();
+        scorePlayer2Text.text = scorePlayer2.ToString();
+    }
+
     IEnumerator CheckWin(bool win)
     {
         yield return new WaitForSeconds(0f);
@@ -245,19 +277,29 @@ public class MemoryManager : MonoBehaviour
         {
             memoryDataManager.fixed_cards[first_card_index].won = true;
             memoryDataManager.fixed_cards[second_card_index].won = true;
+            if (current_turn_is_player)
+            {
+                scorePlayer1 += 1;
+            }
+            else
+            {
+                if (multiplayer || cpuIsOn)
+                {
+                    scorePlayer2 += 1;
+                }
+            }
+            UpdatePlayerScores();
         }
         else
         {
-            yield return new WaitForSeconds(2f);
+            yield return new WaitForSeconds(8f);
             CoverLoseBacks();
         }
         
-        if (cpuIsOn)
-        {
-            ChangeCPUTurn();
-        }
-        
         flipped = 0;
+
+        yield return StartCoroutine(ChangeTurn());
+        
 
         if (CheckVictory())
         {
