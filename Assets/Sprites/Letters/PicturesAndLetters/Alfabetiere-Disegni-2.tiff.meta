@@ -45,7 +45,7 @@ TextureImporter:
       213: 2486221875814346378
     second: Alfabetiere-Disegni-2_13
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -62,10 +62,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -74,9 +76,9 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
-    aniso: -1
-    mipBias: -100
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -104,6 +106,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -155,6 +159,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -472,9 +488,23 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-  spritePackingTag: 
+    nameFileIdTable:
+      Alfabetiere-Disegni-2_0: -1222114633729102872
+      Alfabetiere-Disegni-2_1: -2646703378983132824
+      Alfabetiere-Disegni-2_10: 2493566836155092527
+      Alfabetiere-Disegni-2_11: -1198147488615876482
+      Alfabetiere-Disegni-2_12: -3547529939741571185
+      Alfabetiere-Disegni-2_13: 2486221875814346378
+      Alfabetiere-Disegni-2_2: -7682506538947061183
+      Alfabetiere-Disegni-2_3: -7933168488736769445
+      Alfabetiere-Disegni-2_4: 8755190625473010133
+      Alfabetiere-Disegni-2_5: -5584113094638393339
+      Alfabetiere-Disegni-2_6: -5732830494025114637
+      Alfabetiere-Disegni-2_7: -7093506011798184086
+      Alfabetiere-Disegni-2_8: 6769275029847331422
+      Alfabetiere-Disegni-2_9: 5489370627227519179
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

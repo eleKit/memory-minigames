@@ -90,7 +90,7 @@ TextureImporter:
       213: 8328581652392651738
     second: flowers-Page-2_28
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -107,10 +107,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -119,9 +121,9 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
-    aniso: -1
-    mipBias: -100
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -149,6 +151,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -200,6 +204,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -832,9 +848,38 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-  spritePackingTag: 
+    nameFileIdTable:
+      flowers-Page-2_0: 3566179124839559420
+      flowers-Page-2_1: 3459579268288066754
+      flowers-Page-2_10: 6291835497254686479
+      flowers-Page-2_11: -5428661035741889361
+      flowers-Page-2_12: -7098023749085134573
+      flowers-Page-2_13: 6631679402811496107
+      flowers-Page-2_14: -953599160628245666
+      flowers-Page-2_15: -4922284040458135935
+      flowers-Page-2_16: 2780398898972465907
+      flowers-Page-2_17: 4813761117101864190
+      flowers-Page-2_18: 2589710112299922716
+      flowers-Page-2_19: 19905040510369793
+      flowers-Page-2_2: 8844683816921978887
+      flowers-Page-2_20: -399338971896233347
+      flowers-Page-2_21: -8316558129529696042
+      flowers-Page-2_22: -925698544124193994
+      flowers-Page-2_23: -8216216446602067579
+      flowers-Page-2_24: -550713720897121088
+      flowers-Page-2_25: 6864927571650747550
+      flowers-Page-2_26: 8508417435733126157
+      flowers-Page-2_27: -5660394018762774856
+      flowers-Page-2_28: 8328581652392651738
+      flowers-Page-2_3: 6852086342966144723
+      flowers-Page-2_4: 8941863193288208460
+      flowers-Page-2_5: 2733351331642893274
+      flowers-Page-2_6: 1452511587516716311
+      flowers-Page-2_7: 4465817874745781397
+      flowers-Page-2_8: -5070349437669483008
+      flowers-Page-2_9: -8743047063698898409
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

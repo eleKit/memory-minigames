@@ -114,7 +114,7 @@ TextureImporter:
       213: -4347500595592881923
     second: furniture_36
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -131,10 +131,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -143,9 +145,9 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
-    aniso: -1
-    mipBias: -100
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -173,6 +175,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -224,6 +228,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -814,9 +830,36 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-  spritePackingTag: 
+    nameFileIdTable:
+      furniture_0: -1642859493879143628
+      furniture_1: 2693470749061965190
+      furniture_10: -7741028847787921026
+      furniture_11: 7566899253062582031
+      furniture_12: 2833113517201327931
+      furniture_13: -7109277637079520400
+      furniture_14: -2886602234474372309
+      furniture_15: -4857367318145518952
+      furniture_16: -2192188118670351728
+      furniture_17: -7654096612423372679
+      furniture_19: -6480201081642596069
+      furniture_2: -6908575831710699870
+      furniture_21: 2666940833105643229
+      furniture_24: -5336413158813440611
+      furniture_28: -1317289915903495808
+      furniture_3: -6002770931703613222
+      furniture_32: -8275489402426310495
+      furniture_33: 6261993103638159235
+      furniture_34: -4417580274371165881
+      furniture_35: -2424252088177639434
+      furniture_36: -4347500595592881923
+      furniture_4: 205143788297125134
+      furniture_5: -2712268415149190716
+      furniture_6: 2153611453704789883
+      furniture_7: -1733980632971139719
+      furniture_8: 8632782752606789037
+      furniture_9: 4962202238060913595
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

@@ -48,7 +48,7 @@ TextureImporter:
       213: -8002254669296467416
     second: set-cartoon-children-head-with-different-face-e-vector-27700061_19
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -65,10 +65,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -77,9 +79,9 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
-    aniso: -1
-    mipBias: -100
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -107,6 +109,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -158,6 +162,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -496,9 +512,24 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-  spritePackingTag: 
+    nameFileIdTable:
+      set-cartoon-children-head-with-different-face-e-vector-27700061_0: -551020514236295477
+      set-cartoon-children-head-with-different-face-e-vector-27700061_1: -8923730947522661542
+      set-cartoon-children-head-with-different-face-e-vector-27700061_15: -2211466444104341454
+      set-cartoon-children-head-with-different-face-e-vector-27700061_16: -6811790504123962446
+      set-cartoon-children-head-with-different-face-e-vector-27700061_17: 3527437304234843004
+      set-cartoon-children-head-with-different-face-e-vector-27700061_18: -2766070953073705559
+      set-cartoon-children-head-with-different-face-e-vector-27700061_19: -8002254669296467416
+      set-cartoon-children-head-with-different-face-e-vector-27700061_2: 5899875278224829223
+      set-cartoon-children-head-with-different-face-e-vector-27700061_3: -1555417037299288230
+      set-cartoon-children-head-with-different-face-e-vector-27700061_4: -4390530490921362761
+      set-cartoon-children-head-with-different-face-e-vector-27700061_5: 6794810165254359934
+      set-cartoon-children-head-with-different-face-e-vector-27700061_6: -6758020408012160782
+      set-cartoon-children-head-with-different-face-e-vector-27700061_7: -6528730521298256666
+      set-cartoon-children-head-with-different-face-e-vector-27700061_8: 7235513342097027399
+      set-cartoon-children-head-with-different-face-e-vector-27700061_9: -4405078518809483359
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

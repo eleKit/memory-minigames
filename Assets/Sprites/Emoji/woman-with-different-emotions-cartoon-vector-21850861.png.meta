@@ -90,7 +90,7 @@ TextureImporter:
       213: -8353929035640704154
     second: woman-with-different-emotions-cartoon-vector-21850861_28
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -107,10 +107,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -119,9 +121,9 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
-    aniso: -1
-    mipBias: -100
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -149,6 +151,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -200,6 +204,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -832,9 +848,38 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-  spritePackingTag: 
+    nameFileIdTable:
+      woman-with-different-emotions-cartoon-vector-21850861_0: 4708668449489432706
+      woman-with-different-emotions-cartoon-vector-21850861_1: 5308718040885280968
+      woman-with-different-emotions-cartoon-vector-21850861_10: -3746159233896689996
+      woman-with-different-emotions-cartoon-vector-21850861_11: -3719708374431944969
+      woman-with-different-emotions-cartoon-vector-21850861_12: -2501056624756829118
+      woman-with-different-emotions-cartoon-vector-21850861_13: 5907767968448249217
+      woman-with-different-emotions-cartoon-vector-21850861_14: 5566391545502523161
+      woman-with-different-emotions-cartoon-vector-21850861_15: -997125760329050486
+      woman-with-different-emotions-cartoon-vector-21850861_16: -8564672637694671698
+      woman-with-different-emotions-cartoon-vector-21850861_17: -5934506556379810883
+      woman-with-different-emotions-cartoon-vector-21850861_18: 4244148713045306730
+      woman-with-different-emotions-cartoon-vector-21850861_19: -3293876350751186524
+      woman-with-different-emotions-cartoon-vector-21850861_2: -5209721524185666873
+      woman-with-different-emotions-cartoon-vector-21850861_20: -2174349004567655390
+      woman-with-different-emotions-cartoon-vector-21850861_21: 259401047556317530
+      woman-with-different-emotions-cartoon-vector-21850861_22: -5059906754616038106
+      woman-with-different-emotions-cartoon-vector-21850861_23: -3930794966554966131
+      woman-with-different-emotions-cartoon-vector-21850861_24: 6558474752046308077
+      woman-with-different-emotions-cartoon-vector-21850861_25: 1049144273574126099
+      woman-with-different-emotions-cartoon-vector-21850861_26: 6682416473622248717
+      woman-with-different-emotions-cartoon-vector-21850861_27: -1207962214051930305
+      woman-with-different-emotions-cartoon-vector-21850861_28: -8353929035640704154
+      woman-with-different-emotions-cartoon-vector-21850861_3: -389357879524832323
+      woman-with-different-emotions-cartoon-vector-21850861_4: -972149581637158339
+      woman-with-different-emotions-cartoon-vector-21850861_5: -6433642124678379151
+      woman-with-different-emotions-cartoon-vector-21850861_6: 7396471123815363455
+      woman-with-different-emotions-cartoon-vector-21850861_7: -8102785452890909097
+      woman-with-different-emotions-cartoon-vector-21850861_8: -1667265096430529432
+      woman-with-different-emotions-cartoon-vector-21850861_9: -1621850678580076934
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

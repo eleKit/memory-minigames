@@ -51,7 +51,7 @@ TextureImporter:
       213: -4711596218899869735
     second: cute-boy-face-expression-cartoon-set-vector-24803805_15
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -68,10 +68,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -80,9 +82,9 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
-    aniso: -1
-    mipBias: -100
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -110,6 +112,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -161,6 +165,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -520,9 +536,25 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-  spritePackingTag: 
+    nameFileIdTable:
+      cute-boy-face-expression-cartoon-set-vector-24803805_0: 1740776808354477542
+      cute-boy-face-expression-cartoon-set-vector-24803805_1: 1849838115790550949
+      cute-boy-face-expression-cartoon-set-vector-24803805_10: 4875105154663061048
+      cute-boy-face-expression-cartoon-set-vector-24803805_11: 8847061906021438896
+      cute-boy-face-expression-cartoon-set-vector-24803805_12: -8200381788731264353
+      cute-boy-face-expression-cartoon-set-vector-24803805_13: 6276672040616969148
+      cute-boy-face-expression-cartoon-set-vector-24803805_14: 8463278210814128566
+      cute-boy-face-expression-cartoon-set-vector-24803805_15: -4711596218899869735
+      cute-boy-face-expression-cartoon-set-vector-24803805_2: -7512485951284787593
+      cute-boy-face-expression-cartoon-set-vector-24803805_3: 496324569297326227
+      cute-boy-face-expression-cartoon-set-vector-24803805_4: 1627744680220888409
+      cute-boy-face-expression-cartoon-set-vector-24803805_5: 7543373158493178293
+      cute-boy-face-expression-cartoon-set-vector-24803805_6: 747171524919248983
+      cute-boy-face-expression-cartoon-set-vector-24803805_7: -2573528441760440937
+      cute-boy-face-expression-cartoon-set-vector-24803805_8: -5874364010480023002
+      cute-boy-face-expression-cartoon-set-vector-24803805_9: -5412785690200000912
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

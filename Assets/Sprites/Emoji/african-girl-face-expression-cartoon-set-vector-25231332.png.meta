@@ -51,7 +51,7 @@ TextureImporter:
       213: 1865517170485829717
     second: african-girl-face-expression-cartoon-set-vector-25231332_15
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -68,10 +68,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -80,9 +82,9 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
-    aniso: -1
-    mipBias: -100
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -110,6 +112,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -161,6 +165,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -520,9 +536,25 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-  spritePackingTag: 
+    nameFileIdTable:
+      african-girl-face-expression-cartoon-set-vector-25231332_0: 6988702258787899340
+      african-girl-face-expression-cartoon-set-vector-25231332_1: 4137005773768542002
+      african-girl-face-expression-cartoon-set-vector-25231332_10: 4720042302962900486
+      african-girl-face-expression-cartoon-set-vector-25231332_11: -3412366056282243140
+      african-girl-face-expression-cartoon-set-vector-25231332_12: -375473869392029563
+      african-girl-face-expression-cartoon-set-vector-25231332_13: 8451458235861915204
+      african-girl-face-expression-cartoon-set-vector-25231332_14: 4375879909518902711
+      african-girl-face-expression-cartoon-set-vector-25231332_15: 1865517170485829717
+      african-girl-face-expression-cartoon-set-vector-25231332_2: 6895393411351349873
+      african-girl-face-expression-cartoon-set-vector-25231332_3: -8411681593940982472
+      african-girl-face-expression-cartoon-set-vector-25231332_4: -5491014766685382425
+      african-girl-face-expression-cartoon-set-vector-25231332_5: -7600994737663052053
+      african-girl-face-expression-cartoon-set-vector-25231332_6: -4863603987789922982
+      african-girl-face-expression-cartoon-set-vector-25231332_7: 8512663580408451308
+      african-girl-face-expression-cartoon-set-vector-25231332_8: -6731902408240963335
+      african-girl-face-expression-cartoon-set-vector-25231332_9: -6087409074610862618
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

@@ -93,7 +93,7 @@ TextureImporter:
       213: -7695125540673906372
     second: vector_style5_29
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -110,10 +110,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -122,9 +124,9 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
-    aniso: -1
-    mipBias: -100
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -152,6 +154,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -203,6 +207,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -856,9 +872,39 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-  spritePackingTag: 
+    nameFileIdTable:
+      vector_style5_0: -8754195044465786803
+      vector_style5_1: 7216844579269473328
+      vector_style5_10: -6169935980306003151
+      vector_style5_11: -8351197952580383640
+      vector_style5_12: 7162321310350327508
+      vector_style5_13: -5178749805059396954
+      vector_style5_14: -7561729875314682998
+      vector_style5_15: -3720542489727766223
+      vector_style5_16: -4507328121286827739
+      vector_style5_17: -7592309047786900384
+      vector_style5_18: -7770800475394751117
+      vector_style5_19: -6854779753208583340
+      vector_style5_2: 5553995118218565290
+      vector_style5_20: -529474511531667505
+      vector_style5_21: 3537955255483647594
+      vector_style5_22: 4235015847001963957
+      vector_style5_23: -7867726718887326503
+      vector_style5_24: 2495964547474838056
+      vector_style5_25: -4726706322920585568
+      vector_style5_26: 2535226141800801919
+      vector_style5_27: 8895191188824027655
+      vector_style5_28: -7739539502316062786
+      vector_style5_29: -7695125540673906372
+      vector_style5_3: 2464249969338629504
+      vector_style5_4: 4132084890699096038
+      vector_style5_5: 2396749931736263057
+      vector_style5_6: -2922704738941034388
+      vector_style5_7: 3628095681652620313
+      vector_style5_8: -4937050423758030044
+      vector_style5_9: 4230472243460739137
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

@@ -298,7 +298,11 @@ public class MemoryManager : MonoBehaviour
         }
         else
         {
-            yield return new WaitForSeconds(save_num_players.memory_card_speed);
+            var waitTime = save_num_players.memory_card_speed / 2;
+            yield return new WaitForSeconds(waitTime);
+            sfx_manager.music_utilities_script.Play("Countdown", false);
+            yield return new WaitForSeconds(waitTime);
+            sfx_manager.music_utilities_script.StopAll();
             CoverLoseBacks();
         }
         

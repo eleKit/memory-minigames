@@ -63,7 +63,7 @@ TextureImporter:
       213: -263677060112387386
     second: cartoon-little-boy-various-face-expressions-vector-8128620_19
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -80,10 +80,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMipmapLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -92,9 +94,9 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
-    aniso: -1
-    mipBias: -100
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -122,6 +124,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -173,6 +177,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -616,9 +632,29 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-  spritePackingTag: 
+    nameFileIdTable:
+      cartoon-little-boy-various-face-expressions-vector-8128620_0: -5809749986080004906
+      cartoon-little-boy-various-face-expressions-vector-8128620_1: 8006253538810709948
+      cartoon-little-boy-various-face-expressions-vector-8128620_10: -8078338468379948210
+      cartoon-little-boy-various-face-expressions-vector-8128620_11: -8551621978361502038
+      cartoon-little-boy-various-face-expressions-vector-8128620_12: -8889523903632541782
+      cartoon-little-boy-various-face-expressions-vector-8128620_13: -7770012218538013486
+      cartoon-little-boy-various-face-expressions-vector-8128620_14: -7315777076311805340
+      cartoon-little-boy-various-face-expressions-vector-8128620_15: 1157832535378282501
+      cartoon-little-boy-various-face-expressions-vector-8128620_16: -6682360897548937030
+      cartoon-little-boy-various-face-expressions-vector-8128620_17: -6122065060077973758
+      cartoon-little-boy-various-face-expressions-vector-8128620_18: 7076890287386357175
+      cartoon-little-boy-various-face-expressions-vector-8128620_19: -263677060112387386
+      cartoon-little-boy-various-face-expressions-vector-8128620_2: 2125935158895291940
+      cartoon-little-boy-various-face-expressions-vector-8128620_3: -9012636229419247062
+      cartoon-little-boy-various-face-expressions-vector-8128620_4: 3232257864413528614
+      cartoon-little-boy-various-face-expressions-vector-8128620_5: -8166168450623423647
+      cartoon-little-boy-various-face-expressions-vector-8128620_6: 158653389193683010
+      cartoon-little-boy-various-face-expressions-vector-8128620_7: 1336506846336776198
+      cartoon-little-boy-various-face-expressions-vector-8128620_8: -4902865537298418253
+      cartoon-little-boy-various-face-expressions-vector-8128620_9: 814875194133331267
+  mipmapLimitGroupName: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
