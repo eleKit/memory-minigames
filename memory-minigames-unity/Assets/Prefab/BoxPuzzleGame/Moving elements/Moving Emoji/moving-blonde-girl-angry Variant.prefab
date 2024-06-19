@@ -1,0 +1,71 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &3698739053216301949
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 720525533834716746, guid: 44e72d8b3edc245b5a966740aaddb8a6, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1.77
+      objectReference: {fileID: 0}
+    - target: {fileID: 720525533834716746, guid: 44e72d8b3edc245b5a966740aaddb8a6, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 2.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 720525533834716852, guid: 44e72d8b3edc245b5a966740aaddb8a6, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 720525533834716852, guid: 44e72d8b3edc245b5a966740aaddb8a6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -7.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 720525533834716852, guid: 44e72d8b3edc245b5a966740aaddb8a6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 720525533834716852, guid: 44e72d8b3edc245b5a966740aaddb8a6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 720525533834716852, guid: 44e72d8b3edc245b5a966740aaddb8a6, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 720525533834716852, guid: 44e72d8b3edc245b5a966740aaddb8a6, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 720525533834716852, guid: 44e72d8b3edc245b5a966740aaddb8a6, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 720525533834716852, guid: 44e72d8b3edc245b5a966740aaddb8a6, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 720525533834716852, guid: 44e72d8b3edc245b5a966740aaddb8a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 720525533834716852, guid: 44e72d8b3edc245b5a966740aaddb8a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 720525533834716852, guid: 44e72d8b3edc245b5a966740aaddb8a6, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 720525533834716854, guid: 44e72d8b3edc245b5a966740aaddb8a6, type: 3}
+      propertyPath: m_Name
+      value: moving-blonde-girl-angry
+      objectReference: {fileID: 0}
+    - target: {fileID: 720525533834716855, guid: 44e72d8b3edc245b5a966740aaddb8a6, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 6103593889311961714, guid: 38d54029ffd1c4d8c94594fa2cafdd91, type: 3}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 44e72d8b3edc245b5a966740aaddb8a6, type: 3}

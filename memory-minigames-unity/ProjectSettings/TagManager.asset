@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - card
+  - box
+  - boxManager
+  - box_title
+  - save_number_players
+  - memoryManager
+  - memoryCPUupdater
+  - music_manager
+  - sfx_manager
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: floor
+    uniqueID: 3007300129
+    locked: 0
+  - name: wall
+    uniqueID: 2768769841
+    locked: 0
+  - name: boxes_bg
+    uniqueID: 2537018439
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0

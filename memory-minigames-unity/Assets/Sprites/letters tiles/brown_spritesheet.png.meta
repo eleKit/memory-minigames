@@ -1,0 +1,881 @@
+fileFormatVersion: 2
+guid: fda2fd54d38fb4e6faf9f2d6ac923243
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4937430539154529258
+    second: brown_spritesheet_0
+  - first:
+      213: 4891151824271005075
+    second: brown_spritesheet_1
+  - first:
+      213: 6999904933267009132
+    second: brown_spritesheet_2
+  - first:
+      213: 4373946166616868811
+    second: brown_spritesheet_3
+  - first:
+      213: -41189695623805161
+    second: brown_spritesheet_4
+  - first:
+      213: -2525293952693650264
+    second: brown_spritesheet_5
+  - first:
+      213: 2430760585463734205
+    second: brown_spritesheet_6
+  - first:
+      213: -7984650910762142203
+    second: brown_spritesheet_7
+  - first:
+      213: -1398598659012228125
+    second: brown_spritesheet_8
+  - first:
+      213: -2089093848644078357
+    second: brown_spritesheet_9
+  - first:
+      213: -2706843129306655943
+    second: brown_spritesheet_10
+  - first:
+      213: 5011580696711591318
+    second: brown_spritesheet_11
+  - first:
+      213: -2328481547836148802
+    second: brown_spritesheet_12
+  - first:
+      213: -8972411659160297010
+    second: brown_spritesheet_13
+  - first:
+      213: -6692157292405861446
+    second: brown_spritesheet_14
+  - first:
+      213: 5205013432073077622
+    second: brown_spritesheet_15
+  - first:
+      213: -4476580527115319252
+    second: brown_spritesheet_16
+  - first:
+      213: 4961059940989888320
+    second: brown_spritesheet_17
+  - first:
+      213: -1323589404633883316
+    second: brown_spritesheet_18
+  - first:
+      213: -4209359367872112865
+    second: brown_spritesheet_19
+  - first:
+      213: -1348035336399204997
+    second: brown_spritesheet_20
+  - first:
+      213: 3744059307061343306
+    second: brown_spritesheet_21
+  - first:
+      213: -4323328326506315038
+    second: brown_spritesheet_22
+  - first:
+      213: -8088241209023695038
+    second: brown_spritesheet_23
+  - first:
+      213: -355766089048692009
+    second: brown_spritesheet_24
+  - first:
+      213: 3879573580186231469
+    second: brown_spritesheet_25
+  - first:
+      213: 4804530263920274430
+    second: brown_spritesheet_26
+  - first:
+      213: -539799314690430457
+    second: brown_spritesheet_27
+  - first:
+      213: -2077781135005863865
+    second: brown_spritesheet_28
+  - first:
+      213: 7672185557700099630
+    second: brown_spritesheet_29
+  - first:
+      213: 4546021954254886453
+    second: brown_spritesheet_30
+  - first:
+      213: -2443377991551519772
+    second: brown_spritesheet_31
+  - first:
+      213: -3727777752188184493
+    second: brown_spritesheet_32
+  - first:
+      213: -6902727424963976413
+    second: brown_spritesheet_33
+  - first:
+      213: -9168664176014591736
+    second: brown_spritesheet_34
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: brown_spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1791
+        width: 257
+        height: 257
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61467829519ba7bb0800000000000000
+      internalID: -4937430539154529258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brown_spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 1791
+        width: 257
+        height: 257
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3955d247bacd0e340800000000000000
+      internalID: 4891151824271005075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brown_spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 1791
+        width: 257
+        height: 257
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6e62e02378a42160800000000000000
+      internalID: 6999904933267009132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brown_spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 771
+        y: 1791
+        width: 257
+        height: 257
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc741e74dd063bc30800000000000000
+      internalID: 4373946166616868811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brown_spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1534
+        width: 257
+        height: 257
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8acb044978a54fcd0800000000000000
+      internalID: -2525293952693650264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brown_spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 1534
+        width: 257
+        height: 257
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbf169eafdbcbb120800000000000000
+      internalID: 2430760585463734205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brown_spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 1534
+        width: 257
+        height: 257
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 506f5881d42d03190800000000000000
+      internalID: -7984650910762142203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brown_spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 771
+        y: 1534
+        width: 257
+        height: 257
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3eb0d320eed279ce0800000000000000
+      internalID: -1398598659012228125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brown_spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1277
+        width: 257
+        height: 257
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93358fee38c5f6ad0800000000000000
+      internalID: -2706843129306655943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brown_spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 1277
+        width: 257
+        height: 257
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 695f2b65716bc8540800000000000000
+      internalID: 5011580696711591318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brown_spritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 1277
+        width: 257
+        height: 257
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb3bc2b7e529fafd0800000000000000
+      internalID: -2328481547836148802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brown_spritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 771
+        y: 1277
+        width: 257
+        height: 257
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec16d2542279b7380800000000000000
+      internalID: -8972411659160297010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brown_spritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1020
+        width: 257
+        height: 257
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6734add932ceb3840800000000000000
+      internalID: 5205013432073077622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brown_spritesheet_16
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 1020
+        width: 257
+        height: 257
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c284cd08abdffd1c0800000000000000
+      internalID: -4476580527115319252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brown_spritesheet_17
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 1020
+        width: 257
+        height: 257
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0476f144bb939d440800000000000000
+      internalID: 4961059940989888320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brown_spritesheet_18
+      rect:
+        serializedVersion: 2
+        x: 771
+        y: 1020
+        width: 257
+        height: 257
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4d935cf27aa1ade0800000000000000
+      internalID: -1323589404633883316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brown_spritesheet_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 763
+        width: 257
+        height: 257
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7d4045f001da4de0800000000000000
+      internalID: -1348035336399204997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brown_spritesheet_21
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 763
+        width: 257
+        height: 257
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a44f2675a1295f330800000000000000
+      internalID: 3744059307061343306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brown_spritesheet_22
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 763
+        width: 257
+        height: 257
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e205330bc37004c0800000000000000
+      internalID: -4323328326506315038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brown_spritesheet_23
+      rect:
+        serializedVersion: 2
+        x: 771
+        y: 763
+        width: 257
+        height: 257
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2477776497bc0cf80800000000000000
+      internalID: -8088241209023695038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brown_spritesheet_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 506
+        width: 257
+        height: 257
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da2adf6cd9307d530800000000000000
+      internalID: 3879573580186231469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brown_spritesheet_26
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 506
+        width: 257
+        height: 257
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efbe49dc1de1da240800000000000000
+      internalID: 4804530263920274430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brown_spritesheet_27
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 506
+        width: 257
+        height: 257
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70aa0ed126f3288f0800000000000000
+      internalID: -539799314690430457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brown_spritesheet_28
+      rect:
+        serializedVersion: 2
+        x: 771
+        y: 506
+        width: 257
+        height: 257
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 740b7f6f01d3a23e0800000000000000
+      internalID: -2077781135005863865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brown_spritesheet_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 249
+        width: 257
+        height: 257
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5365d7ca1e6b61f30800000000000000
+      internalID: 4546021954254886453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brown_spritesheet_31
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 249
+        width: 257
+        height: 257
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e3709989a0671ed0800000000000000
+      internalID: -2443377991551519772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brown_spritesheet_32
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 249
+        width: 257
+        height: 257
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 358183f82e5444cc0800000000000000
+      internalID: -3727777752188184493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: brown_spritesheet_34
+      rect:
+        serializedVersion: 2
+        x: 1028
+        y: 249
+        width: 257
+        height: 257
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 809fcc3728c52c080800000000000000
+      internalID: -9168664176014591736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      brown_spritesheet_0: -4937430539154529258
+      brown_spritesheet_1: 4891151824271005075
+      brown_spritesheet_10: -2706843129306655943
+      brown_spritesheet_11: 5011580696711591318
+      brown_spritesheet_12: -2328481547836148802
+      brown_spritesheet_13: -8972411659160297010
+      brown_spritesheet_15: 5205013432073077622
+      brown_spritesheet_16: -4476580527115319252
+      brown_spritesheet_17: 4961059940989888320
+      brown_spritesheet_18: -1323589404633883316
+      brown_spritesheet_2: 6999904933267009132
+      brown_spritesheet_20: -1348035336399204997
+      brown_spritesheet_21: 3744059307061343306
+      brown_spritesheet_22: -4323328326506315038
+      brown_spritesheet_23: -8088241209023695038
+      brown_spritesheet_25: 3879573580186231469
+      brown_spritesheet_26: 4804530263920274430
+      brown_spritesheet_27: -539799314690430457
+      brown_spritesheet_28: -2077781135005863865
+      brown_spritesheet_3: 4373946166616868811
+      brown_spritesheet_30: 4546021954254886453
+      brown_spritesheet_31: -2443377991551519772
+      brown_spritesheet_32: -3727777752188184493
+      brown_spritesheet_34: -9168664176014591736
+      brown_spritesheet_5: -2525293952693650264
+      brown_spritesheet_6: 2430760585463734205
+      brown_spritesheet_7: -7984650910762142203
+      brown_spritesheet_8: -1398598659012228125
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
