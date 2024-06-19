@@ -1,0 +1,860 @@
+fileFormatVersion: 2
+guid: 1eded329eeefd49e4ae1f0a46e7aa23d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2542641415228024720
+    second: dark_blue_spritesheet_0
+  - first:
+      213: -909880980742565582
+    second: dark_blue_spritesheet_1
+  - first:
+      213: -2747922551059975673
+    second: dark_blue_spritesheet_2
+  - first:
+      213: -7457343638211778279
+    second: dark_blue_spritesheet_3
+  - first:
+      213: -7121930675702927481
+    second: dark_blue_spritesheet_5
+  - first:
+      213: -1431065920636620302
+    second: dark_blue_spritesheet_6
+  - first:
+      213: -4870006130997726261
+    second: dark_blue_spritesheet_7
+  - first:
+      213: 4679368914471334543
+    second: dark_blue_spritesheet_8
+  - first:
+      213: -4747593400870732719
+    second: dark_blue_spritesheet_10
+  - first:
+      213: -3832973784247022012
+    second: dark_blue_spritesheet_11
+  - first:
+      213: -3315241284333638409
+    second: dark_blue_spritesheet_12
+  - first:
+      213: -5366773924140960095
+    second: dark_blue_spritesheet_13
+  - first:
+      213: -897079113236021876
+    second: dark_blue_spritesheet_15
+  - first:
+      213: 112174354625110070
+    second: dark_blue_spritesheet_16
+  - first:
+      213: -4340099991439087229
+    second: dark_blue_spritesheet_17
+  - first:
+      213: -123838196684462954
+    second: dark_blue_spritesheet_18
+  - first:
+      213: -2130625648523215678
+    second: dark_blue_spritesheet_20
+  - first:
+      213: 5501720775458204785
+    second: dark_blue_spritesheet_21
+  - first:
+      213: -1994520806902134698
+    second: dark_blue_spritesheet_22
+  - first:
+      213: -2641144471275217100
+    second: dark_blue_spritesheet_23
+  - first:
+      213: -3263702998124099541
+    second: dark_blue_spritesheet_25
+  - first:
+      213: -5779099117856642811
+    second: dark_blue_spritesheet_26
+  - first:
+      213: 1862600658693396348
+    second: dark_blue_spritesheet_27
+  - first:
+      213: 7865573029913704408
+    second: dark_blue_spritesheet_28
+  - first:
+      213: -8681388186872024225
+    second: dark_blue_spritesheet_30
+  - first:
+      213: -810209117694529188
+    second: dark_blue_spritesheet_31
+  - first:
+      213: -2449125489521636879
+    second: dark_blue_spritesheet_32
+  - first:
+      213: 6010302175007878353
+    second: dark_blue_spritesheet_34
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: dark_blue_spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1791
+        width: 257
+        height: 257
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0781326ba19b6bcd0800000000000000
+      internalID: -2542641415228024720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_blue_spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 1791
+        width: 257
+        height: 257
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23194fa91147f53f0800000000000000
+      internalID: -909880980742565582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_blue_spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 1791
+        width: 257
+        height: 257
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 702f8c9bffa6dd9d0800000000000000
+      internalID: -2747922551059975673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_blue_spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 771
+        y: 1791
+        width: 257
+        height: 257
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9192e54c871328890800000000000000
+      internalID: -7457343638211778279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_blue_spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1534
+        width: 257
+        height: 257
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78fe4c7b8c1d92d90800000000000000
+      internalID: -7121930675702927481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_blue_spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 1534
+        width: 257
+        height: 257
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f179469025d32ce0800000000000000
+      internalID: -1431065920636620302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_blue_spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 1534
+        width: 257
+        height: 257
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc3f7ebe9334a6cb0800000000000000
+      internalID: -4870006130997726261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_blue_spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 771
+        y: 1534
+        width: 257
+        height: 257
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f82b1104c3570f040800000000000000
+      internalID: 4679368914471334543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_blue_spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1277
+        width: 257
+        height: 257
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15c7c1ba4f82d1eb0800000000000000
+      internalID: -4747593400870732719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_blue_spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 1277
+        width: 257
+        height: 257
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44e4294b6aa8ecac0800000000000000
+      internalID: -3832973784247022012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_blue_spritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 1277
+        width: 257
+        height: 257
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fc6596ed95edf1d0800000000000000
+      internalID: -3315241284333638409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_blue_spritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 771
+        y: 1277
+        width: 257
+        height: 257
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a6bfb5ec836585b0800000000000000
+      internalID: -5366773924140960095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_blue_spritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1020
+        width: 257
+        height: 257
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8df428ac4fec83f0800000000000000
+      internalID: -897079113236021876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_blue_spritesheet_16
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 1020
+        width: 257
+        height: 257
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 630a6503bf58e8100800000000000000
+      internalID: 112174354625110070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_blue_spritesheet_17
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 1020
+        width: 257
+        height: 257
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 389e8987d0ed4c3c0800000000000000
+      internalID: -4340099991439087229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_blue_spritesheet_18
+      rect:
+        serializedVersion: 2
+        x: 771
+        y: 1020
+        width: 257
+        height: 257
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6946ff4f0d9084ef0800000000000000
+      internalID: -123838196684462954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_blue_spritesheet_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 763
+        width: 257
+        height: 257
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ccff6ed24f7e62e0800000000000000
+      internalID: -2130625648523215678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_blue_spritesheet_21
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 763
+        width: 257
+        height: 257
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17ca29a55e90a5c40800000000000000
+      internalID: 5501720775458204785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_blue_spritesheet_22
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 763
+        width: 257
+        height: 257
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 658097fb4e90254e0800000000000000
+      internalID: -1994520806902134698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_blue_spritesheet_23
+      rect:
+        serializedVersion: 2
+        x: 771
+        y: 763
+        width: 257
+        height: 257
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43f5725c815c85bd0800000000000000
+      internalID: -2641144471275217100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_blue_spritesheet_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 506
+        width: 257
+        height: 257
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b288f604a6ff4b2d0800000000000000
+      internalID: -3263702998124099541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_blue_spritesheet_26
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 506
+        width: 257
+        height: 257
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 509a166a8f38ccfa0800000000000000
+      internalID: -5779099117856642811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_blue_spritesheet_27
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 506
+        width: 257
+        height: 257
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7714db3e6949d910800000000000000
+      internalID: 1862600658693396348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_blue_spritesheet_28
+      rect:
+        serializedVersion: 2
+        x: 771
+        y: 506
+        width: 257
+        height: 257
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d736e24ff0282d60800000000000000
+      internalID: 7865573029913704408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_blue_spritesheet_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 249
+        width: 257
+        height: 257
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f537834a073858780800000000000000
+      internalID: -8681388186872024225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_blue_spritesheet_31
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 249
+        width: 257
+        height: 257
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c51f802a91f81c4f0800000000000000
+      internalID: -810209117694529188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_blue_spritesheet_32
+      rect:
+        serializedVersion: 2
+        x: 514
+        y: 249
+        width: 257
+        height: 257
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f945b2e755f20ed0800000000000000
+      internalID: -2449125489521636879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dark_blue_spritesheet_34
+      rect:
+        serializedVersion: 2
+        x: 1028
+        y: 249
+        width: 257
+        height: 257
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1dc2a16fbf1e86350800000000000000
+      internalID: 6010302175007878353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      dark_blue_spritesheet_0: -2542641415228024720
+      dark_blue_spritesheet_1: -909880980742565582
+      dark_blue_spritesheet_10: -4747593400870732719
+      dark_blue_spritesheet_11: -3832973784247022012
+      dark_blue_spritesheet_12: -3315241284333638409
+      dark_blue_spritesheet_13: -5366773924140960095
+      dark_blue_spritesheet_15: -897079113236021876
+      dark_blue_spritesheet_16: 112174354625110070
+      dark_blue_spritesheet_17: -4340099991439087229
+      dark_blue_spritesheet_18: -123838196684462954
+      dark_blue_spritesheet_2: -2747922551059975673
+      dark_blue_spritesheet_20: -2130625648523215678
+      dark_blue_spritesheet_21: 5501720775458204785
+      dark_blue_spritesheet_22: -1994520806902134698
+      dark_blue_spritesheet_23: -2641144471275217100
+      dark_blue_spritesheet_25: -3263702998124099541
+      dark_blue_spritesheet_26: -5779099117856642811
+      dark_blue_spritesheet_27: 1862600658693396348
+      dark_blue_spritesheet_28: 7865573029913704408
+      dark_blue_spritesheet_3: -7457343638211778279
+      dark_blue_spritesheet_30: -8681388186872024225
+      dark_blue_spritesheet_31: -810209117694529188
+      dark_blue_spritesheet_32: -2449125489521636879
+      dark_blue_spritesheet_34: 6010302175007878353
+      dark_blue_spritesheet_5: -7121930675702927481
+      dark_blue_spritesheet_6: -1431065920636620302
+      dark_blue_spritesheet_7: -4870006130997726261
+      dark_blue_spritesheet_8: 4679368914471334543
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
